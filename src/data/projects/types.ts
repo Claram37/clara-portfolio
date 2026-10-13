@@ -26,3 +26,11 @@ export interface MoreProject {
   tag?: string;
   cover: ReactNode;
 }
+export interface CodeProject {
+  name: string;
+  tag: string;
+  summary: string;
+  stack: string[];
+  links: { label: string; href: string }[];
+  visual: ReactNode;
+}
