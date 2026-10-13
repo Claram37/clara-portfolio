@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import Work from "@/components/Work";
 import site from "@/data/site";
 import { pageMeta } from "@/lib/meta";
+import CodeWork from "@/components/CodeWork";
 
 export const meta: Route.MetaFunction = () =>
   pageMeta({ title: `${site.name} · ${site.role}`, description: site.intro });
@@ -15,6 +16,7 @@ const Home = () => {
       <Hero />
       <Work />
       <MoreWork />
+      <CodeWork />
       <Contact />
     </>
   );
