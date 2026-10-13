@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { Download } from "lucide-react";
 import Button from "@/components/Button";
 import site from "@/data/site";
 import { cn } from "@/lib/utils";
@@ -6,6 +7,7 @@ import { cn } from "@/lib/utils";
 const links = [
   { to: "/work", label: "Work", className: "max-sm:hidden" },
   { to: "/about", label: "About" },
+  { to: "/contact", label: "Contact" },
 ];
 
 const Nav = () => {
@@ -34,8 +36,9 @@ const Nav = () => {
               {label}
             </Link>
           ))}
-          <Button to="/contact" size="sm">
-            Contact
+          <Button href={site.resume} size="sm">
+            Resume
+            <Download className="size-4" aria-hidden="true" />
           </Button>
         </div>
       </nav>

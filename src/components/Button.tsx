@@ -16,6 +16,7 @@ const sizes = {
 
 interface ButtonProps {
   to?: string;
+  href?: string; // files, opened in a new tab
   type?: "button" | "submit";
   variant?: keyof typeof variants;
   size?: keyof typeof sizes;
@@ -26,6 +27,7 @@ interface ButtonProps {
 
 const Button = ({
   to,
+  href,
   type = "button",
   variant = "dark",
   size = "md",
@@ -51,6 +53,14 @@ const Button = ({
       )}
     </>
   );
+
+  if (href) {
+    return (
+      <a href={href} target="_blank" rel="noreferrer" className={classes}>
+        {content}
+      </a>
+    );
+  }
 
   return to ? (
     <Link to={to} className={classes}>
