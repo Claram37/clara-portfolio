@@ -88,6 +88,17 @@
   --color-contact-body: #ffe3d8;
   --color-placeholder: #8e8f94;
 
+  /* Code work: the dark band before Contact */
+  --color-code-card: #1a1b20;
+  --color-code-line: #2a2b30;
+  --color-code-chip: #24252b;
+  --color-code-chip-line: #303137;
+  --color-code-chip-text: #d4d5d9;
+  --color-code-muted: #a9aaaf;
+  --color-game-hub: #241638;
+  --color-switch: #3b82f6;
+  --shadow-code: 0 24px 50px #00000066;
+
   /* Type scale. Heading sizes here are the phone sizes; they step up in the :root block below */
   --text-display: 2.5rem;
   --text-display--line-height: 1.02;
@@ -173,6 +184,8 @@
   --color-window-close: #ff5f57;
   --color-window-minimise: #febc2e;
   --color-window-zoom: #28c840;
+  --color-window-bar-dark: #2b2c31;
+  --color-window-line-dark: #3a3b41;
 
   /* A project's open feature tab: its tint fills left to right over the 6 seconds it stays open (spec r1RONp) */
   --animate-tab-fill: tab-fill 6s linear forwards;
@@ -188,7 +201,12 @@
 
 /* The keyboard focus outline on links, buttons and tabs */
 @utility focus-ring {
-  @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink;
+  @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring;
+}
+
+/* On a dark section: white focus outlines */
+@utility focus-light {
+  --ring: var(--color-paper);
 }
 
 /*
