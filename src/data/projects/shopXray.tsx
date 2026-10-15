@@ -5,7 +5,7 @@ import openVisitsDesktop from "@/assets/shopxray/open-visits-desktop.png";
 import visitCardZoom from "@/assets/shopxray/visit-card-zoom.png";
 import type { Project } from "./types";
 
-const openVisitsAlt =
+export const openVisitsAlt =
   "ShopXray's Today page with the day's revenue and its open visits, each listing services and a total";
 
 const shopXray: Project = {
