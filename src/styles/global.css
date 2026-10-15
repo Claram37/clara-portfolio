@@ -13,7 +13,8 @@
   (porfoilio-ideas.pen → "Page · Home v2 · Feature tabs", designed at 1440px wide).
   Spacing rules: padding, margins and gaps are multiples of 4px, cards have a 16px radius,
   and font sizes sit on the scale 12 14 16 18 20 24 28 32 36 40 48 56 64 72 80
-  (steps of 2 up to 20, of 4 up to 40, of 8 above).
+  (steps of 2 up to 20, of 4 up to 40, of 8 above). The case studies' display type
+  (case-title, impact) goes past 80 on purpose, still in steps of 8.
 */
 @theme {
   /* Tailwind's md (768px), lg (1024px) and xl (1280px), with 2xl moved to 1440px, the design width */
@@ -55,6 +56,15 @@
   --color-dproz-body: #dce5ff;
   --color-dproz-glow: #4c78ffaa;
   --shadow-dproz: 0 30px 70px #0a1a5c59;
+
+  /* Dproz case study (portfolio-pages.pen → Idea 04 · Stacking cards) */
+  --color-dproz-tint: #eef2fd;
+  --color-ink-raised: #1b1c21;
+  --color-ink-muted: #55565b;
+  --color-on-dark: #c9ccd6;
+  --color-on-dark-label: #dce0ea;
+  --color-rule: #c4c5ca;
+  --color-alert: #e5484d;
 
   /* Project 02 · Dproz Fitcheck. Its tab screens are light, with ink captions and muted-foreground links */
   --color-fitcheck: #f2efea;
@@ -140,6 +150,22 @@
   --text-title--letter-spacing: -0.025em;
   --text-title--font-weight: 600;
 
+  /* Case studies: the hero title (and Dproz's red "10"), the impact number, and stat figures */
+  --text-case-title: 4.5rem;
+  --text-case-title--line-height: 0.9;
+  --text-case-title--letter-spacing: -0.05em;
+  --text-case-title--font-weight: 600;
+
+  --text-impact: 6rem;
+  --text-impact--line-height: 0.82;
+  --text-impact--letter-spacing: -0.053em;
+  --text-impact--font-weight: 600;
+
+  --text-figure: 2rem;
+  --text-figure--line-height: 1.2;
+  --text-figure--letter-spacing: -0.03em;
+  --text-figure--font-weight: 600;
+
   --text-lead: 1.25rem;
   --text-lead--line-height: 1.55;
   --text-body-lg: 1.125rem;
@@ -151,6 +177,9 @@
   --spacing-page: 1.25rem;
   --spacing-nav: 1.25rem;
   --container-content: 78rem;
+
+  /* A case study's stacked chapter card: 780px at most, and never taller than the screen */
+  --spacing-deck-card: min(48.75rem, calc(100svh - 3rem));
 
   /* Corner radii. Every card, the About portrait included, is 16px; form inputs are 12px */
   --radius-chip: 16px;
@@ -223,6 +252,8 @@
   about             32   32   36   40   48
   section           28   32   32   36   40
   feature           24   28   28   28   32
+  case-title        72   96  120  144  176
+  impact            96  160  200  200  296
 */
 :root {
   @variant md {
@@ -233,6 +264,8 @@
     --text-chapter: 2.25rem;
     --text-section: 2rem;
     --text-feature: 1.75rem;
+    --text-case-title: 6rem;
+    --text-impact: 10rem;
   }
   @variant lg {
     --spacing-page: 4rem;
@@ -242,6 +275,8 @@
     --text-hero: 3rem;
     --text-chapter: 2.5rem;
     --text-about: 2.25rem;
+    --text-case-title: 7.5rem;
+    --text-impact: 12.5rem;
   }
   @variant xl {
     --spacing-page: 5rem;
@@ -250,6 +285,7 @@
     --text-stat: 4rem;
     --text-about: 2.5rem;
     --text-section: 2.25rem;
+    --text-case-title: 9rem;
   }
   @variant 2xl {
     --spacing-page: 6rem;
@@ -261,6 +297,8 @@
     --text-about: 3rem;
     --text-section: 2.5rem;
     --text-feature: 2rem;
+    --text-case-title: 11rem;
+    --text-impact: 18.5rem;
   }
 }
 
