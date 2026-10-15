@@ -1,5 +1,3 @@
-import { Link } from "react-router";
-import { ArrowLeft } from "lucide-react";
 import type { CaseStudy } from "@/data/projects/types";
 
 interface CaseHeroProps {
