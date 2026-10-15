@@ -2,23 +2,21 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-/*
-  shadcn/ui components carry dark: styles. Tie them to a .dark class rather than the OS setting:
-  the design has no dark mode, so they stay off.
-*/
 @custom-variant dark (&:is(.dark *));
 
-/*
-  Design tokens from Idea 06 · Full-bleed Chapters
-  (porfoilio-ideas.pen → "Page · Home v2 · Feature tabs", designed at 1440px wide).
-  Spacing rules: padding, margins and gaps are multiples of 4px, cards have a 16px radius,
-  and font sizes sit on the scale 12 14 16 18 20 24 28 32 36 40 48 56 64 72 80
-  (steps of 2 up to 20, of 4 up to 40, of 8 above). The case studies' display type
-  (case-title, impact) goes past 80 on purpose, still in steps of 8.
-*/
 @theme {
-  /* Tailwind's md (768px), lg (1024px) and xl (1280px), with 2xl moved to 1440px, the design width */
-  --breakpoint-2xl: 90rem;
+  /* Everything in px, no rem or em. Tailwind's breakpoints, with 2xl moved to 1440px, the design width */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1440px;
+
+  /* The spacing step: p-4 is 16px */
+  --spacing: 4px;
+
+  --tracking-*: initial;
+  --tracking-tight: -0.5px;
 
   /* Montserrat for headings and display numbers, Open Sans for everything else */
   --font-sans:
@@ -109,99 +107,121 @@
   --color-switch: #3b82f6;
   --shadow-code: 0 24px 50px #00000066;
 
-  /* Type scale. Heading sizes here are the phone sizes; they step up in the :root block below */
-  --text-display: 2.5rem;
+  /*
+    Type scale, in px: multiples of 4 up to 40, of 8 above. Tailwind's own sizes are cleared
+    and only the on-scale ones kept (text-sm and text-lg are gone).
+    Heading sizes here are the phone sizes; they step up in the :root block below
+  */
+  --text-*: initial;
+  --text-xs: 12px;
+  --text-xs--line-height: calc(16 / 12);
+  --text-base: 16px;
+  --text-base--line-height: 1.5;
+  --text-xl: 20px;
+  --text-xl--line-height: 1.4;
+  --text-2xl: 24px;
+  --text-2xl--line-height: calc(32 / 24);
+
+  --text-display: 40px;
   --text-display--line-height: 1.02;
-  --text-display--letter-spacing: -0.048em;
+  --text-display--letter-spacing: -1.9px;
   --text-display--font-weight: 600;
 
-  --text-stat: 3rem;
+  --text-stat: 48px;
   --text-stat--line-height: 1;
-  --text-stat--letter-spacing: -0.042em;
+  --text-stat--letter-spacing: -2px;
   --text-stat--font-weight: 700;
 
-  --text-hero: 2.25rem;
+  --text-hero: 36px;
   --text-hero--line-height: 1.08;
-  --text-hero--letter-spacing: -0.043em;
+  --text-hero--letter-spacing: -1.5px;
   --text-hero--font-weight: 600;
 
-  --text-chapter: 2rem;
+  --text-chapter: 32px;
   --text-chapter--line-height: 1.1;
-  --text-chapter--letter-spacing: -0.031em;
+  --text-chapter--letter-spacing: -1px;
   --text-chapter--font-weight: 600;
 
   /* The caption on a project's stage ("A complete profile in under 60 seconds.") */
-  --text-feature: 1.5rem;
+  --text-feature: 24px;
   --text-feature--line-height: 1.15;
-  --text-feature--letter-spacing: -0.024em;
+  --text-feature--letter-spacing: -0.6px;
   --text-feature--font-weight: 500;
 
-  --text-about: 2rem;
+  --text-about: 32px;
   --text-about--line-height: 1.08;
-  --text-about--letter-spacing: -0.039em;
+  --text-about--letter-spacing: -1.2px;
   --text-about--font-weight: 600;
 
-  --text-section: 1.75rem;
+  --text-section: 28px;
   --text-section--line-height: 1.08;
-  --text-section--letter-spacing: -0.034em;
+  --text-section--letter-spacing: -1px;
   --text-section--font-weight: 600;
 
-  --text-title: 1.5rem;
-  --text-title--letter-spacing: -0.025em;
+  --text-title: 24px;
+  --text-title--letter-spacing: -0.6px;
   --text-title--font-weight: 600;
 
   /* Case studies: the hero title (and Dproz's red "10"), the impact number, and stat figures */
-  --text-case-title: 4.5rem;
+  --text-case-title: 56px;
   --text-case-title--line-height: 0.9;
-  --text-case-title--letter-spacing: -0.05em;
+  --text-case-title--letter-spacing: -2.8px;
   --text-case-title--font-weight: 600;
 
-  --text-impact: 6rem;
+  --text-impact: 96px;
   --text-impact--line-height: 0.82;
-  --text-impact--letter-spacing: -0.053em;
+  --text-impact--letter-spacing: -5.1px;
   --text-impact--font-weight: 600;
 
-  --text-figure: 2rem;
+  --text-figure: 32px;
   --text-figure--line-height: 1.2;
-  --text-figure--letter-spacing: -0.03em;
+  --text-figure--letter-spacing: -1px;
   --text-figure--font-weight: 600;
 
-  --text-lead: 1.25rem;
+  --text-lead: 20px;
   --text-lead--line-height: 1.55;
-  --text-body-lg: 1.125rem;
+  --text-body-lg: 20px;
   --text-body-lg--line-height: 1.65;
-  --text-body: 1rem;
+  --text-body: 16px;
   --text-body--line-height: 1.55;
 
   /* Layout: page margins (phone size here, 96px at 1440) and a 1248px content width */
-  --spacing-page: 1.25rem;
-  --spacing-nav: 1.25rem;
-  --container-content: 78rem;
+  --spacing-page: 20px;
+  --spacing-nav: 20px;
+  --container-content: 1248px;
 
   /* A case study's stacked chapter card: 780px at most, and never taller than the screen */
-  --spacing-deck-card: min(48.75rem, calc(100svh - 3rem));
+  --spacing-deck-card: min(780px, calc(100svh - 48px));
 
-  /* Corner radii. Every card, the About portrait included, is 16px; form inputs are 12px */
+  /*
+    Corner radii, multiples of 8. Every card, the About portrait included, and every form input is 16px.
+    Tailwind's own are cleared down to lg (8px), 2xl (16px), 3xl (24px) and 4xl (32px)
+  */
+  --radius-*: initial;
+  --radius-lg: 8px;
+  --radius-2xl: 16px;
+  --radius-3xl: 24px;
+  --radius-4xl: 32px;
   --radius-chip: 16px;
   --radius-card: 16px;
-  --radius-input: 12px;
+  --radius-input: 16px;
 
   /*
     Phone frame (@/components/Phone), as a share of the phone's width so it scales with it:
-    44px corners, 35px screen corners and a 9px bezel on the design's 280px phone
+    40px corners, 32px screen corners and a 9px bezel on the design's 280px phone
   */
-  --radius-device: 15.714cqw;
-  --radius-screen: 12.5cqw;
+  --radius-device: 14.286cqw;
+  --radius-screen: 11.429cqw;
   --spacing-bezel: 3.214cqw;
   --shadow-phone: 0 30px 60px #00000022;
   --shadow-phone-lg: 0 30px 60px #00000030;
 
   /*
     Browser window (@/components/Browser), as a share of the window's width so it scales with it:
-    14px corners, a 44px top bar with 18px side padding, 12px dots 8px apart and a 440×28 address bar
+    16px corners, a 44px top bar with 18px side padding, 12px dots 8px apart and a 440×28 address bar
     with 8px corners on the design's 700px window (its size on the tab screens at 1440)
   */
-  --radius-window: 2cqw;
+  --radius-window: 2.286cqw;
   --radius-window-address: 1.143cqw;
   --spacing-window-bar: 6.286cqw;
   --spacing-window-pad: 2.571cqw;
@@ -240,7 +260,8 @@
 
 /*
   Headings and page margins step up at each breakpoint instead of scaling with the viewport,
-  so every size stays on the scale. 2xl is the design at 1440px. Sizes in px:
+  so every size stays on the scale. 2xl is the design at 1440px. Sizes in px, and each
+  heading's letter spacing steps up with its size:
 
                  phone   md   lg   xl  2xl
   page margin       20   48   64   80   96
@@ -252,53 +273,77 @@
   about             32   32   36   40   48
   section           28   32   32   36   40
   feature           24   28   28   28   32
-  case-title        72   96  120  144  176
+  case-title        56   96  120  120  120
   impact            96  160  200  200  296
 */
 :root {
   @variant md {
-    --spacing-page: 3rem;
-    --spacing-nav: 2rem;
-    --text-display: 3rem;
-    --text-hero: 2.5rem;
-    --text-chapter: 2.25rem;
-    --text-section: 2rem;
-    --text-feature: 1.75rem;
-    --text-case-title: 6rem;
-    --text-impact: 10rem;
+    --spacing-page: 48px;
+    --spacing-nav: 32px;
+    --text-display: 48px;
+    --text-display--letter-spacing: -2.3px;
+    --text-hero: 40px;
+    --text-hero--letter-spacing: -1.7px;
+    --text-chapter: 36px;
+    --text-chapter--letter-spacing: -1.1px;
+    --text-section: 32px;
+    --text-section--letter-spacing: -1.1px;
+    --text-feature: 28px;
+    --text-feature--letter-spacing: -0.7px;
+    --text-case-title: 96px;
+    --text-case-title--letter-spacing: -4.8px;
+    --text-impact: 160px;
+    --text-impact--letter-spacing: -8.5px;
   }
   @variant lg {
-    --spacing-page: 4rem;
-    --spacing-nav: 2.5rem;
-    --text-display: 3.5rem;
-    --text-stat: 3.5rem;
-    --text-hero: 3rem;
-    --text-chapter: 2.5rem;
-    --text-about: 2.25rem;
-    --text-case-title: 7.5rem;
-    --text-impact: 12.5rem;
+    --spacing-page: 64px;
+    --spacing-nav: 40px;
+    --text-display: 56px;
+    --text-display--letter-spacing: -2.7px;
+    --text-stat: 56px;
+    --text-stat--letter-spacing: -2.4px;
+    --text-hero: 48px;
+    --text-hero--letter-spacing: -2.1px;
+    --text-chapter: 40px;
+    --text-chapter--letter-spacing: -1.2px;
+    --text-about: 36px;
+    --text-about--letter-spacing: -1.4px;
+    --text-case-title: 120px;
+    --text-case-title--letter-spacing: -6px;
+    --text-impact: 200px;
+    --text-impact--letter-spacing: -10.6px;
   }
   @variant xl {
-    --spacing-page: 5rem;
-    --spacing-nav: 3rem;
-    --text-display: 4.5rem;
-    --text-stat: 4rem;
-    --text-about: 2.5rem;
-    --text-section: 2.25rem;
-    --text-case-title: 9rem;
+    --spacing-page: 80px;
+    --spacing-nav: 48px;
+    --text-display: 72px;
+    --text-display--letter-spacing: -3.5px;
+    --text-stat: 64px;
+    --text-stat--letter-spacing: -2.7px;
+    --text-about: 40px;
+    --text-about--letter-spacing: -1.6px;
+    --text-section: 36px;
+    --text-section--letter-spacing: -1.2px;
   }
   @variant 2xl {
-    --spacing-page: 6rem;
-    --spacing-nav: 3.5rem;
-    --text-display: 5rem;
-    --text-stat: 4.5rem;
-    --text-hero: 3.5rem;
-    --text-chapter: 3rem;
-    --text-about: 3rem;
-    --text-section: 2.5rem;
-    --text-feature: 2rem;
-    --text-case-title: 11rem;
-    --text-impact: 18.5rem;
+    --spacing-page: 96px;
+    --spacing-nav: 56px;
+    --text-display: 80px;
+    --text-display--letter-spacing: -3.8px;
+    --text-stat: 72px;
+    --text-stat--letter-spacing: -3px;
+    --text-hero: 56px;
+    --text-hero--letter-spacing: -2.4px;
+    --text-chapter: 48px;
+    --text-chapter--letter-spacing: -1.5px;
+    --text-about: 48px;
+    --text-about--letter-spacing: -1.9px;
+    --text-section: 40px;
+    --text-section--letter-spacing: -1.4px;
+    --text-feature: 32px;
+    --text-feature--letter-spacing: -0.8px;
+    --text-impact: 296px;
+    --text-impact--letter-spacing: -15.7px;
   }
 }
 
@@ -324,7 +369,7 @@
   }
 }
 
-/* shadcn/ui: exposes the variables in :root below as Tailwind classes (bg-primary, text-muted-foreground, rounded-lg…) */
+/* shadcn/ui: exposes the variables in :root below as Tailwind classes (bg-primary, text-muted-foreground…) */
 @theme inline {
   --font-heading: var(--font-display);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -358,13 +403,6 @@
   --color-card: var(--card);
   --color-foreground: var(--foreground);
   --color-background: var(--background);
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
 /* shadcn/ui theme, mapped onto the design's tokens. Borders, inputs, destructive, charts and sidebar keep shadcn's neutrals */
@@ -392,7 +430,6 @@
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);

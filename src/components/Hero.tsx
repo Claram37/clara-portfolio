@@ -8,7 +8,7 @@ import safariScreen from "@/assets/hero/safari-screen.png";
 const Hero = () => {
   return (
     <section className="flex flex-col items-center gap-6 overflow-hidden px-page pt-20 text-center">
-      <p className="inline-flex items-center gap-2 rounded-full bg-pill px-4 py-2 text-sm leading-4.5 font-medium">
+      <p className="inline-flex items-center gap-2 rounded-full bg-pill px-4 py-2 text-base leading-4.5 font-medium">
         <span
           className="size-2 shrink-0 rounded-full bg-success"
           aria-hidden="true"

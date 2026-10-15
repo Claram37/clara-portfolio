@@ -25,7 +25,7 @@ const CodeCard = ({ project }: CodeCardProps) => {
           {project.stack.map((tool) => (
             <li
               key={tool}
-              className="rounded-full border border-code-chip-line bg-code-chip px-3 py-1 text-sm font-medium text-code-chip-text"
+              className="rounded-full border border-code-chip-line bg-code-chip px-3 py-1 text-xs font-medium text-code-chip-text"
             >
               {tool}
             </li>

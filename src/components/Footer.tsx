@@ -5,7 +5,7 @@ const stack = ["React", "TypeScript", "Tailwind CSS"];
 const Footer = () => {
   return (
     <footer className="px-page pb-10">
-      <div className="mx-auto flex max-w-content flex-wrap items-center justify-between gap-x-8 gap-y-4 border-t pt-6 text-sm text-muted-foreground">
+      <div className="mx-auto flex max-w-content flex-wrap items-center justify-between gap-x-8 gap-y-4 border-t pt-6 text-xs text-muted-foreground">
         <p suppressHydrationWarning>
           Designed and built by {site.name} · © {new Date().getFullYear()}
         </p>

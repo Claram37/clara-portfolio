@@ -27,7 +27,7 @@ const ProjectTab = ({ project, index, onFilled }: ProjectTabProps) => {
 
       <span
         className={cn(
-          "relative flex size-6 shrink-0 items-center justify-center rounded-sm text-paper",
+          "relative flex size-6 shrink-0 items-center justify-center rounded-lg text-paper",
           tile,
         )}
       >
@@ -35,7 +35,7 @@ const ProjectTab = ({ project, index, onFilled }: ProjectTabProps) => {
       </span>
       <span className="relative flex flex-col">
         {project.name}
-        <span className="text-sm font-normal">{project.kind}</span>
+        <span className="text-xs font-normal">{project.kind}</span>
       </span>
     </TabsTrigger>
   );

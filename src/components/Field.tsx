@@ -25,7 +25,7 @@ const Field = ({
 
   return (
     <div className="flex flex-col gap-2">
-      <label htmlFor={id} className="text-sm font-semibold">
+      <label htmlFor={id} className="text-base font-semibold">
         {label}
       </label>
       {multiline ? (

@@ -9,7 +9,7 @@ const ErrorBoundary = ({ error }: ErrorBoundaryProps) => {
     <main>
       <MessagePage title="Something went wrong">
         {import.meta.env.DEV && error instanceof Error && (
-          <pre className="max-w-full overflow-x-auto text-left text-sm text-muted-foreground">
+          <pre className="max-w-full overflow-x-auto text-left text-xs text-muted-foreground">
             {error.stack}
           </pre>
         )}

@@ -11,7 +11,7 @@ const variants = {
 
 const sizes = {
   md: "px-6 py-4 text-base leading-5 max-sm:px-5", // button
-  sm: "px-4 py-2 text-sm leading-5", // contact pill
+  sm: "px-4 py-2 text-base leading-5", // contact pill
 };
 
 interface ButtonProps {

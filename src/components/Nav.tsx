@@ -19,7 +19,7 @@ const Nav = () => {
       >
         <Link
           to="/"
-          className="font-display text-lg font-semibold whitespace-nowrap"
+          className="font-display text-xl font-semibold whitespace-nowrap"
         >
           {site.name}
         </Link>
