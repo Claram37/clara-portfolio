@@ -381,6 +381,10 @@
   html {
     @apply font-sans;
   }
+  /* A page with a stacking deck settles on one card at a time (Deck's snap markers) */
+  html:has([data-snap]) {
+    @apply xl:snap-y xl:snap-proximity;
+  }
 }
 
 /* shadcn/ui: exposes the variables in :root below as Tailwind classes (bg-primary, text-muted-foreground…) */
