@@ -84,6 +84,19 @@
   --color-shopxray-glow: #5a9a70aa;
   --shadow-shopxray: 0 30px 70px #0b2a1866;
 
+  /* ShopXray case study (portfolio-pages.pen → Idea 09 · Paper to Pixels): the cream page and stage, then the step rail */
+  --color-daftari: #faf8f3;
+  --color-daftari-stage: #efebe2;
+  --color-daftari-rule: #e3dfd4;
+  --color-rail-done: #9db8a6;
+  --color-rail-done-text: #6e7a72;
+  --color-rail-todo: #d5d2ca;
+  --color-rail-todo-text: #a3a19a;
+  --shadow-paper-note: 0 10px 24px #5a4a2a22;
+  --shadow-visit-card: 0 12px 28px #1a1a1a22;
+  --shadow-modal: 0 24px 64px #1a1a1a1c;
+  --tracking-eyebrow: 1.4px;
+
   /* Safari Spirits: chapter 03 in v1, replaced by ShopXray on the homepage. Not used yet */
   --color-safari: #f5ede0;
   --color-safari-accent: #8a6a45;
@@ -180,6 +193,12 @@
   --text-figure--letter-spacing: -1px;
   --text-figure--font-weight: 600;
 
+  /* A ShopXray step's caption headline ("A blank page becomes a shop.") */
+  --text-step: 24px;
+  --text-step--line-height: 1.2;
+  --text-step--letter-spacing: -0.7px;
+  --text-step--font-weight: 600;
+
   --text-lead: 20px;
   --text-lead--line-height: 1.55;
   --text-body-lg: 20px;
@@ -194,6 +213,9 @@
 
   /* A case study's stacked chapter card: 680px at most, and never taller than the screen */
   --spacing-deck-card: min(680px, calc(100svh - 48px));
+
+  /* ShopXray's pinned 3:2 stage: 900px at most, and never taller than the screen less 96px */
+  --container-paper-stage: min(900px, calc((100svh - 96px) * 3 / 2));
 
   /*
     Corner radii, multiples of 8. Every card, the About portrait included, and every form input is 16px.
@@ -285,6 +307,7 @@
   feature           24   28   28   28   32
   case-title        56   96  120  120  120
   impact            72   96  120  144  160
+  step              24   28   28   28   28
 */
 :root {
   @variant md {
@@ -304,6 +327,8 @@
     --text-case-title--letter-spacing: -4.8px;
     --text-impact: 96px;
     --text-impact--letter-spacing: -5.1px;
+    --text-step: 28px;
+    --text-step--letter-spacing: -0.8px;
   }
   @variant lg {
     --spacing-page: 64px;
