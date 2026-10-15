@@ -18,6 +18,7 @@ const fitCheck: Project = {
       "bg-fitcheck bg-radial-[at_40%_30%] from-fitcheck-glow to-transparent",
     caption: "text-ink",
     link: "text-muted-foreground",
+    dark: false,
   },
   visual: (
     <>

@@ -7,6 +7,7 @@ export interface ProjectTheme {
   stage: string;
   caption: string;
   link: string;
+  dark: boolean;
 }
 
 export interface Project {
@@ -17,6 +18,7 @@ export interface Project {
   caseStudy: string;
   theme: ProjectTheme;
   visual: ReactNode;
+  peek?: ReactNode;
 }
 
 export interface MoreProject {

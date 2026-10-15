@@ -5,6 +5,9 @@ import openVisitsDesktop from "@/assets/shopxray/open-visits-desktop.png";
 import visitCardZoom from "@/assets/shopxray/visit-card-zoom.png";
 import type { Project } from "./types";
 
+const openVisitsAlt =
+  "ShopXray's Today page with the day's revenue and its open visits, each listing services and a total";
+
 const shopXray: Project = {
   name: "ShopXray",
   kind: "Shop management",
@@ -19,13 +22,14 @@ const shopXray: Project = {
       "bg-shopxray bg-radial-[at_28%_35%] from-shopxray-glow to-transparent",
     caption: "text-paper",
     link: "text-shopxray-label",
+    dark: true,
   },
   visual: (
     <>
       <Browser
         url="mkatabahq.com/shopxray"
         src={openVisitsDesktop}
-        alt="ShopXray's Today page with the day's revenue and its open visits, each listing services and a total"
+        alt={openVisitsAlt}
         shadow="shadow-shopxray"
         className="absolute top-[7.5%] left-[-4.01%] w-[64.1%]"
       />
@@ -36,6 +40,15 @@ const shopXray: Project = {
         className="absolute top-[8.75%] left-[57.69%] w-[32.05%]"
       />
     </>
+  ),
+  peek: (
+    <Browser
+      url="mkatabahq.com/shopxray"
+      src={openVisitsDesktop}
+      alt={openVisitsAlt}
+      shadow="shadow-shopxray"
+      className="absolute top-[8%] left-[6.67%] w-[116.67%]"
+    />
   ),
 };
 

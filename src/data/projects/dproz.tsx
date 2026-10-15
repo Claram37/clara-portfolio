@@ -17,6 +17,7 @@ const dproz: Project = {
     stage: "bg-dproz bg-radial-[at_28%_35%] from-dproz-glow to-transparent",
     caption: "text-paper",
     link: "text-dproz-label",
+    dark: true,
   },
   visual: (
     <>
