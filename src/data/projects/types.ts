@@ -53,10 +53,22 @@ export interface Chapter {
   panel?: string;
   visual?: ReactNode;
 }
-
-export interface CaseStudy {
+export interface CaseStudyIntro {
   project: Project;
   intro: string;
   details: { label: string; value: string }[];
+}
+// the extend merges both into one interface. So CaseStudy has CaseStudyIntro declarations
+export interface CaseStudy extends CaseStudyIntro {
   chapters: Chapter[];
+}
+export interface Step {
+  label: string;
+  eyebrow: string;
+  headline: string;
+  body: string;
+  scene: ReactNode;
+}
+export interface StepCaseStudy extends CaseStudyIntro {
+  steps: Step[];
 }
