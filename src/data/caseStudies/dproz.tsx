@@ -12,7 +12,6 @@ const dprozCaseStudy: CaseStudy = {
   details: [
     { label: "Role", value: "UI/UX Designer" },
     { label: "Company", value: dproz.name },
-    { label: "Timeline", value: "2024 – 2026" },
     { label: "Platform", value: "Mobile app and web" },
     {
       label: "Scope",

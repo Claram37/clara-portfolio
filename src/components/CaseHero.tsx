@@ -27,7 +27,7 @@ const CaseHero = ({ caseStudy }: CaseHeroProps) => {
           </p>
         </div>
 
-        <dl className="grid grid-cols-2 gap-x-8 gap-y-6 pt-8 md:grid-cols-3 lg:grid-cols-5 lg:pt-16">
+        <dl className="grid grid-cols-2 gap-x-8 gap-y-6 pt-8 md:grid-cols-3 lg:grid-cols-4 lg:pt-16">
           {details.map(({ label, value }) => (
             <div key={label} className="flex flex-col gap-2 border-t pt-4">
               <dt className="text-xs text-muted-foreground">{label}</dt>
