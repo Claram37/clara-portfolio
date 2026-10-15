@@ -1,8 +1,8 @@
 import { useId, type FormEvent } from "react";
 import { Mail, MapPin } from "lucide-react";
-import Button from "@/components/Button";
-import Field from "@/components/Field";
-import SectionHead from "@/components/SectionHead";
+import Button from "@/components/shared/Button";
+import Field from "@/components/shared/Field";
+import SectionHead from "@/components/shared/SectionHead";
 import GitHub from "@/components/icons/GitHub";
 import LinkedIn from "@/components/icons/LinkedIn";
 import site from "@/data/site";

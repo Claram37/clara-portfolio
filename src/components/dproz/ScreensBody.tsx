@@ -1,4 +1,4 @@
-import Phone from "@/components/Phone";
+import Phone from "@/components/mockups/Phone";
 import type { Chapter } from "@/data/projects/types";
 import { cn } from "@/lib/utils";
 

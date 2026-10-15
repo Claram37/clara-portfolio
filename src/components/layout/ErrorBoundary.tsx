@@ -1,4 +1,4 @@
-import MessagePage from "@/components/MessagePage";
+import MessagePage from "@/components/layout/MessagePage";
 
 type ErrorBoundaryProps = {
   error: unknown;

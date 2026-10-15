@@ -1,4 +1,4 @@
-import GameHubVisual from "@/components/GameHubVisual";
+import GameHubVisual from "@/components/home/GameHubVisual";
 import type { CodeProject } from "./types";
 import portfolioVisual from "@/assets/portfolio/visual.png";
 import site from "../site";

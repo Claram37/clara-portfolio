@@ -1,6 +1,6 @@
 import { Store } from "lucide-react";
-import Browser from "@/components/Browser";
-import Zoom from "@/components/Zoom";
+import Browser from "@/components/mockups/Browser";
+import Zoom from "@/components/mockups/Zoom";
 import openVisitsDesktop from "@/assets/shopxray/open-visits-desktop.png";
 import visitCardZoom from "@/assets/shopxray/visit-card-zoom.png";
 import type { Project } from "./types";

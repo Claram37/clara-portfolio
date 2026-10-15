@@ -1,6 +1,6 @@
 import { BriefcaseBusiness } from "lucide-react";
-import Browser from "@/components/Browser";
-import Phone from "@/components/Phone";
+import Browser from "@/components/mockups/Browser";
+import Phone from "@/components/mockups/Phone";
 import homepageDesktop from "@/assets/dproz/homepage-desktop.png";
 import homeFeedPhone from "@/assets/hero/dproz-home-feed.png";
 import type { Project } from "./types";

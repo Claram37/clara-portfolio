@@ -209,7 +209,7 @@
   --radius-input: 16px;
 
   /*
-    Phone frame (@/components/Phone), as a share of the phone's width so it scales with it:
+    Phone frame (@/components/mockups/Phone), as a share of the phone's width so it scales with it:
     40px corners, 32px screen corners and a 9px bezel on the design's 280px phone
   */
   --radius-device: 14.286cqw;
@@ -219,7 +219,7 @@
   --shadow-phone-lg: 0 30px 60px #00000030;
 
   /*
-    Browser window (@/components/Browser), as a share of the window's width so it scales with it:
+    Browser window (@/components/mockups/Browser), as a share of the window's width so it scales with it:
     16px corners, a 44px top bar with 18px side padding, 12px dots 8px apart and a 440×28 address bar
     with 8px corners on the design's 700px window (its size on the tab screens at 1440)
   */

@@ -1,6 +1,6 @@
 import { FileCheck } from "lucide-react";
-import Phone from "@/components/Phone";
-import Zoom from "@/components/Zoom";
+import Phone from "@/components/mockups/Phone";
+import Zoom from "@/components/mockups/Zoom";
 import nextStepsPhone from "@/assets/fitcheck/next-steps-phone.png";
 import nextStepsZoom from "@/assets/fitcheck/next-steps-zoom.png";
 import type { Project } from "./types";

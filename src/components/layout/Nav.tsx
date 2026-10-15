@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { Download } from "lucide-react";
-import Button from "@/components/Button";
+import Button from "@/components/shared/Button";
 import site from "@/data/site";
 import { cn } from "@/lib/utils";
 

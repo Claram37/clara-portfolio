@@ -1,7 +1,7 @@
 import { useId } from "react";
 import ProjectCard from "./ProjectCard";
 import moreWork from "@/data/projects/moreWork";
-import SectionHead from "./SectionHead";
+import SectionHead from "@/components/shared/SectionHead";
 
 const MoreWork = () => {
   const headingId = useId();

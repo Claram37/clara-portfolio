@@ -1,5 +1,5 @@
 import type { Route } from './+types/not-found';
-import MessagePage from '@/components/MessagePage';
+import MessagePage from '@/components/layout/MessagePage';
 import site from '@/data/site';
 import { pageMeta } from '@/lib/meta';
 

@@ -1,8 +1,8 @@
 import type { Route } from "./+types/dproz";
-import CaseHero from "@/components/CaseHero";
-import Contact from "@/components/Contact";
-import Deck from "@/components/Deck";
-import NextProject from "@/components/NextProject";
+import CaseHero from "@/components/dproz/CaseHero";
+import Contact from "@/components/shared/Contact";
+import Deck from "@/components/dproz/Deck";
+import NextProject from "@/components/shared/NextProject";
 import dprozCaseStudy from "@/data/caseStudies/dproz";
 import site from "@/data/site";
 import { pageMeta } from "@/lib/meta";

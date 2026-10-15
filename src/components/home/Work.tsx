@@ -5,7 +5,7 @@ import { Tabs, TabsContent, TabsList } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 import projects from "@/data/projects";
 import ProjectTab from "./ProjectTab";
-import SectionHead from "./SectionHead";
+import SectionHead from "@/components/shared/SectionHead";
 
 const Work = () => {
   const headingId = useId();

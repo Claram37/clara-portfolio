@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import projects from "@/data/projects";
 import type { Project } from "@/data/projects/types";
 import { cn } from "@/lib/utils";
-import Button from "./Button";
+import Button from "@/components/shared/Button";
 
 interface NextProjectProps {
   project: Project;

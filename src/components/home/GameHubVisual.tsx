@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Browser from "./Browser";
+import Browser from "@/components/mockups/Browser";
 import { cn } from "@/lib/utils";
 import homeDark from "@/assets/game-hub/home-dark.jpg";
 import homeLight from "@/assets/game-hub/home-light.jpg";

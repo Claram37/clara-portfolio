@@ -4,7 +4,7 @@ import resumeConfidencePhone from "@/assets/resume-feedback/resume-confidence-ph
 import prideCover from "@/assets/pride/cover.jpg";
 import pastriesCover from "@/assets/pastries/cover.jpg";
 import meditationCover from "@/assets/meditation/cover.jpg";
-import Phone from "@/components/Phone";
+import Phone from "@/components/mockups/Phone";
 import type { MoreProject } from "./types";
 
 const moreWork: MoreProject[] = [

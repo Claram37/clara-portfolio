@@ -1,5 +1,5 @@
-import Button from "@/components/Button";
-import Phone from "@/components/Phone";
+import Button from "@/components/shared/Button";
+import Phone from "@/components/mockups/Phone";
 import site from "@/data/site";
 import dprozScreen from "@/assets/hero/dproz-home-feed.png";
 import fitcheckScreen from "@/assets/hero/fitcheck-overview.png";
