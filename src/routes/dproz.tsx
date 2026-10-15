@@ -1,4 +1,5 @@
 import type { Route } from "./+types/dproz";
+import CaseHero from "@/components/CaseHero";
 import dprozCaseStudy from "@/data/caseStudies/dproz";
 import site from "@/data/site";
 import { pageMeta } from "@/lib/meta";
@@ -12,7 +13,7 @@ export const meta: Route.MetaFunction = () =>
   });
 
 const DprozCaseStudy = () => {
-  return <h1 className="px-page">{project.name}</h1>;
+  return <CaseHero caseStudy={dprozCaseStudy} />;
 };
 
 export default DprozCaseStudy;

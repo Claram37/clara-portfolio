@@ -54,6 +54,6 @@ export interface Chapter {
 export interface CaseStudy {
   project: Project;
   intro: string;
-  details: string[];
+  details: { label: string; value: string }[];
   chapters: Chapter[];
 }

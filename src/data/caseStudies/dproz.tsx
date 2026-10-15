@@ -10,11 +10,14 @@ const dprozCaseStudy: CaseStudy = {
   intro:
     "Making Tanzania's job market visible, then getting job seekers through the door.",
   details: [
-    "UI/UX Designer",
-    dproz.name,
-    "2024 – 2026",
-    "Mobile app and web",
-    "Onboarding, profile, homepage, recommendations",
+    { label: "Role", value: "UI/UX Designer" },
+    { label: "Company", value: dproz.name },
+    { label: "Timeline", value: "2024 – 2026" },
+    { label: "Platform", value: "Mobile app and web" },
+    {
+      label: "Scope",
+      value: "Onboarding, profile, homepage, job recommendations",
+    },
   ],
   chapters: [
     {
