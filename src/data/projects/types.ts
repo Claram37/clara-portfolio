@@ -44,10 +44,11 @@ export interface Chapter {
   headline: string;
   body?: string;
   stats?: { value: string; label: string }[];
-  checklist?: { title: string; items: string[] };
+  checklist?: { items: string[] };
   highlight?: string;
   figure?: string;
   screens?: { src: string; alt: string; title: string; caption: string }[];
+  panel?: string;
   visual?: ReactNode;
 }
 

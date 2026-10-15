@@ -63,6 +63,8 @@
   --color-on-dark-label: #dce0ea;
   --color-rule: #c4c5ca;
   --color-alert: #e5484d;
+  --shadow-chapter-window: 0 20px 48px #0a1a5c26;
+  --shadow-chapter-phone: 0 12px 32px #0a1a5c33;
 
   /* Project 02 · Dproz Fitcheck. Its tab screens are light, with ink captions and muted-foreground links */
   --color-fitcheck: #f2efea;

@@ -17,7 +17,7 @@ const DprozCaseStudy = () => {
   return (
     <>
       <CaseHero caseStudy={dprozCaseStudy} />
-      <div className="flex flex-col gap-7 px-4 pb-35 md:px-6 xl:px-12">
+      <div className="mx-auto flex max-w-360 flex-col gap-7 px-4 pb-35 md:px-6 xl:px-12">
         {chapters.map((chapter, index) => (
           <ChapterCard
             key={chapter.label}

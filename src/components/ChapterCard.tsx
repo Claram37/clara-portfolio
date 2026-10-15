@@ -1,22 +1,21 @@
 import { useId } from "react";
 import type { Chapter } from "@/data/projects/types";
 import { cn } from "@/lib/utils";
+import SplitBody from "./SplitBody";
 
 const light = {
   text: "text-ink",
-  number: "text-dproz",
+  accent: "text-dproz",
   label: "text-ink-muted",
-  rule: "bg-rule",
-  counter: "text-code-muted",
+  counter: "text-muted-foreground",
   body: "text-ink-muted",
 };
 
 const dark = {
   text: "text-paper",
-  number: "text-paper",
+  accent: "text-paper",
   label: "text-on-dark-label",
-  rule: "bg-paper/40",
-  counter: "text-paper/50",
+  counter: "text-paper/70",
   body: "text-on-dark",
 };
 
@@ -34,34 +33,38 @@ interface ChapterCardProps {
   total: number;
 }
 
+const pad = (n: number) => String(n).padStart(2, "0");
+
 const ChapterCard = ({ chapter, index, total }: ChapterCardProps) => {
   const labelId = useId();
   const tone = tones[chapter.tone];
-  const number = String(index + 1).padStart(2, "0");
 
   return (
     <section
       aria-labelledby={labelId}
       className={cn(
-        "flex flex-col gap-8 rounded-card p-6 md:p-10 xl:gap-11 xl:p-14",
+        "flex flex-col gap-8 rounded-card p-6 md:p-10 xl:p-14",
         tone.card,
         tone.text,
       )}
     >
       <div className="flex items-center justify-between gap-6">
-        <p className="flex items-center gap-3 text-base">
-          <span className={cn("font-semibold", tone.number)}>{number}</span>
-          <span className={cn("h-px w-5", tone.rule)} aria-hidden="true"></span>
-          <span id={labelId} className={cn("font-medium", tone.label)}>
-            {chapter.label}
-          </span>
+        <p id={labelId} className={cn("text-base font-medium", tone.label)}>
+          {chapter.label}
         </p>
-        <p className={cn("text-xs", tone.counter)} aria-hidden="true">
-          {number} / {String(total).padStart(2, "0")}
+        <p
+          className={cn("text-xs tabular-nums", tone.counter)}
+          aria-hidden="true"
+        >
+          {pad(index + 1)} / {pad(total)}
         </p>
       </div>
 
-      <h2 className="max-w-160 text-section">{chapter.headline}</h2>
+      {chapter.layout === "split" ? (
+        <SplitBody chapter={chapter} tone={tone} reverse={index % 2 === 1} />
+      ) : (
+        <h2 className="max-w-160 text-section">{chapter.headline}</h2>
+      )}
     </section>
   );
 };
