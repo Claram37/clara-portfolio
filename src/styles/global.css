@@ -192,8 +192,8 @@
   --spacing-nav: 20px;
   --container-content: 1248px;
 
-  /* A case study's stacked chapter card: 780px at most, and never taller than the screen */
-  --spacing-deck-card: min(780px, calc(100svh - 48px));
+  /* A case study's stacked chapter card: 680px at most, and never taller than the screen */
+  --spacing-deck-card: min(680px, calc(100svh - 48px));
 
   /*
     Corner radii, multiples of 8. Every card, the About portrait included, and every form input is 16px.
@@ -253,6 +253,14 @@
 /* The keyboard focus outline on links, buttons and tabs */
 @utility focus-ring {
   @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring;
+}
+
+/* A stacked case-study card: shrinks, lifts and dims as the next card covers it (--cover from useStack) */
+@utility stack-card {
+  transform-origin: top;
+  scale: calc(1 - var(--cover, 0) * 0.04);
+  translate: 0 calc(var(--cover, 0) * -16px);
+  filter: brightness(calc(1 - var(--cover, 0) * 0.25));
 }
 
 /* On a dark section: white focus outlines */
