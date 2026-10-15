@@ -4,6 +4,6 @@ import { type RouteConfig, index, route } from "@react-router/dev/routes";
 export default [
   index("routes/home.tsx"),
   route("work/dproz", "routes/dproz.tsx"),
-  // Any URL that matches nothing above
+  route("work/shopxray", "routes/shopxray.tsx"),
   route("*", "routes/not-found.tsx"),
 ] satisfies RouteConfig;
