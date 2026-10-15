@@ -356,6 +356,8 @@
     --text-feature--letter-spacing: -0.8px;
     --text-impact: 160px;
     --text-impact--letter-spacing: -8.5px;
+    --text-case-title: 120px;
+    --text-case-title--letter-spacing: -8px;
   }
 }
 
