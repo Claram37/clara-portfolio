@@ -1,5 +1,6 @@
 import type { Route } from "./+types/dproz";
 import CaseHero from "@/components/CaseHero";
+import Contact from "@/components/Contact";
 import Deck from "@/components/Deck";
 import NextProject from "@/components/NextProject";
 import dprozCaseStudy from "@/data/caseStudies/dproz";
@@ -20,6 +21,7 @@ const DprozCaseStudy = () => {
       <CaseHero caseStudy={dprozCaseStudy} />
       <Deck chapters={chapters} />
       <NextProject project={project} />
+      <Contact />
     </>
   );
 };
