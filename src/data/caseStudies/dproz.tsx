@@ -121,7 +121,7 @@ const dprozCaseStudy: CaseStudy = {
           src={jobsDesktop}
           alt="Dproz jobs page listing companies that are hiring, with jobs grouped by category"
           shadow="shadow-chapter-window"
-          className="absolute top-[9.9%] left-[8.47%] w-[90.4%]"
+          className="absolute top-1/2 left-1/2 w-[90.4%] -translate-x-1/2 -translate-y-1/2"
         />
       ),
     },
