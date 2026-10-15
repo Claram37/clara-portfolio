@@ -13,7 +13,7 @@ const shopXray: Project = {
   kind: "Shop management",
   icon: Store,
   caption:
-    "A digital daftari to records visits and reconcile cash in real time.",
+    "A digital daftari to record visits and reconcile cash in real time.",
   caseStudy: "/work/shopxray",
   theme: {
     tile: "bg-tab-green",
