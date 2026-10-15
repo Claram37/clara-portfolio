@@ -1,7 +1,10 @@
 import { useId } from "react";
 import type { Chapter } from "@/data/projects/types";
 import { cn } from "@/lib/utils";
+import ImpactBody from "./ImpactBody";
+import ScreensBody from "./ScreensBody";
 import SplitBody from "./SplitBody";
+import StatementBody from "./StatementBody";
 
 const light = {
   text: "text-ink",
@@ -60,10 +63,17 @@ const ChapterCard = ({ chapter, index, total }: ChapterCardProps) => {
         </p>
       </div>
 
-      {chapter.layout === "split" ? (
+      {chapter.layout === "split" && (
         <SplitBody chapter={chapter} tone={tone} reverse={index % 2 === 1} />
-      ) : (
-        <h2 className="max-w-160 text-section">{chapter.headline}</h2>
+      )}
+      {chapter.layout === "screens" && (
+        <ScreensBody chapter={chapter} tone={tone} />
+      )}
+      {chapter.layout === "impact" && (
+        <ImpactBody chapter={chapter} tone={tone} />
+      )}
+      {chapter.layout === "statement" && (
+        <StatementBody chapter={chapter} tone={tone} />
       )}
     </section>
   );

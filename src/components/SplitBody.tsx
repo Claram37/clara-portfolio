@@ -42,22 +42,17 @@ const SplitBody = ({ chapter, tone, reverse = false }: SplitBodyProps) => {
         )}
 
         {checklist && (
-          <div className="pt-3">
-            <p className="text-xs font-medium text-muted-foreground">
-              {checklist.title}
-            </p>
-            <ul>
-              {checklist.items.map((item) => (
-                <li key={item} className="flex gap-3 border-b py-3 text-base">
-                  <Check
-                    className={cn("mt-1 size-4 shrink-0", tone.accent)}
-                    aria-hidden="true"
-                  />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <ul className="pt-3">
+            {checklist.items.map((item) => (
+              <li key={item} className="flex gap-3 border-b py-3 text-base">
+                <Check
+                  className={cn("mt-1 size-4 shrink-0", tone.accent)}
+                  aria-hidden="true"
+                />
+                {item}
+              </li>
+            ))}
+          </ul>
         )}
 
         {highlight && (

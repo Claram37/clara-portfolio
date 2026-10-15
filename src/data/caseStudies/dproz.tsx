@@ -181,7 +181,7 @@ const dprozCaseStudy: CaseStudy = {
       ),
     },
     {
-      label: "What I changed",
+      label: "What we changed",
       tone: "tint",
       layout: "split",
       headline: "A lighter path on each platform.",
@@ -261,11 +261,11 @@ const dprozCaseStudy: CaseStudy = {
     },
     {
       label: "What I learned",
-      tone: "ink",
+      tone: "tint",
       layout: "statement",
       headline:
         "The smartest algorithm can't help someone who leaves before it gets to know them.",
-      body: "This project taught me that removing friction at the very start can matter more than any feature added later.",
+      body: "Removing friction at the very start can matter more than any feature added later.",
     },
   ],
 };
