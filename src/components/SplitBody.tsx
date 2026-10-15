@@ -15,7 +15,7 @@ const SplitBody = ({ chapter, tone, reverse = false }: SplitBodyProps) => {
   return (
     <div
       className={cn(
-        "flex flex-col gap-8 xl:gap-16",
+        "flex flex-col gap-8 xl:min-h-0 xl:flex-1 xl:gap-16",
         reverse ? "xl:flex-row-reverse" : "xl:flex-row",
       )}
     >
@@ -64,7 +64,7 @@ const SplitBody = ({ chapter, tone, reverse = false }: SplitBodyProps) => {
 
       <div
         className={cn(
-          "relative aspect-708/606 overflow-hidden rounded-card xl:w-150 xl:shrink-0",
+          "relative aspect-708/606 overflow-hidden rounded-card xl:aspect-auto xl:w-150 xl:shrink-0",
           panel ?? tone.panel,
         )}
       >

@@ -34,11 +34,17 @@ interface ChapterCardProps {
   chapter: Chapter;
   index: number;
   total: number;
+  stacked?: boolean;
 }
 
 const pad = (n: number) => String(n).padStart(2, "0");
 
-const ChapterCard = ({ chapter, index, total }: ChapterCardProps) => {
+const ChapterCard = ({
+  chapter,
+  index,
+  total,
+  stacked = false,
+}: ChapterCardProps) => {
   const labelId = useId();
   const tone = tones[chapter.tone];
 
@@ -47,6 +53,8 @@ const ChapterCard = ({ chapter, index, total }: ChapterCardProps) => {
       aria-labelledby={labelId}
       className={cn(
         "flex flex-col gap-8 rounded-card p-6 md:p-10 xl:p-14",
+        stacked &&
+          "xl:sticky xl:top-6 xl:h-deck-card xl:motion-safe:stack-card",
         tone.card,
         tone.text,
       )}

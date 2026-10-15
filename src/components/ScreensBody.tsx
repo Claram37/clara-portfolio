@@ -11,15 +11,15 @@ const ScreensBody = ({ chapter, tone }: ScreensBodyProps) => {
   const { headline, screens } = chapter;
 
   return (
-    <div className="flex flex-col gap-7">
+    <div className="flex flex-col gap-7 xl:min-h-0 xl:flex-1">
       <h2 className="max-w-160 text-section">{headline}</h2>
 
-      <ul className="grid grid-cols-2 gap-x-5 gap-y-8 lg:grid-cols-4">
+      <ul className="grid grid-cols-2 gap-x-5 gap-y-8 lg:grid-cols-4 xl:min-h-0 xl:flex-1 xl:grid-rows-1">
         {screens?.map(({ src, alt, title, caption }) => (
-          <li key={title} className="flex flex-col gap-3">
+          <li key={title} className="flex flex-col gap-3 xl:min-h-0">
             <div
               className={cn(
-                "relative aspect-293/424 overflow-hidden rounded-card",
+                "relative aspect-293/424 overflow-hidden rounded-card xl:aspect-auto xl:min-h-0 xl:flex-1",
                 tone.panel,
               )}
             >
