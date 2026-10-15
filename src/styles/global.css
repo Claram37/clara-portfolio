@@ -164,7 +164,7 @@
   --text-title--letter-spacing: -0.6px;
   --text-title--font-weight: 600;
 
-  /* Case studies: the hero title (and Dproz's red "10"), the impact number, and stat figures */
+  /* Case studies: the hero title, the impact number (and Dproz's red "10"), and stat figures */
   --text-case-title: 56px;
   --text-case-title--line-height: 0.9;
   --text-case-title--letter-spacing: -2.8px;

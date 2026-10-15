@@ -174,7 +174,7 @@ const dprozCaseStudy: CaseStudy = {
             className="absolute top-[36.3%] left-[66.38%] flex flex-col gap-2"
             aria-hidden="true"
           >
-            <p className="text-case-title text-alert">10</p>
+            <p className="font-display text-impact text-alert">10</p>
             <p className="text-base text-on-dark">required questions</p>
           </div>
         </>
