@@ -16,6 +16,7 @@ import createAccountDesktop from "@/assets/shopxray/create-account-desktop.jpg";
 import Zoom from "@/components/mockups/Zoom";
 import { cn } from "@/lib/utils";
 import Browser from "@/components/mockups/Browser";
+import Arrows from "@/components/shopxray/Arrows";
 
 const visits = [
   {
@@ -80,6 +81,7 @@ const shopXrayCaseStudy: StepCaseStudy = {
             alt="A daftari page: Daftari jipya. Jina la duka: ___. Namba ya simu: ___ (New daftari. Shop name. Phone number.)"
             className="left-[4.44%] top-[28.33%] w-[36.67%]"
           />
+          <Arrows paths={["M380 300H404"]} />
           <Browser
             src={createAccountDesktop}
             alt="ShopXray's Create Your Account form, asking for a shop name, full name, phone number and email, beside a shop owner smiling at a tablet"
@@ -104,6 +106,15 @@ const shopXrayCaseStudy: StepCaseStudy = {
             alt="The same daftari, with its four visit lines highlighted"
             className="absolute left-[3.33%] top-[18.67%] w-[55.56%] morph-fade"
           />
+          <Arrows
+            paths={[
+              "M239 207L592 76",
+              "M239 228L632 204",
+              "M239 249L592 332",
+              "M239 269L632 460",
+            ]}
+          />
+
           {lines.map((top) => (
             <div
               key={top}
@@ -158,6 +169,7 @@ const shopXrayCaseStudy: StepCaseStudy = {
             alt="A daftari page headed Matumizi (expenses): hair supplies 12,000, tea for staff 6,000, car fuel 8,000"
             className="left-[4.44%] top-[28.33%] w-[35.56%]"
           />
+          <Arrows paths={["M372 300H452"]} />
           <Zoom
             src={recordExpense}
             shadow="shadow-modal"
@@ -179,6 +191,7 @@ const shopXrayCaseStudy: StepCaseStudy = {
             alt="A daftari page: Mapato (income) 140,000, Salio (balance) 114,000, and Droo (the cash drawer) 104,000, followed by two question marks"
             className="left-[4.44%] top-[31.67%] w-[36.67%]"
           />
+          <Arrows paths={["M384 300H506"]} />
           <Zoom
             src={daySummary}
             shadow="shadow-modal"
