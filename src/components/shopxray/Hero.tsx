@@ -10,7 +10,7 @@ const Hero = ({ caseStudy }: HeroProps) => {
       data-daftari
       className="px-page pt-12 pb-16 flex flex-col items-center gap-6 text-center"
     >
-      <p className="text-xs font-semibold uppercase tracking-eyebrow text-shopxray">
+      <p className="text-xs font-bold uppercase tracking-eyebrow text-shopxray">
         Case study · MkatabaHQ
       </p>
       <h1 className="text-case-title">{project.name}</h1>

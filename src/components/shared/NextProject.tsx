@@ -26,7 +26,10 @@ const NextProject = ({ project }: NextProjectProps) => {
       <div className="mx-auto flex max-w-content flex-col gap-12 lg:flex-row lg:items-end lg:justify-between">
         <div className="flex max-w-175 flex-col items-start gap-6 lg:pb-28">
           <p
-            className={cn("flex items-center gap-2 text-base font-medium", link)}
+            className={cn(
+              "flex items-center gap-2 text-base font-medium",
+              link,
+            )}
           >
             Next project
             <ArrowRight className="size-4" aria-hidden="true" />
