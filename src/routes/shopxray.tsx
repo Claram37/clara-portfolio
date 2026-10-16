@@ -1,13 +1,12 @@
-import type { Route } from "./+types/dproz";
+import type { Route } from "./+types/shopxray";
 import Contact from "@/components/shared/Contact";
 import NextProject from "@/components/shared/NextProject";
-import dprozCaseStudy from "@/data/caseStudies/dproz";
+import shopXrayCaseStudy from "@/data/caseStudies/shopXray";
 import site from "@/data/site";
 import { pageMeta } from "@/lib/meta";
-import shopXrayCaseStudy from "@/data/caseStudies/shopXray";
 import Hero from "@/components/shopxray/Hero";
 
-const { project, intro } = dprozCaseStudy;
+const { project, intro } = shopXrayCaseStudy;
 
 export const meta: Route.MetaFunction = () =>
   pageMeta({
@@ -15,7 +14,7 @@ export const meta: Route.MetaFunction = () =>
     description: intro,
   });
 
-const DprozCaseStudy = () => {
+const ShopXrayPage = () => {
   return (
     <>
       <Hero caseStudy={shopXrayCaseStudy} />
@@ -25,4 +24,4 @@ const DprozCaseStudy = () => {
   );
 };
 
-export default DprozCaseStudy;
+export default ShopXrayPage;

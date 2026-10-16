@@ -6,15 +6,18 @@ interface HeroProps {
 const Hero = ({ caseStudy }: HeroProps) => {
   const { project, intro, details } = caseStudy;
   return (
-    <section className="data-daftari px-page pt-12 pb-16 flex flex-col items-center gap-6 text-center">
+    <section
+      data-daftari
+      className="px-page pt-12 pb-16 flex flex-col items-center gap-6 text-center"
+    >
       <p className="text-xs font-semibold uppercase tracking-eyebrow text-shopxray">
         Case study · MkatabaHQ
       </p>
       <h1 className="text-case-title">{project.name}</h1>
-      <p className="text-xl md:text-2xl text-ink-muted. ink-muted">{intro}</p>
+      <p className="text-xl md:text-2xl text-ink-muted">{intro}</p>
       <dl className="grid grid-cols-2 gap-x-8 gap-y-6 pt-4 text-left md:flex md:gap-x-18">
         {details.map(({ label, value }) => (
-          <div className="flex flex-col gap-2">
+          <div key={label} className="flex flex-col gap-2">
             <dt className="text-xs text-muted-foreground">{label}</dt>
             <dd className="text-base font-medium">{value}</dd>
           </div>

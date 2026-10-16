@@ -182,7 +182,7 @@ const shopXrayCaseStudy: StepCaseStudy = {
           <Zoom
             src={daySummary}
             shadow="shadow-modal"
-            className="left-[58.89%] top-[5%] w-[30.22%] morph-to"
+            className="absolute left-[58.89%] top-[5%] w-[30.22%] morph-to"
             alt="The closed day's summary for Friday, Jan 12: visits, revenue expected and collected, a 200,000 cash deficit, expenses, and TZS 15,230,000 net recorded"
           />
         </>

@@ -15,7 +15,7 @@ export const meta: Route.MetaFunction = () =>
     description: intro,
   });
 
-const DprozCaseStudy = () => {
+const DprozPage = () => {
   return (
     <>
       <CaseHero caseStudy={dprozCaseStudy} />
@@ -26,4 +26,4 @@ const DprozCaseStudy = () => {
   );
 };
 
-export default DprozCaseStudy;
+export default DprozPage;
