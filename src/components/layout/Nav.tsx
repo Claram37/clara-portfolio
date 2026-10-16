@@ -2,10 +2,9 @@ import { Link } from "react-router";
 import { Download } from "lucide-react";
 import Button from "@/components/shared/Button";
 import site from "@/data/site";
-import { cn } from "@/lib/utils";
 
 const links = [
-  { to: "/work", label: "Work", className: "max-sm:hidden" },
+  { to: "/work", label: "Work" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ];
@@ -23,15 +22,12 @@ const Nav = () => {
         >
           {site.name}
         </Link>
-        <div className="flex items-center gap-8 max-sm:gap-5">
-          {links.map(({ to, label, className }) => (
+        <div className="flex items-center gap-8">
+          {links.map(({ to, label }) => (
             <Link
               key={to}
               to={to}
-              className={cn(
-                "text-base leading-5 transition-colors hover:text-muted-foreground",
-                className,
-              )}
+              className="text-base leading-5 transition-colors hover:text-muted-foreground max-sm:hidden"
             >
               {label}
             </Link>
