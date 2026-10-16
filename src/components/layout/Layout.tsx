@@ -1,11 +1,10 @@
-import type { ReactNode } from 'react';
-import { Links, Meta, Scripts, ScrollRestoration } from 'react-router';
+import type { ReactNode } from "react";
+import { Links, Meta, Scripts, ScrollRestoration } from "react-router";
 
 type LayoutProps = {
   children: ReactNode;
 };
 
-// The HTML document around every page
 const Layout = ({ children }: LayoutProps) => {
   return (
     <html lang="en">

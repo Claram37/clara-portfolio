@@ -408,9 +408,10 @@
   html:has([data-snap]) {
     @apply xl:snap-y xl:snap-proximity;
   }
-  body:has([data-daftari]) {
-    @apply bg-daftari;
-  }
+}
+
+body:has([data-daftari]) {
+  @apply bg-daftari;
 }
 
 /* shadcn/ui: exposes the variables in :root below as Tailwind classes (bg-primary, text-muted-foreground…) */
