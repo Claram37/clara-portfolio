@@ -33,7 +33,6 @@ const Deck = ({ chapters }: DeckProps) => {
       </div>
       {chapters.filter((chapter) => !stacks(chapter)).map(card)}
 
-      {/* Snap points where each stacked card comes to rest; the sticky cards can't be snap targets themselves */}
       <div
         data-snap
         className="pointer-events-none absolute inset-x-0 top-0 hidden flex-col gap-7 xl:flex"
