@@ -3,6 +3,7 @@ import Stage from "./Stage";
 import StepCaption from "./StepCaption";
 import type { Step } from "@/data/projects/types";
 import { cn } from "@/lib/utils";
+import StepRail from "./StepRail";
 
 interface PinnedStepsProps {
   steps: Step[];
@@ -11,6 +12,14 @@ interface PinnedStepsProps {
 const PinnedSteps = ({ steps }: PinnedStepsProps) => {
   const track = useRef<HTMLElement>(null);
   const markers = useRef<HTMLDivElement>(null);
+
+  const goTo = (i: number) => {
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    markers.current?.children[i]?.scrollIntoView({
+      behavior: reduce ? "auto" : "smooth",
+    });
+  };
+
   const active = 0;
 
   return (
@@ -28,6 +37,7 @@ const PinnedSteps = ({ steps }: PinnedStepsProps) => {
         <div className="sticky top-0 flex h-svh items-center px-page">
           <div className="mx-auto grid w-full max-w-content grid-cols-[1fr_3fr] items-start gap-12">
             <div className="flex flex-col gap-7">
+              <StepRail steps={steps} active={active} onSelect={goTo} />
               <div className="grid border-t border-daftari-rule pt-5">
                 {steps.map((step, i) => (
                   <StepCaption
