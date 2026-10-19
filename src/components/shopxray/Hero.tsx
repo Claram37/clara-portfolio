@@ -9,7 +9,7 @@ const Hero = ({ caseStudy }: HeroProps) => {
   return (
     <section
       data-daftari
-      className="px-page pt-12 pb-16 flex flex-col items-center gap-6 text-center"
+      className="px-page pt-12 pb-16 flex flex-col items-center gap-6 text-center snap-end"
     >
       <Eyebrow>Case study · MkatabaHQ</Eyebrow>
       <h1 className="text-case-title">{project.name}</h1>

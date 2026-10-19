@@ -18,7 +18,7 @@ const NextProject = ({ project }: NextProjectProps) => {
     <section
       aria-labelledby={headingId}
       className={cn(
-        "overflow-hidden px-page pt-16 lg:pt-24",
+        "overflow-hidden px-page pt-16 lg:pt-24 snap-start",
         stage,
         dark && "focus-light",
       )}

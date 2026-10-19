@@ -37,15 +37,17 @@ const PinnedSteps = ({ steps }: PinnedStepsProps) => {
               <StepCaption
                 key={step.label}
                 className={cn(
-                  "col-start-1 row-start-1 transition-opacity duration-500",
-                  i !== active && "opacity-0",
+                  "col-start-1 row-start-1",
+                  i === active
+                    ? "transition-opacity duration-500"
+                    : "opacity-0",
                 )}
                 step={step}
               />
             ))}
           </div>
         </div>
-        <div ref={scenes} data-snap>
+        <div ref={scenes} data-snap="mandatory">
           {steps.map((step) => (
             <div
               key={step.label}

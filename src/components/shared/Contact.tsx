@@ -26,7 +26,10 @@ const Contact = () => {
   };
 
   return (
-    <section aria-labelledby={headingId} className="px-page py-20 lg:py-28">
+    <section
+      aria-labelledby={headingId}
+      className="px-page py-20 lg:py-28 snap-start"
+    >
       <div className="mx-auto flex max-w-content flex-col gap-12 lg:gap-20">
         <SectionHead id={headingId} title="Get in touch.">
           Let's build something will people actually use.

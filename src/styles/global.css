@@ -423,6 +423,9 @@
   html:has([data-snap]) {
     @apply xl:snap-y xl:snap-proximity;
   }
+  html:has([data-snap="mandatory"]) {
+    @apply xl:snap-mandatory;
+  }
 }
 
 body:has([data-daftari]) {
