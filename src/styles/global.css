@@ -285,6 +285,21 @@
   filter: brightness(calc(1 - var(--cover, 0) * 0.25));
 }
 
+/* Paper to Pixels: --t runs 0 → 1 while a step morphs (useScrub). Unset means finished */
+@utility morph-from {
+  translate: calc((var(--t, 1) - 1) * 8%) 0;
+}
+@utility morph-fade {
+  opacity: calc(1 - var(--t, 1) * 0.45);
+}
+@utility morph-to {
+  opacity: var(--t, 1);
+  translate: calc((1 - var(--t, 1)) * -8%) 0;
+}
+@utility morph-line {
+  clip-path: inset(0 calc((1 - var(--t, 1)) * 100%) 0 0);
+}
+
 /* On a dark section: white focus outlines */
 @utility focus-light {
   --ring: var(--color-paper);
