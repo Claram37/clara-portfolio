@@ -6,6 +6,7 @@ import site from "@/data/site";
 import { pageMeta } from "@/lib/meta";
 import Hero from "@/components/shopxray/Hero";
 import StepCards from "@/components/shopxray/StepCards";
+import PinnedSteps from "@/components/shopxray/PinnedSteps";
 
 const { project, intro, steps } = shopXrayCaseStudy;
 
@@ -20,6 +21,7 @@ const ShopXrayPage = () => {
     <>
       <Hero caseStudy={shopXrayCaseStudy} />
       <StepCards steps={steps} />
+      <PinnedSteps steps={steps} />
       <NextProject project={project} />
       <Contact />
     </>
