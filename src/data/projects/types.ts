@@ -33,7 +33,8 @@ export interface CodeProject {
   tag: string;
   summary: string;
   stack: string[];
-  links: { label: string; href: string }[];
+  live?: string;
+  code: string;
   visual: ReactNode;
 }
 

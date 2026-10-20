@@ -1,6 +1,7 @@
 import type { CodeProject } from "@/data/projects/types";
-import { cn } from "@/lib/utils";
 import { ArrowUpRight } from "lucide-react";
+import Button from "@/components/shared/Button";
+import GitHub from "@/components/icons/GitHub";
 
 interface CodeCardProps {
   project: CodeProject;
@@ -31,26 +32,22 @@ const CodeCard = ({ project }: CodeCardProps) => {
             </li>
           ))}
         </ul>
-        <div className="mt-auto flex flex-wrap gap-7 pt-2">
-          {project.links.map((link, index) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target="_blank"
-              rel="noreferrer"
-              className={cn(
-                "group inline-flex items-center gap-2 font-semibold transition-colors hover:text-paper focus-ring",
-                index === 0 ? "text-paper" : "text-code-muted",
-              )}
-            >
-              {link.label}
+        <div className="mt-auto flex flex-wrap gap-3 pt-2">
+          {project.live && (
+            <Button href={project.live} variant="light" size="sm">
+              Live site
               <span className="sr-only"> ({project.name})</span>
               <ArrowUpRight
                 className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                 aria-hidden="true"
               />
-            </a>
-          ))}
+            </Button>
+          )}
+          <Button href={project.code} variant="subtle" size="sm">
+            <GitHub className="size-4" aria-hidden="true" />
+            Code
+            <span className="sr-only"> on GitHub ({project.name})</span>
+          </Button>
         </div>
       </div>
     </li>
