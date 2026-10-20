@@ -49,12 +49,12 @@ const Work = () => {
                 key={project.name}
                 value={index}
                 keepMounted
-                className="relative animate-in duration-500 fade-in motion-reduce:animate-none"
+                className="relative grid animate-in duration-500 fade-in motion-reduce:animate-none"
               >
-                <div className="relative aspect-1248/640 overflow-hidden">
+                <div className="relative aspect-1248/640 overflow-hidden xl:col-start-1 xl:row-start-1">
                   {project.visual}
                 </div>
-                <div className="flex flex-col items-start gap-4 p-6 md:p-8 xl:absolute xl:right-14 xl:bottom-14 xl:max-w-105 xl:p-0">
+                <div className="flex flex-col items-start gap-4 p-6 md:p-8 xl:z-10 xl:col-start-1 xl:row-start-1 xl:mr-14 xl:mb-14 xl:max-w-105 xl:self-end xl:justify-self-end xl:p-0">
                   <p
                     className={cn(
                       "font-display text-feature text-balance xl:text-wrap",
@@ -66,7 +66,7 @@ const Work = () => {
                   <Link
                     to={project.caseStudy}
                     className={cn(
-                      "inline-flex items-center gap-2 text-base font-bold transition-opacity hover:opacity-80",
+                      "inline-flex items-center gap-2 text-base font-bold transition-opacity after:absolute after:inset-0 hover:opacity-80",
                       project.theme.link,
                     )}
                   >
