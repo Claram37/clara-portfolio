@@ -17,6 +17,14 @@ export const meta: Route.MetaFunction = () =>
     description: intro,
   });
 
+// Connect to Figma early: the whole-page prototypes load from these
+export const links: Route.LinksFunction = () =>
+  [
+    "https://embed.figma.com",
+    "https://www.figma.com",
+    "https://static.figma.com",
+  ].map((href) => ({ rel: "preconnect", href }));
+
 const PastriesPage = () => {
   return (
     <>
