@@ -180,6 +180,7 @@ export interface MenuItem {
 export interface PastriesCaseStudy extends PageIntro {
   project: NextUp;
   title: string;
+  overview: Pick<SectionCopy, "eyebrow" | "body">;
   menu: { headline: string; chips: string[]; items: MenuItem[] };
   wholePage: {
     headline: string;

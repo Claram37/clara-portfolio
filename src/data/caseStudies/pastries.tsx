@@ -22,6 +22,11 @@ const pastriesCaseStudy: PastriesCaseStudy = {
     { label: "Type", value: "Concept" },
     { label: "Format", value: "Landing page · Mobile and desktop" },
   ],
+  // From Idea 03 · Side by Side
+  overview: {
+    eyebrow: "Overview",
+    body: "A landing page that helps people browse available and seasonal pastries and order a custom pastry, designed for both mobile and desktop.",
+  },
   menu: {
     headline: "Our Menu",
     chips: ["All", "Desktop", "Mobile", "Seasonal", "Custom cakes"],
