@@ -4,6 +4,7 @@ import Contact from "@/components/shared/Contact";
 import Deck from "@/components/dproz/Deck";
 import NextProject from "@/components/shared/NextProject";
 import dprozCaseStudy from "@/data/caseStudies/dproz";
+import { nextAfter } from "@/data/projects";
 import site from "@/data/site";
 import { pageMeta } from "@/lib/meta";
 
@@ -20,7 +21,7 @@ const DprozPage = () => {
     <>
       <CaseHero caseStudy={dprozCaseStudy} accent="text-dproz" />
       <Deck chapters={chapters} />
-      <NextProject project={project} />
+      <NextProject next={nextAfter(project)} />
       <Contact />
     </>
   );

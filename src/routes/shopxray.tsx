@@ -2,6 +2,7 @@ import type { Route } from "./+types/shopxray";
 import Contact from "@/components/shared/Contact";
 import NextProject from "@/components/shared/NextProject";
 import shopXrayCaseStudy from "@/data/caseStudies/shopXray";
+import { nextAfter } from "@/data/projects";
 import site from "@/data/site";
 import { pageMeta } from "@/lib/meta";
 import Hero from "@/components/shopxray/Hero";
@@ -22,7 +23,7 @@ const ShopXrayPage = () => {
       <Hero caseStudy={shopXrayCaseStudy} />
       <StepCards steps={steps} />
       <PinnedSteps steps={steps} />
-      <NextProject project={project} />
+      <NextProject next={nextAfter(project)} />
       <Contact />
     </>
   );

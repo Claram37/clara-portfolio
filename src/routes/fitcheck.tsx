@@ -11,6 +11,7 @@ import Results from "@/components/fitcheck/Results";
 import Screens from "@/components/fitcheck/Screens";
 import VersionOne from "@/components/fitcheck/VersionOne";
 import fitCheckCaseStudy from "@/data/caseStudies/fitCheck";
+import { nextAfter } from "@/data/projects";
 import site from "@/data/site";
 import useReveal from "@/hooks/useReveal";
 import { pageMeta } from "@/lib/meta";
@@ -39,7 +40,7 @@ const FitcheckPage = () => {
         <Results />
         <Learned />
       </div>
-      <NextProject project={project} />
+      <NextProject next={nextAfter(project)} />
       <Contact />
     </>
   );
