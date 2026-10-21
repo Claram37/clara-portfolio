@@ -2,10 +2,12 @@ import type { ComponentType } from "react";
 import { defaultReader } from "@/data/caseStudies/fitCheck";
 import type { StoryId } from "@/data/projects/types";
 import Overview from "./Overview";
+import Problem from "./Problem";
 import Results from "./Results";
 
 const sections: Partial<Record<StoryId, ComponentType<{ tag?: string }>>> = {
   results: Results,
+  problem: Problem,
 };
 
 const Story = () => {
