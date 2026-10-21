@@ -1,4 +1,5 @@
 import type { Route } from "./+types/pastries";
+import Menu from "@/components/pastries/Menu";
 import CaseHero from "@/components/shared/CaseHero";
 import pastriesCaseStudy from "@/data/caseStudies/pastries";
 import site from "@/data/site";
@@ -21,6 +22,7 @@ const PastriesPage = () => {
           eyebrow="Concept"
           accent="text-pastries-terracotta"
         />
+        <Menu />
       </div>
     </>
   );
