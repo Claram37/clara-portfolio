@@ -5,14 +5,14 @@ import prideCover from "@/assets/pride/cover.jpg";
 import pastriesCover from "@/assets/pastries/cover.jpg";
 import meditationCover from "@/assets/meditation/cover.jpg";
 import Phone from "@/components/mockups/Phone";
+import safariSpirits from "./safariSpirits";
 import type { MoreProject } from "./types";
 
 const moreWork: MoreProject[] = [
   {
-    name: "Safari Spirits",
-    summary:
-      "Trips matched to budget and time, with every cost shown up front.",
-    to: "/work/safari-spirits",
+    name: safariSpirits.name,
+    summary: safariSpirits.caption,
+    to: safariSpirits.caseStudy,
     cover: (
       <img
         src={safariCover}

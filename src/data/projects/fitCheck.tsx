@@ -4,6 +4,7 @@ import Zoom from "@/components/mockups/Zoom";
 import nextStepsPhone from "@/assets/fitcheck/next-steps-phone.png";
 import nextStepsZoom from "@/assets/fitcheck/next-steps-zoom.png";
 import overviewPhone from "@/assets/fitcheck/overview.png";
+import safariSpirits from "./safariSpirits";
 import type { Project } from "./types";
 
 const fitCheck: Project = {
@@ -45,6 +46,7 @@ const fitCheck: Project = {
       className="absolute top-[8%] left-[31.67%] w-[63.33%]"
     />
   ),
+  next: safariSpirits,
 };
 
 export default fitCheck;

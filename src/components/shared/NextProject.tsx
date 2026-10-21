@@ -1,7 +1,7 @@
 import { useId } from "react";
 import { ArrowRight } from "lucide-react";
 import projects from "@/data/projects";
-import type { Project } from "@/data/projects/types";
+import type { NextUp, Project } from "@/data/projects/types";
 import { cn } from "@/lib/utils";
 import Button from "@/components/shared/Button";
 
@@ -11,7 +11,9 @@ interface NextProjectProps {
 
 const NextProject = ({ project }: NextProjectProps) => {
   const headingId = useId();
-  const next = projects[(projects.indexOf(project) + 1) % projects.length];
+  const next: NextUp =
+    project.next ??
+    projects[(projects.indexOf(project) + 1) % projects.length];
   const { stage, caption, link, dark } = next.theme;
 
   return (
@@ -39,7 +41,7 @@ const NextProject = ({ project }: NextProjectProps) => {
           </h2>
           <p className={cn("text-xl", link)}>{next.caption}</p>
           <Button to={next.caseStudy} variant={dark ? "light" : "dark"} arrow>
-            View case study
+            {next.cta ?? "View case study"}
           </Button>
         </div>
 

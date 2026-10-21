@@ -10,6 +10,16 @@ export interface ProjectTheme {
   dark: boolean;
 }
 
+// What the Next project section shows. Every Project fits it, and so does a project that isn't on the homepage
+export interface NextUp {
+  name: string;
+  caption: string;
+  caseStudy: string;
+  cta?: string;
+  theme: Pick<ProjectTheme, "stage" | "caption" | "link" | "dark">;
+  peek?: ReactNode;
+}
+
 export interface Project {
   name: string;
   kind: string;
@@ -19,6 +29,7 @@ export interface Project {
   theme: ProjectTheme;
   visual: ReactNode;
   peek?: ReactNode;
+  next?: NextUp;
 }
 
 export interface MoreProject {
