@@ -1,12 +1,19 @@
-import type { CaseStudyIntro } from "@/data/projects/types";
+import type { PageIntro } from "@/data/projects/types";
 import { cn } from "@/lib/utils";
 
 interface CaseHeroProps {
-  caseStudy: CaseStudyIntro;
+  caseStudy: PageIntro;
   accent: string;
+  eyebrow?: string;
+  dark?: boolean;
 }
 
-const CaseHero = ({ caseStudy, accent }: CaseHeroProps) => {
+const CaseHero = ({
+  caseStudy,
+  accent,
+  eyebrow = "Case Study",
+  dark = false,
+}: CaseHeroProps) => {
   const { project, intro, details } = caseStudy;
 
   return (
@@ -18,10 +25,15 @@ const CaseHero = ({ caseStudy, accent }: CaseHeroProps) => {
             accent,
           )}
         >
-          Case Study
+          {eyebrow}
         </p>
         <h1 className="text-case-title">{project.name}</h1>
-        <p className="text-xl/snug text-pretty text-ink-soft md:text-2xl/snug">
+        <p
+          className={cn(
+            "text-xl/snug text-pretty md:text-2xl/snug",
+            dark ? "text-on-dark" : "text-ink-soft",
+          )}
+        >
           {intro}
         </p>
 
@@ -31,7 +43,14 @@ const CaseHero = ({ caseStudy, accent }: CaseHeroProps) => {
               key={label}
               className="flex flex-col gap-2"
             >
-              <dt className="text-xs text-muted-foreground">{label}</dt>
+              <dt
+                className={cn(
+                  "text-xs",
+                  dark ? "text-on-dark-muted" : "text-muted-foreground",
+                )}
+              >
+                {label}
+              </dt>
               <dd className="text-base">{value}</dd>
             </div>
           ))}
