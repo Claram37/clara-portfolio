@@ -2,18 +2,20 @@ import type { ComponentType } from "react";
 import { defaultReader } from "@/data/caseStudies/fitCheck";
 import type { StoryId } from "@/data/projects/types";
 import HardestQuestion from "./HardestQuestion";
+import Learned from "./Learned";
 import Overview from "./Overview";
 import Problem from "./Problem";
 import Results from "./Results";
 import Screens from "./Screens";
 import VersionOne from "./VersionOne";
 
-const sections: Partial<Record<StoryId, ComponentType>> = {
+const sections: Record<StoryId, ComponentType> = {
   results: Results,
   problem: Problem,
   versionOne: VersionOne,
   hardest: HardestQuestion,
   screens: Screens,
+  learned: Learned,
 };
 
 const Story = () => {
@@ -24,7 +26,7 @@ const Story = () => {
       <Overview />
       {reader.order.map((id) => {
         const Section = sections[id];
-        return Section && <Section key={id} />;
+        return <Section key={id} />;
       })}
     </div>
   );
