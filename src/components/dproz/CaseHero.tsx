@@ -18,11 +18,11 @@ const CaseHero = ({ caseStudy }: CaseHeroProps) => {
           {intro}
         </p>
 
-        <dl className="grid grid-cols-2 gap-x-8 gap-y-6 pt-4 text-left lg:flex lg:gap-x-18">
+        <dl className="grid grid-cols-2 gap-x-8 gap-y-6 pt-4 text-left md:flex md:gap-x-18">
           {details.map(({ label, value }) => (
             <div
               key={label}
-              className="flex flex-col gap-2 lg:not-last:shrink-0"
+              className="flex flex-col gap-2"
             >
               <dt className="text-xs text-muted-foreground">{label}</dt>
               <dd className="text-base">{value}</dd>

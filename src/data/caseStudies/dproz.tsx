@@ -55,10 +55,6 @@ const dprozCaseStudy: CaseStudy = {
     { label: "Role", value: "UI/UX Designer" },
     { label: "Company", value: dproz.name },
     { label: "Platform", value: "Mobile app and web" },
-    {
-      label: "Scope",
-      value: "Onboarding, profile, homepage, job recommendations",
-    },
   ],
   chapters: [
     {

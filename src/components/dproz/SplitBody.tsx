@@ -24,12 +24,15 @@ const SplitBody = ({ chapter, tone, reverse = false }: SplitBodyProps) => {
         {body && <p className={cn("text-body", tone.body)}>{body}</p>}
 
         {stats && (
-          <ul className="flex gap-6 pt-4">
+          <ul className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-3 pt-4 md:flex">
             {stats.map(({ value, label }, index) => (
-              <li key={label} className="flex flex-1 flex-col gap-1">
+              <li
+                key={label}
+                className="col-span-2 grid grid-cols-subgrid items-baseline md:flex md:flex-1 md:flex-col md:gap-1"
+              >
                 <span
                   className={cn(
-                    "font-display text-figure",
+                    "font-display text-figure whitespace-nowrap",
                     index === 0 && tone.accent,
                   )}
                 >
