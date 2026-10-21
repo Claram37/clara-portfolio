@@ -14,7 +14,7 @@ const Overview = () => {
       className="bg-surface px-page py-20 lg:py-24 2xl:py-30"
     >
       <div className="mx-auto flex max-w-content flex-col gap-12 lg:flex-row lg:items-center lg:gap-20">
-        <div className="flex flex-col gap-6 lg:flex-1">
+        <div data-reveal className="flex flex-col gap-6 reveal-stagger lg:flex-1">
           <Eyebrow className="text-muted-foreground">{eyebrow}</Eyebrow>
           <h2 id={headingId} className="text-chapter">
             {headline}
@@ -42,12 +42,14 @@ const Overview = () => {
         </div>
 
         <div className="relative mx-auto aspect-13/15 w-full max-w-130 overflow-hidden rounded-card bg-fitcheck lg:mx-0 lg:max-w-none lg:shrink-0 lg:basis-5/12">
-          <Phone
-            src={screen.src}
-            alt={screen.alt}
-            shadow="shadow-fitcheck-phone"
-            className="absolute top-[9.33%] left-[17.31%] w-[65.38%]"
-          />
+          <div data-reveal className="absolute inset-0 reveal-scene delay-150">
+            <Phone
+              src={screen.src}
+              alt={screen.alt}
+              shadow="shadow-fitcheck-phone"
+              className="absolute top-[9.33%] left-[17.31%] w-[65.38%]"
+            />
+          </div>
         </div>
       </div>
     </section>

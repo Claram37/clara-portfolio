@@ -11,7 +11,10 @@ const Problem = () => {
       aria-labelledby={headingId}
       className="px-page py-20 lg:py-24 2xl:py-30"
     >
-      <div className="mx-auto flex max-w-content flex-col gap-6 lg:flex-row lg:justify-between lg:gap-12">
+      <div
+        data-reveal
+        className="mx-auto flex max-w-content flex-col gap-6 reveal-stagger lg:flex-row lg:justify-between lg:gap-12"
+      >
         <h2 id={headingId} className="text-chapter lg:max-w-150">
           {headline}
         </h2>

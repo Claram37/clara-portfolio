@@ -15,7 +15,10 @@ const HardestQuestion = () => {
       className="overflow-hidden bg-fitcheck px-page"
     >
       <div className="mx-auto flex max-w-content flex-col gap-12 lg:flex-row lg:items-end lg:gap-16 xl:gap-24">
-        <div className="flex flex-col gap-6 pt-20 lg:flex-1 lg:py-24 2xl:py-30">
+        <div
+          data-reveal
+          className="mt-20 flex flex-col gap-6 reveal-stagger lg:my-24 lg:flex-1 2xl:my-30"
+        >
           <Eyebrow className="text-muted-foreground">{eyebrow}</Eyebrow>
           <h2 id={headingId} className="text-chapter">
             {headline}
@@ -46,12 +49,14 @@ const HardestQuestion = () => {
         </div>
 
         <div className="relative mx-auto aspect-7/12 w-full max-w-90 shrink-0 lg:mx-0 lg:w-80 lg:max-w-none xl:w-105">
-          <Phone
-            src={screen.src}
-            alt={screen.alt}
-            shadow="shadow-fitcheck-float"
-            className="absolute top-[13.33%] left-[7.14%] w-[85.71%]"
-          />
+          <div data-reveal className="absolute inset-0 reveal-scene delay-150">
+            <Phone
+              src={screen.src}
+              alt={screen.alt}
+              shadow="shadow-fitcheck-float"
+              className="absolute top-[13.33%] left-[7.14%] w-[85.71%]"
+            />
+          </div>
         </div>
       </div>
     </section>

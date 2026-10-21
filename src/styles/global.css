@@ -281,6 +281,9 @@
   --color-window-line-dark: #3a3b41;
 
   /* A project's open feature tab: its tint fills left to right over the 6 seconds it stays open (spec r1RONp) */
+  /* Fitcheck's entrance motion (the reveal-* utilities below): a long, soft ease-out */
+  --ease-reveal: cubic-bezier(0.22, 1, 0.36, 1);
+
   --animate-tab-fill: tab-fill 6s linear forwards;
   @keyframes tab-fill {
     from {
@@ -318,6 +321,66 @@
 }
 @utility morph-line {
   clip-path: inset(0 calc((1 - var(--t, 1)) * 100%) 0 0);
+}
+
+/*
+  Fitcheck's entrance motion. useReveal marks each [data-reveal] element that starts below the screen
+  "waiting", then "shown" as it scrolls in, and these utilities say how it arrives. Delays come from delay-*
+*/
+@utility reveal-rise {
+  &[data-reveal="waiting"] {
+    opacity: 0;
+    translate: 0 24px;
+  }
+  &[data-reveal="shown"] {
+    transition-property: opacity, translate;
+    transition-duration: 800ms;
+    transition-timing-function: var(--ease-reveal);
+  }
+}
+/* Each child rises in turn */
+@utility reveal-stagger {
+  &[data-reveal="waiting"] > * {
+    opacity: 0;
+    translate: 0 24px;
+  }
+  &[data-reveal="shown"] > * {
+    transition-property: opacity, translate;
+    transition-duration: 800ms;
+    transition-timing-function: var(--ease-reveal);
+  }
+  &[data-reveal="shown"] > :nth-child(2) {
+    transition-delay: 90ms;
+  }
+  &[data-reveal="shown"] > :nth-child(3) {
+    transition-delay: 180ms;
+  }
+  &[data-reveal="shown"] > :nth-child(n + 4) {
+    transition-delay: 270ms;
+  }
+}
+/* A stage's mockups glide up into place */
+@utility reveal-scene {
+  &[data-reveal="waiting"] {
+    opacity: 0;
+    translate: 0 10%;
+  }
+  &[data-reveal="shown"] {
+    transition-property: opacity, translate;
+    transition-duration: 1200ms;
+    transition-timing-function: var(--ease-reveal);
+  }
+}
+@utility reveal-pop {
+  &[data-reveal="waiting"] {
+    opacity: 0;
+    scale: 0.5;
+  }
+  &[data-reveal="shown"] {
+    transition-property: opacity, scale;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
 }
 
 /* On a dark section: white focus outlines */

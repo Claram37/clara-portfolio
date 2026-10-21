@@ -12,7 +12,10 @@ const Learned = () => {
       aria-labelledby={headingId}
       className="px-page py-20 lg:py-24 2xl:pt-30"
     >
-      <div className="mx-auto flex max-w-content flex-col gap-5">
+      <div
+        data-reveal
+        className="mx-auto flex max-w-content flex-col gap-5 reveal-stagger"
+      >
         <Eyebrow className="text-muted-foreground">{eyebrow}</Eyebrow>
         <h2 id={headingId} className="max-w-240 text-lesson">
           {headline}

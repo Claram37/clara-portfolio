@@ -23,7 +23,10 @@ const VersionOne = () => {
       className="bg-surface px-page py-20 lg:py-24 2xl:py-30"
     >
       <div className="mx-auto flex max-w-content flex-col gap-12 lg:flex-row lg:items-start lg:gap-16 xl:gap-24">
-        <div className="flex flex-col gap-6 lg:flex-1 lg:pt-6">
+        <div
+          data-reveal
+          className="flex flex-col gap-6 reveal-stagger lg:flex-1 lg:pt-6"
+        >
           <Eyebrow className="text-muted-foreground">{eyebrow}</Eyebrow>
           <h2 id={headingId} className="text-chapter">
             {headline}
@@ -46,7 +49,10 @@ const VersionOne = () => {
           </ol>
         </div>
 
-        <div className="relative mx-auto w-full max-w-90 lg:mx-0 lg:w-80 lg:max-w-none lg:shrink-0 xl:w-110">
+        <div
+          data-reveal
+          className="relative mx-auto w-full max-w-90 reveal-rise delay-150 lg:mx-0 lg:w-80 lg:max-w-none lg:shrink-0 xl:w-110"
+        >
           <Zoom
             src={report.src}
             alt={report.alt}
@@ -54,9 +60,13 @@ const VersionOne = () => {
             className="w-full border border-window-line"
           />
           {pins.map((placement, index) => (
-            <Pin key={placement} className={cn("absolute shadow-pin", placement)}>
-              {index + 1}
-            </Pin>
+            <span
+              key={placement}
+              data-reveal
+              className={cn("absolute reveal-pop delay-500", placement)}
+            >
+              <Pin className="shadow-pin">{index + 1}</Pin>
+            </span>
           ))}
         </div>
       </div>

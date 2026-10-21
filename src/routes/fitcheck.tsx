@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import type { Route } from "./+types/fitcheck";
 import CaseHero from "@/components/shared/CaseHero";
 import Contact from "@/components/shared/Contact";
@@ -11,6 +12,7 @@ import Screens from "@/components/fitcheck/Screens";
 import VersionOne from "@/components/fitcheck/VersionOne";
 import fitCheckCaseStudy from "@/data/caseStudies/fitCheck";
 import site from "@/data/site";
+import useReveal from "@/hooks/useReveal";
 import { pageMeta } from "@/lib/meta";
 
 const { project, intro } = fitCheckCaseStudy;
@@ -22,16 +24,21 @@ export const meta: Route.MetaFunction = () =>
   });
 
 const FitcheckPage = () => {
+  const story = useRef<HTMLDivElement>(null);
+  useReveal(story);
+
   return (
     <>
       <CaseHero caseStudy={fitCheckCaseStudy} accent="text-fitcheck-blue" />
-      <Overview />
-      <Problem />
-      <VersionOne />
-      <HardestQuestion />
-      <Screens />
-      <Results />
-      <Learned />
+      <div ref={story}>
+        <Overview />
+        <Problem />
+        <VersionOne />
+        <HardestQuestion />
+        <Screens />
+        <Results />
+        <Learned />
+      </div>
       <NextProject project={project} />
       <Contact />
     </>
