@@ -7,5 +7,6 @@ export default [
   route("work/shopxray", "routes/shopxray.tsx"),
   route("work/fitcheck", "routes/fitcheck.tsx"),
   route("concepts/pride", "routes/pride.tsx"),
+  route("concepts/pastries", "routes/pastries.tsx"),
   route("*", "routes/not-found.tsx"),
 ] satisfies RouteConfig;

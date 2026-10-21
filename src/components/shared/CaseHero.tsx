@@ -14,7 +14,7 @@ const CaseHero = ({
   eyebrow = "Case Study",
   dark = false,
 }: CaseHeroProps) => {
-  const { project, intro, details } = caseStudy;
+  const { project, title = project.name, intro, details } = caseStudy;
 
   return (
     <section className="px-page pt-12 pb-16">
@@ -27,7 +27,7 @@ const CaseHero = ({
         >
           {eyebrow}
         </p>
-        <h1 className="text-case-title">{project.name}</h1>
+        <h1 className="text-case-title">{title}</h1>
         <p
           className={cn(
             "text-xl/snug text-pretty md:text-2xl/snug",
