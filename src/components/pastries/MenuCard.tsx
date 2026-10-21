@@ -37,26 +37,21 @@ const MenuCard = ({ item, name, onOpen }: MenuCardProps) => {
 
       <div className="flex items-center justify-between gap-4 p-5">
         <div className="flex flex-col items-start gap-2">
-          <h3 className="text-xl font-semibold">
-            <button
-              type="button"
-              aria-haspopup="dialog"
-              onClick={onOpen}
-              className="text-left focus-ring after:absolute after:inset-0"
-            >
-              {title}
-            </button>
-          </h3>
+          <h3 className="text-xl font-semibold">{title}</h3>
           <span className="rounded-full bg-pastries-tag px-3 py-1 text-xs text-pastries-muted">
             {category ?? format}
           </span>
         </div>
-        <span
-          aria-hidden="true"
-          className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-pastries-terracotta text-paper transition group-hover:brightness-110"
+        {/* Stretched over the card, so a click anywhere on it opens the screen */}
+        <button
+          type="button"
+          aria-haspopup="dialog"
+          aria-label={`View ${title} full size`}
+          onClick={onOpen}
+          className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-pastries-terracotta text-paper transition-colors group-hover:bg-pastries-terracotta/85 focus-ring after:absolute after:inset-0"
         >
-          <Maximize2 className="size-5" />
-        </span>
+          <Maximize2 className="size-5" aria-hidden="true" />
+        </button>
       </div>
     </li>
   );
