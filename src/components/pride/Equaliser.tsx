@@ -15,7 +15,7 @@ const Equaliser = ({ playing }: EqualiserProps) => {
           className={cn(
             "w-1 origin-bottom rounded-full bg-pride-pink",
             height,
-            playing && "motion-safe:animate-equalise",
+            playing && "animate-equalise",
           )}
           style={{ animationDelay: `${index * -0.15}s` }}
         />
