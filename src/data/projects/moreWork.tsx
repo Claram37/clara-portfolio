@@ -5,6 +5,8 @@ import prideCover from "@/assets/pride/cover.jpg";
 import pastriesCover from "@/assets/pastries/cover.jpg";
 import meditationCover from "@/assets/meditation/cover.jpg";
 import Phone from "@/components/mockups/Phone";
+import pastries from "./pastries";
+import pride from "./pride";
 import safariSpirits from "./safariSpirits";
 import type { MoreProject } from "./types";
 
@@ -54,9 +56,9 @@ const moreWork: MoreProject[] = [
     ),
   },
   {
-    name: "Pride",
-    summary: "A landing page for an ad-free music streaming service.",
-    to: "/concepts/pride",
+    name: pride.name,
+    summary: pride.caption,
+    to: pride.caseStudy,
     tag: "Concept",
     cover: (
       <img
@@ -69,10 +71,9 @@ const moreWork: MoreProject[] = [
     ),
   },
   {
-    name: "Pastries Landing Page",
-    summary:
-      "A bakery site for browsing pastries and ordering custom celebration cakes.",
-    to: "/concepts/pastries",
+    name: pastries.name,
+    summary: pastries.caption,
+    to: pastries.caseStudy,
     tag: "Concept",
     cover: (
       <img

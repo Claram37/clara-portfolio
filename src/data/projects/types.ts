@@ -65,10 +65,14 @@ export interface Chapter {
   panel?: string;
   visual?: ReactNode;
 }
-export interface CaseStudyIntro {
-  project: Project;
+// What CaseHero shows. A case study's project is on the homepage; a concept's only needs a name
+export interface PageIntro {
+  project: { name: string };
   intro: string;
   details: { label: string; value: string }[];
+}
+export interface CaseStudyIntro extends PageIntro {
+  project: Project;
 }
 // the extend merges both into one interface. So CaseStudy has CaseStudyIntro declarations
 export interface CaseStudy extends CaseStudyIntro {
@@ -134,4 +138,31 @@ export interface FitcheckCaseStudy extends CaseStudyIntro {
   screens: ScreensSection;
   results: ResultsSection;
   learned: FitcheckSection;
+}
+
+// Pride's concept page: the set (the waveform), a track per landing page section, and the liner notes
+export interface SectionCopy {
+  eyebrow: string;
+  headline: string;
+  body: string;
+}
+
+export interface Track {
+  title: string;
+  job: string;
+  tag: string;
+  beat: string;
+  screen: Shot;
+}
+
+export interface LinerNotes extends SectionCopy {
+  images: Shot[];
+}
+
+export interface PrideCaseStudy extends PageIntro {
+  project: NextUp;
+  set: SectionCopy;
+  tracks: Track[];
+  linerNotes: LinerNotes;
+  next: NextUp;
 }
