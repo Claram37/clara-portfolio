@@ -3,8 +3,7 @@ import Phone from "@/components/mockups/Phone";
 import Eyebrow from "@/components/shared/Eyebrow";
 import fitCheckCaseStudy from "@/data/caseStudies/fitCheck";
 
-const { eyebrow, headline, body, steps, screen, caption } =
-  fitCheckCaseStudy.overview;
+const { eyebrow, headline, body, steps, screen } = fitCheckCaseStudy.overview;
 
 const Overview = () => {
   const headingId = useId();
@@ -42,19 +41,14 @@ const Overview = () => {
           </ol>
         </div>
 
-        <figure className="mx-auto flex w-full max-w-130 flex-col gap-4 lg:mx-0 lg:max-w-none lg:shrink-0 lg:basis-5/12">
-          <div className="relative aspect-13/15 overflow-hidden rounded-card bg-fitcheck">
-            <Phone
-              src={screen.src}
-              alt={screen.alt}
-              shadow="shadow-fitcheck-phone"
-              className="absolute top-[9.33%] left-[17.31%] w-[65.38%]"
-            />
-          </div>
-          <figcaption className="text-base text-muted-foreground">
-            {caption}
-          </figcaption>
-        </figure>
+        <div className="relative mx-auto aspect-13/15 w-full max-w-130 overflow-hidden rounded-card bg-fitcheck lg:mx-0 lg:max-w-none lg:shrink-0 lg:basis-5/12">
+          <Phone
+            src={screen.src}
+            alt={screen.alt}
+            shadow="shadow-fitcheck-phone"
+            className="absolute top-[9.33%] left-[17.31%] w-[65.38%]"
+          />
+        </div>
       </div>
     </section>
   );

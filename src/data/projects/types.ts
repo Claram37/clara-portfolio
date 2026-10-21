@@ -103,7 +103,6 @@ export interface Overview {
   body: string;
   steps: { name: string; text: string }[];
   screen: Shot;
-  caption: string;
 }
 
 export interface VersionOneSection extends FitcheckSection {

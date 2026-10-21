@@ -40,8 +40,6 @@ const fitCheckCaseStudy: FitcheckCaseStudy = {
       src: jobEntryPhone,
       alt: "A Dproz job page on a phone. Under the requirements, a Fitcheck card asks “Does your resume prove you can do this job?” with a Check my fit button, just above How to apply",
     },
-    caption:
-      "Where it starts: a card under every Dproz job's requirements, just before How to apply.",
   },
   problem: {
     headline: "Qualified candidates kept getting filtered out.",
