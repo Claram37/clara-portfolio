@@ -73,3 +73,76 @@ export interface Step {
 export interface StepCaseStudy extends CaseStudyIntro {
   steps: Step[];
 }
+
+// Fitcheck: the hero and overview are the same for everyone, these sections re-order for each reader
+export type StoryId =
+  | "results"
+  | "problem"
+  | "versionOne"
+  | "hardest"
+  | "screens"
+  | "learned";
+
+export interface Reader {
+  id: string;
+  name: string;
+  plural: string;
+  lead: string;
+  icon: LucideIcon;
+  order: StoryId[];
+  folded: StoryId[];
+}
+
+export interface Shot {
+  src: string;
+  alt: string;
+}
+
+export interface StorySection {
+  label: string;
+  summary: string;
+  eyebrow?: string;
+  headline: ReactNode;
+  body?: string;
+}
+
+export interface Overview {
+  eyebrow: string;
+  headline: string;
+  body: string;
+  steps: { name: string; text: string }[];
+  screen: Shot;
+  caption: string;
+}
+
+export interface ResultsSection extends StorySection {
+  note: string;
+  document: Shot;
+  cards: { icon: LucideIcon; title: string; text: string }[];
+}
+
+export interface VersionOneSection extends StorySection {
+  callouts: { quote: string; text: string }[];
+  report: Shot;
+}
+
+export interface HardestSection extends StorySection {
+  answers: { icon: LucideIcon; tile: string; title: string; text: string }[];
+  screen: Shot;
+}
+
+export interface ScreensSection extends StorySection {
+  aside: string;
+  screens: (Shot & { caption: string })[];
+}
+
+export interface ReaderCaseStudy extends CaseStudyIntro {
+  readers: Reader[];
+  overview: Overview;
+  results: ResultsSection;
+  problem: StorySection;
+  versionOne: VersionOneSection;
+  hardest: HardestSection;
+  screens: ScreensSection;
+  learned: StorySection;
+}
