@@ -3,15 +3,10 @@ import Phone from "@/components/mockups/Phone";
 import Eyebrow from "@/components/shared/Eyebrow";
 import fitCheckCaseStudy from "@/data/caseStudies/fitCheck";
 import { cn } from "@/lib/utils";
-import OrderTag from "./OrderTag";
 
 const { eyebrow, headline, body, answers, screen } = fitCheckCaseStudy.hardest;
 
-interface HardestQuestionProps {
-  tag?: string;
-}
-
-const HardestQuestion = ({ tag }: HardestQuestionProps) => {
+const HardestQuestion = () => {
   const headingId = useId();
 
   return (
@@ -21,7 +16,6 @@ const HardestQuestion = ({ tag }: HardestQuestionProps) => {
     >
       <div className="mx-auto flex max-w-content flex-col gap-12 lg:flex-row lg:items-end lg:gap-16 xl:gap-24">
         <div className="flex flex-col gap-6 pt-20 lg:flex-1 lg:py-24 2xl:py-30">
-          {tag && <OrderTag>{tag}</OrderTag>}
           <Eyebrow className="text-muted-foreground">{eyebrow}</Eyebrow>
           <h2 id={headingId} className="text-chapter">
             {headline}

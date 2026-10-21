@@ -56,7 +56,6 @@ const fitCheckCaseStudy: ReaderCaseStudy = {
   details: [
     { label: "Role", value: "UI/UX Designer" },
     { label: "Company", value: dproz.name },
-    { label: "Platform", value: "[Confirm]" },
     {
       label: "Scope",
       value: "Gap analysis, conversational UI, resume tailoring",

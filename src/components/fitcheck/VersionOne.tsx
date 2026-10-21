@@ -3,7 +3,6 @@ import Zoom from "@/components/mockups/Zoom";
 import Eyebrow from "@/components/shared/Eyebrow";
 import fitCheckCaseStudy from "@/data/caseStudies/fitCheck";
 import { cn } from "@/lib/utils";
-import OrderTag from "./OrderTag";
 import Pin from "./Pin";
 
 const { eyebrow, headline, body, callouts, report } =
@@ -15,11 +14,7 @@ const pins = [
   "top-[94.52%] left-[62.05%]",
 ];
 
-interface VersionOneProps {
-  tag?: string;
-}
-
-const VersionOne = ({ tag }: VersionOneProps) => {
+const VersionOne = () => {
   const headingId = useId();
 
   return (
@@ -29,7 +24,6 @@ const VersionOne = ({ tag }: VersionOneProps) => {
     >
       <div className="mx-auto flex max-w-content flex-col gap-12 lg:flex-row lg:items-start lg:gap-16 xl:gap-24">
         <div className="flex flex-col gap-6 lg:flex-1 lg:pt-6">
-          {tag && <OrderTag>{tag}</OrderTag>}
           <Eyebrow className="text-muted-foreground">{eyebrow}</Eyebrow>
           <h2 id={headingId} className="text-chapter">
             {headline}

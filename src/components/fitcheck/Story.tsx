@@ -8,7 +8,7 @@ import Results from "./Results";
 import Screens from "./Screens";
 import VersionOne from "./VersionOne";
 
-const sections: Partial<Record<StoryId, ComponentType<{ tag?: string }>>> = {
+const sections: Partial<Record<StoryId, ComponentType>> = {
   results: Results,
   problem: Problem,
   versionOne: VersionOne,
@@ -22,16 +22,9 @@ const Story = () => {
   return (
     <div>
       <Overview />
-      {reader.order.map((id, index) => {
+      {reader.order.map((id) => {
         const Section = sections[id];
-        return (
-          Section && (
-            <Section
-              key={id}
-              tag={`${index + 3} of ${reader.order.length + 2} for ${reader.plural}`}
-            />
-          )
-        );
+        return Section && <Section key={id} />;
       })}
     </div>
   );

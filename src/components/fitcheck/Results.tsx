@@ -2,18 +2,13 @@ import { useId } from "react";
 import Eyebrow from "@/components/shared/Eyebrow";
 import fitCheckCaseStudy from "@/data/caseStudies/fitCheck";
 import { cn } from "@/lib/utils";
-import OrderTag from "./OrderTag";
 
 const { eyebrow, headline, note, document: resume, cards } =
   fitCheckCaseStudy.results;
 
 const placements = ["top-[17.5%] left-[4.23%]", "top-[65.63%] right-[4.23%]"];
 
-interface ResultsProps {
-  tag?: string;
-}
-
-const Results = ({ tag }: ResultsProps) => {
+const Results = () => {
   const headingId = useId();
 
   return (
@@ -23,7 +18,6 @@ const Results = ({ tag }: ResultsProps) => {
     >
       <div className="mx-auto flex max-w-content flex-col gap-12 lg:flex-row lg:items-center lg:gap-20">
         <div className="flex flex-col gap-7 lg:flex-1">
-          {tag && <OrderTag>{tag}</OrderTag>}
           <Eyebrow className="text-muted-foreground">{eyebrow}</Eyebrow>
           <h2 id={headingId} className="max-w-150 text-chapter">
             {headline}

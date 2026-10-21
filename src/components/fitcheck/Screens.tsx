@@ -1,15 +1,10 @@
 import { useId } from "react";
 import Phone from "@/components/mockups/Phone";
 import fitCheckCaseStudy from "@/data/caseStudies/fitCheck";
-import OrderTag from "./OrderTag";
 
 const { headline, aside, screens } = fitCheckCaseStudy.screens;
 
-interface ScreensProps {
-  tag?: string;
-}
-
-const Screens = ({ tag }: ScreensProps) => {
+const Screens = () => {
   const headingId = useId();
 
   return (
@@ -18,7 +13,6 @@ const Screens = ({ tag }: ScreensProps) => {
       className="px-page py-20 lg:py-24 2xl:py-30"
     >
       <div className="mx-auto flex max-w-content flex-col gap-12">
-        {tag && <OrderTag>{tag}</OrderTag>}
         <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between md:gap-8">
           <h2 id={headingId} className="text-chapter text-balance">
             {headline}
