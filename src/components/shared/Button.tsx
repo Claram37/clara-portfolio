@@ -19,6 +19,7 @@ interface ButtonProps {
   to?: string;
   href?: string; // files, opened in a new tab
   type?: "button" | "submit";
+  onClick?: () => void;
   variant?: keyof typeof variants;
   size?: keyof typeof sizes;
   arrow?: boolean;
@@ -30,6 +31,7 @@ const Button = ({
   to,
   href,
   type = "button",
+  onClick,
   variant = "dark",
   size = "md",
   arrow = false,
@@ -68,7 +70,7 @@ const Button = ({
       {content}
     </Link>
   ) : (
-    <button type={type} className={classes}>
+    <button type={type} onClick={onClick} className={classes}>
       {content}
     </button>
   );

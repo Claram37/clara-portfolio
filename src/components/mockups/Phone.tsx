@@ -1,8 +1,10 @@
+import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 interface PhoneProps {
-  src: string;
-  alt: string;
+  src?: string;
+  alt?: string;
+  children?: ReactNode; // on the screen instead of an image, like a live prototype
   className?: string;
   shadow?: string;
   loading?: "eager" | "lazy";
@@ -13,6 +15,7 @@ interface PhoneProps {
 const Phone = ({
   src,
   alt,
+  children,
   className,
   shadow = "shadow-phone",
   loading = "lazy",
@@ -20,13 +23,19 @@ const Phone = ({
   return (
     <div className={cn("@container aspect-280/580", className)}>
       <div className={cn("size-full rounded-device bg-bezel p-bezel", shadow)}>
-        <img
-          src={src}
-          alt={alt}
-          loading={loading}
-          decoding="async"
-          className="size-full rounded-screen object-cover"
-        />
+        {children ? (
+          <div className="size-full overflow-hidden rounded-screen">
+            {children}
+          </div>
+        ) : (
+          <img
+            src={src}
+            alt={alt}
+            loading={loading}
+            decoding="async"
+            className="size-full rounded-screen object-cover"
+          />
+        )}
       </div>
     </div>
   );

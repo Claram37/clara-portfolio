@@ -10,8 +10,10 @@ import createDreamCake from "@/assets/pastries/6-create-your-dream-cake.jpg";
 import menuPhone from "@/assets/pastries/menu-phone.png";
 import customCakePhone from "@/assets/pastries/custom-cake-phone.png";
 import homePhone from "@/assets/pastries/home-phone.png";
-import fullDesktop from "@/assets/pastries/full-page-desktop.jpg";
-import fullMobile from "@/assets/pastries/landing-full-mobile.jpg";
+
+// Figma's embed of the Pastries prototype, starting on one frame, fitted to its width and scrolling down
+const prototype = (frame: string) =>
+  `https://embed.figma.com/proto/gKjhoa6Ouj05vY21fEiF40/Pastries?node-id=${frame}&starting-point-node-id=${frame.replace("-", "%3A")}&scaling=scale-down-width&content-scaling=fixed&hide-ui=1&embed-host=share`;
 
 const pastriesCaseStudy: PastriesCaseStudy = {
   project: pastries,
@@ -119,8 +121,9 @@ const pastriesCaseStudy: PastriesCaseStudy = {
   wholePage: {
     headline: "See the whole page",
     body: "Every section, top to bottom, on desktop and mobile.",
-    desktop: { label: "Desktop page", src: fullDesktop },
-    mobile: { label: "Mobile page", src: fullMobile },
+    // The "Pastries Homepage" and "iPhone 13 & 14 - 1" frames
+    desktop: { label: "Desktop page", prototype: prototype("1-2") },
+    mobile: { label: "Mobile page", prototype: prototype("29-2") },
   },
   next: serenity,
 };

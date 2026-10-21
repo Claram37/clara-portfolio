@@ -185,8 +185,8 @@ export interface PastriesCaseStudy extends PageIntro {
   wholePage: {
     headline: string;
     body: string;
-    desktop: { label: string; src: string };
-    mobile: { label: string; src: string };
+    desktop: { label: string; prototype: string };
+    mobile: { label: string; prototype: string };
   };
   next: NextUp;
 }
