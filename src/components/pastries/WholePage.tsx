@@ -18,7 +18,7 @@ const WholePage = () => {
           </h2>
           <p className="text-pastries-body">{wholePage.body}</p>
         </div>
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-3 lg:shrink-0">
           <Button
             href={desktop.src}
             arrow
