@@ -74,33 +74,13 @@ export interface StepCaseStudy extends CaseStudyIntro {
   steps: Step[];
 }
 
-// Fitcheck: the hero and overview are the same for everyone, these sections re-order for each reader
-export type StoryId =
-  | "results"
-  | "problem"
-  | "versionOne"
-  | "hardest"
-  | "screens"
-  | "learned";
-
-export interface Reader {
-  id: string;
-  name: string;
-  plural: string;
-  lead: string;
-  icon: LucideIcon;
-  order: StoryId[];
-  folded: StoryId[];
-}
-
+// Fitcheck's case study sections
 export interface Shot {
   src: string;
   alt: string;
 }
 
-export interface StorySection {
-  label: string;
-  summary: string;
+export interface FitcheckSection {
   eyebrow?: string;
   headline: ReactNode;
   body?: string;
@@ -115,34 +95,33 @@ export interface Overview {
   caption: string;
 }
 
-export interface ResultsSection extends StorySection {
+export interface VersionOneSection extends FitcheckSection {
+  callouts: { quote: string; text: string }[];
+  report: Shot;
+}
+
+export interface HardestSection extends FitcheckSection {
+  answers: { icon: LucideIcon; tile: string; title: string; text: string }[];
+  screen: Shot;
+}
+
+export interface ScreensSection extends FitcheckSection {
+  aside: string;
+  screens: (Shot & { caption: string })[];
+}
+
+export interface ResultsSection extends FitcheckSection {
   note: string;
   document: Shot;
   cards: { icon: LucideIcon; title: string; text: string }[];
 }
 
-export interface VersionOneSection extends StorySection {
-  callouts: { quote: string; text: string }[];
-  report: Shot;
-}
-
-export interface HardestSection extends StorySection {
-  answers: { icon: LucideIcon; tile: string; title: string; text: string }[];
-  screen: Shot;
-}
-
-export interface ScreensSection extends StorySection {
-  aside: string;
-  screens: (Shot & { caption: string })[];
-}
-
-export interface ReaderCaseStudy extends CaseStudyIntro {
-  readers: Reader[];
+export interface FitcheckCaseStudy extends CaseStudyIntro {
   overview: Overview;
-  results: ResultsSection;
-  problem: StorySection;
+  problem: FitcheckSection;
   versionOne: VersionOneSection;
   hardest: HardestSection;
   screens: ScreensSection;
-  learned: StorySection;
+  results: ResultsSection;
+  learned: FitcheckSection;
 }
