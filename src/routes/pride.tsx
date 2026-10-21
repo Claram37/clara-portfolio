@@ -1,5 +1,6 @@
 import type { Route } from "./+types/pride";
 import type { NavHandle } from "@/components/layout/Nav";
+import Tracklist from "@/components/pride/Tracklist";
 import CaseHero from "@/components/shared/CaseHero";
 import prideCaseStudy from "@/data/caseStudies/pride";
 import site from "@/data/site";
@@ -24,6 +25,7 @@ const PridePage = () => {
         accent="text-pride-pink"
         dark
       />
+      <Tracklist />
     </div>
   );
 };
