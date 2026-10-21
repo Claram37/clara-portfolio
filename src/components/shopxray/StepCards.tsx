@@ -9,13 +9,12 @@ const StepCards = ({ steps }: StepCardsProps) => {
   return (
     <ol
       aria-label="From paper to ShopXray"
-      className="flex snap-x snap-mandatory gap-4 overflow-x-auto px-page pb-16 scroll-px-page xl:hidden focus-ring"
-      tabIndex={0}
+      className="flex flex-col gap-16 px-page pb-16 xl:hidden"
     >
       {steps.map((step) => (
         <li
           key={step.label}
-          className="flex shrink-0 basis-4/5 snap-start flex-col gap-6 md:basis-3/5"
+          className="mx-auto flex w-full max-w-paper-stage flex-col gap-6"
         >
           <Stage>{step.scene}</Stage>
           <StepCaption step={step} />
