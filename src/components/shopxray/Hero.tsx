@@ -1,5 +1,5 @@
 import type { CaseStudyIntro } from "@/data/projects/types";
-import Eyebrow from "./Eyebrow";
+import Eyebrow from "@/components/shared/Eyebrow";
 
 interface HeroProps {
   caseStudy: CaseStudyIntro;
@@ -11,7 +11,7 @@ const Hero = ({ caseStudy }: HeroProps) => {
       data-daftari
       className="px-page pt-12 pb-16 flex flex-col items-center gap-6 text-center snap-end"
     >
-      <Eyebrow>Case study · MkatabaHQ</Eyebrow>
+      <Eyebrow className="text-shopxray">Case study · MkatabaHQ</Eyebrow>
       <h1 className="text-case-title">{project.name}</h1>
       <p className="text-xl md:text-2xl text-ink-muted">{intro}</p>
       <dl className="grid grid-cols-2 gap-x-8 gap-y-6 pt-4 text-left md:flex md:gap-x-18">

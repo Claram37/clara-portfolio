@@ -1,5 +1,5 @@
 import type { Route } from "./+types/dproz";
-import CaseHero from "@/components/dproz/CaseHero";
+import CaseHero from "@/components/shared/CaseHero";
 import Contact from "@/components/shared/Contact";
 import Deck from "@/components/dproz/Deck";
 import NextProject from "@/components/shared/NextProject";
@@ -18,7 +18,7 @@ export const meta: Route.MetaFunction = () =>
 const DprozPage = () => {
   return (
     <>
-      <CaseHero caseStudy={dprozCaseStudy} />
+      <CaseHero caseStudy={dprozCaseStudy} accent="text-dproz" />
       <Deck chapters={chapters} />
       <NextProject project={project} />
       <Contact />

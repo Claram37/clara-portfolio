@@ -1,5 +1,5 @@
 import type { Step } from "@/data/projects/types";
-import Eyebrow from "./Eyebrow";
+import Eyebrow from "@/components/shared/Eyebrow";
 import { cn } from "@/lib/utils";
 
 interface StepCaptionProps {
@@ -11,7 +11,7 @@ const StepCaption = ({ step, className }: StepCaptionProps) => {
 
   return (
     <div className={cn("flex flex-col gap-3", className)}>
-      <Eyebrow>{eyebrow}</Eyebrow>
+      <Eyebrow className="text-shopxray">{eyebrow}</Eyebrow>
       <h2 className="text-step">{headline}</h2>
       <p className="text-body text-ink-muted">{body}</p>
     </div>

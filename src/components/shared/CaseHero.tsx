@@ -1,16 +1,23 @@
-import type { CaseStudy } from "@/data/projects/types";
+import type { CaseStudyIntro } from "@/data/projects/types";
+import { cn } from "@/lib/utils";
 
 interface CaseHeroProps {
-  caseStudy: CaseStudy;
+  caseStudy: CaseStudyIntro;
+  accent: string;
 }
 
-const CaseHero = ({ caseStudy }: CaseHeroProps) => {
+const CaseHero = ({ caseStudy, accent }: CaseHeroProps) => {
   const { project, intro, details } = caseStudy;
 
   return (
     <section className="px-page pt-12 pb-16">
       <div className="mx-auto flex max-w-content flex-col items-center gap-6 text-center">
-        <p className="inline-flex items-center gap-2 text-base font-semibold uppercase text-dproz">
+        <p
+          className={cn(
+            "inline-flex items-center gap-2 text-base font-semibold uppercase",
+            accent,
+          )}
+        >
           Case Study
         </p>
         <h1 className="text-case-title">{project.name}</h1>
