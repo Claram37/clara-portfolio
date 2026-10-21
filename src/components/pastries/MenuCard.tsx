@@ -6,9 +6,10 @@ import { cn } from "@/lib/utils";
 interface MenuCardProps {
   item: MenuItem;
   name: string; // its view transition name, so it glides when the chips reflow the grid
+  onOpen: () => void;
 }
 
-const MenuCard = ({ item, name }: MenuCardProps) => {
+const MenuCard = ({ item, name, onOpen }: MenuCardProps) => {
   const { title, format, category, screen, crop } = item;
 
   return (
@@ -36,7 +37,16 @@ const MenuCard = ({ item, name }: MenuCardProps) => {
 
       <div className="flex items-center justify-between gap-4 p-5">
         <div className="flex flex-col items-start gap-2">
-          <h3 className="text-xl font-semibold">{title}</h3>
+          <h3 className="text-xl font-semibold">
+            <button
+              type="button"
+              aria-haspopup="dialog"
+              onClick={onOpen}
+              className="text-left focus-ring after:absolute after:inset-0"
+            >
+              {title}
+            </button>
+          </h3>
           <span className="rounded-full bg-pastries-tag px-3 py-1 text-xs text-pastries-muted">
             {category ?? format}
           </span>

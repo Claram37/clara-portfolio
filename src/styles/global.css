@@ -562,6 +562,10 @@
   html:has([data-snap="mandatory"]) {
     @apply xl:snap-mandatory;
   }
+  /* The page stays put behind an open dialog (Pastries' full-size screens) */
+  html:has(dialog[open]) {
+    overflow: hidden;
+  }
 }
 
 body:has([data-daftari]) {

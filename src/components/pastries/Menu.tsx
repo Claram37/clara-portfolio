@@ -3,6 +3,7 @@ import { flushSync } from "react-dom";
 import pastriesCaseStudy from "@/data/caseStudies/pastries";
 import type { MenuItem } from "@/data/projects/types";
 import { cn } from "@/lib/utils";
+import FullView from "./FullView";
 import MenuCard from "./MenuCard";
 
 const { menu } = pastriesCaseStudy;
@@ -13,6 +14,7 @@ const onMenu = (item: MenuItem, chip: string) =>
 const Menu = () => {
   const headingId = useId();
   const [chip, setChip] = useState("All");
+  const [viewing, setViewing] = useState<MenuItem | null>(null);
   const count = menu.items.filter((item) => onMenu(item, chip)).length;
 
   // The cards glide to their new places (a view transition), unless the reader prefers less motion
@@ -68,11 +70,13 @@ const Menu = () => {
                   key={item.title}
                   item={item}
                   name={`menu-card-${index}`}
+                  onOpen={() => setViewing(item)}
                 />
               ),
           )}
         </ul>
       </div>
+      <FullView item={viewing} onClose={() => setViewing(null)} />
     </section>
   );
 };
