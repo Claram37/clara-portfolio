@@ -1,5 +1,6 @@
 import type { Route } from "./+types/pride";
 import type { NavHandle } from "@/components/layout/Nav";
+import LinerNotes from "@/components/pride/LinerNotes";
 import Tracklist from "@/components/pride/Tracklist";
 import CaseHero from "@/components/shared/CaseHero";
 import prideCaseStudy from "@/data/caseStudies/pride";
@@ -26,6 +27,7 @@ const PridePage = () => {
         dark
       />
       <Tracklist />
+      <LinerNotes />
     </div>
   );
 };
