@@ -5,6 +5,7 @@ import HardestQuestion from "./HardestQuestion";
 import Overview from "./Overview";
 import Problem from "./Problem";
 import Results from "./Results";
+import Screens from "./Screens";
 import VersionOne from "./VersionOne";
 
 const sections: Partial<Record<StoryId, ComponentType<{ tag?: string }>>> = {
@@ -12,6 +13,7 @@ const sections: Partial<Record<StoryId, ComponentType<{ tag?: string }>>> = {
   problem: Problem,
   versionOne: VersionOne,
   hardest: HardestQuestion,
+  screens: Screens,
 };
 
 const Story = () => {
