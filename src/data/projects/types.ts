@@ -68,6 +68,7 @@ export interface Chapter {
 // What CaseHero shows. A case study's project is on the homepage; a concept's only needs a name
 export interface PageIntro {
   project: { name: string };
+  title?: string; // the hero's title, when it's shorter than the project's name
   intro: string;
   details: { label: string; value: string }[];
 }
@@ -165,4 +166,24 @@ export interface PrideCaseStudy extends PageIntro {
   tracks: Track[];
   linerNotes: LinerNotes;
   next: NextUp;
+}
+
+// Pastries' concept page: its screens served as a menu, which the chips filter by format or category
+export interface MenuItem {
+  title: string;
+  format: "Desktop" | "Mobile";
+  category?: "Seasonal" | "Custom cakes";
+  screen: Shot;
+  crop?: string; // a desktop screen's aspect ratio on its card
+}
+
+export interface PastriesCaseStudy extends PageIntro {
+  project: NextUp;
+  title: string;
+  menu: { headline: string; chips: string[]; items: MenuItem[] };
+  wholePage: {
+    headline: string;
+    body: string;
+    pages: { label: string; src: string }[];
+  };
 }
