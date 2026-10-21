@@ -37,7 +37,7 @@ const Results = () => {
             <div
               key={title}
               className={cn(
-                "absolute flex w-72 items-center gap-4 rounded-card bg-ink px-5 py-4 shadow-fitcheck-note",
+                "absolute flex w-64 items-center gap-4 rounded-card bg-ink px-5 py-4 shadow-fitcheck-note sm:w-72",
                 placements[index],
               )}
             >
