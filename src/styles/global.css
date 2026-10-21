@@ -137,6 +137,21 @@
   --color-pride-next: #14141a;
   --color-on-dark-muted: #9a9aa8;
 
+  /*
+    Pastries concept (portfolio-pages.pen → Pastries Idea 05 · Our Menu): the cream page, the card and chip lines,
+    a card's tag and phone stage, the menu's grey text, then the bakery's green and terracotta and the pink ask
+  */
+  --color-pastries: #fcf7f1;
+  --color-pastries-line: #eadfd1;
+  --color-pastries-chip-line: #dcd3c8;
+  --color-pastries-tag: #f3ece2;
+  --color-pastries-stage: #f3e9dd;
+  --color-pastries-muted: #6b6258;
+  --color-pastries-green: #1e8a6c;
+  --color-pastries-terracotta: #c9775a;
+  --color-pastries-pink: #f2d4d7;
+  --color-pastries-body: #4a433b;
+
   /* Contact */
   --color-contact: #e2582f;
   --color-contact-body: #ffe3d8;
