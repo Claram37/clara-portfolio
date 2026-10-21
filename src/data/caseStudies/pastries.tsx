@@ -119,10 +119,8 @@ const pastriesCaseStudy: PastriesCaseStudy = {
   wholePage: {
     headline: "See the whole page",
     body: "Every section, top to bottom, on desktop and mobile.",
-    pages: [
-      { label: "Desktop page", src: fullDesktop },
-      { label: "Mobile page", src: fullMobile },
-    ],
+    desktop: { label: "Desktop page", src: fullDesktop },
+    mobile: { label: "Mobile page", src: fullMobile },
   },
 };
 

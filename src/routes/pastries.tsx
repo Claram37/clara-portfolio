@@ -1,6 +1,7 @@
 import type { Route } from "./+types/pastries";
 import Menu from "@/components/pastries/Menu";
 import Overview from "@/components/pastries/Overview";
+import WholePage from "@/components/pastries/WholePage";
 import CaseHero from "@/components/shared/CaseHero";
 import pastriesCaseStudy from "@/data/caseStudies/pastries";
 import site from "@/data/site";
@@ -25,6 +26,7 @@ const PastriesPage = () => {
         />
         <Overview />
         <Menu />
+        <WholePage />
       </div>
     </>
   );
