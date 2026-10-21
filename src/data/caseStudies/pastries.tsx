@@ -1,4 +1,5 @@
 import pastries from "@/data/projects/pastries";
+import serenity from "@/data/projects/serenity";
 import type { PastriesCaseStudy } from "@/data/projects/types";
 import hero from "@/assets/pastries/1-hero.jpg";
 import easterSpecials from "@/assets/pastries/2-easter-specials.jpg";
@@ -122,6 +123,7 @@ const pastriesCaseStudy: PastriesCaseStudy = {
     desktop: { label: "Desktop page", src: fullDesktop },
     mobile: { label: "Mobile page", src: fullMobile },
   },
+  next: serenity,
 };
 
 export default pastriesCaseStudy;

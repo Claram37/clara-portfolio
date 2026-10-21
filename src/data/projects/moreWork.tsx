@@ -8,6 +8,7 @@ import Phone from "@/components/mockups/Phone";
 import pastries from "./pastries";
 import pride from "./pride";
 import safariSpirits from "./safariSpirits";
+import serenity from "./serenity";
 import type { MoreProject } from "./types";
 
 const moreWork: MoreProject[] = [
@@ -86,10 +87,9 @@ const moreWork: MoreProject[] = [
     ),
   },
   {
-    name: "Serenity",
-    summary:
-      "A calming meditation app with guided onboarding and breathing exercises.",
-    to: "/concepts/meditation",
+    name: serenity.name,
+    summary: serenity.caption,
+    to: serenity.caseStudy,
     tag: "Concept",
     cover: (
       <img
