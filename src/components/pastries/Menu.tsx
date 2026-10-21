@@ -30,7 +30,7 @@ const Menu = () => {
   };
 
   return (
-    <section aria-labelledby={headingId} className="px-page pt-8 pb-16 lg:pb-24">
+    <section aria-labelledby={headingId} className="px-page pb-16 lg:pb-24">
       <div className="mx-auto max-w-content">
         <h2 id={headingId} className="text-center text-lesson font-bold">
           {menu.headline}
