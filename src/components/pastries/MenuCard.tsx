@@ -5,13 +5,17 @@ import { cn } from "@/lib/utils";
 
 interface MenuCardProps {
   item: MenuItem;
+  name: string; // its view transition name, so it glides when the chips reflow the grid
 }
 
-const MenuCard = ({ item }: MenuCardProps) => {
+const MenuCard = ({ item, name }: MenuCardProps) => {
   const { title, format, category, screen, crop } = item;
 
   return (
-    <li className="group relative mb-6 break-inside-avoid overflow-hidden rounded-card border border-pastries-line bg-paper">
+    <li
+      style={{ viewTransitionName: name }}
+      className="group relative mb-6 break-inside-avoid overflow-hidden rounded-card border border-pastries-line bg-paper"
+    >
       {format === "Mobile" ? (
         <div className="relative aspect-20/21 overflow-hidden bg-pastries-stage">
           <Phone

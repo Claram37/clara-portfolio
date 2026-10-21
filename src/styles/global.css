@@ -568,6 +568,12 @@ body:has([data-daftari]) {
   @apply bg-daftari;
 }
 
+/* Pastries' menu: the cards glide to their new places when a chip filters them */
+::view-transition-group(*) {
+  animation-duration: 500ms;
+  animation-timing-function: var(--ease-reveal);
+}
+
 /* shadcn/ui: exposes the variables in :root below as Tailwind classes (bg-primary, text-muted-foreground…) */
 @theme inline {
   --font-heading: var(--font-display);
