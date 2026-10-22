@@ -19,7 +19,7 @@ const Itinerary = () => {
           </h2>
         </div>
 
-        <ol>
+        <ol className="rail-progress">
           {days.map((day, index) => (
             <Day
               key={day.headline}

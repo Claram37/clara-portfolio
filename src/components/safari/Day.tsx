@@ -16,10 +16,17 @@ const Day = ({ day, number, last }: DayProps) => {
   return (
     <li className="flex gap-3 md:gap-8">
       <div aria-hidden="true" className="flex shrink-0 flex-col items-center">
-        <span className="flex size-10 items-center justify-center rounded-full bg-safari-green font-display text-base font-bold text-paper md:size-14 md:text-xl">
+        <span
+          data-stop
+          className="flex size-10 items-center justify-center rounded-full bg-safari-green font-display text-base font-bold text-paper md:size-14 md:text-xl"
+        >
           {String(number).padStart(2, "0")}
         </span>
-        {!last && <span className="w-0.5 flex-1 bg-safari-rail" />}
+        {!last && (
+          <span data-rail className="flex w-0.5 flex-1">
+            <span className="w-full bg-safari-rail" />
+          </span>
+        )}
       </div>
 
       <div className={cn("min-w-0 flex-1", !last && "pb-10")}>

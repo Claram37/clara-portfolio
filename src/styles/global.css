@@ -502,6 +502,44 @@
   }
 }
 
+/*
+  Safari Spirits' itinerary: as the middle of the screen moves down the rail, each day's number ([data-stop]) fills
+  green and its line ([data-rail]) draws down to the next. Without support, or for reduced motion, it's all filled
+*/
+@utility rail-progress {
+  @supports (animation-timeline: view()) {
+    @variant motion-safe {
+      & [data-stop] {
+        animation: stop-fill linear both;
+        animation-timeline: view(50% 50%);
+        animation-range: cover 0% cover 50%;
+      }
+      & [data-rail] {
+        view-timeline: --rail;
+        view-timeline-inset: 50% 50%;
+      }
+      & [data-rail] > * {
+        transform-origin: top;
+        animation: rail-draw linear both;
+        animation-timeline: --rail;
+        animation-range: cover;
+      }
+    }
+  }
+}
+@keyframes stop-fill {
+  from {
+    background-color: var(--color-paper);
+    color: var(--color-safari-green);
+    box-shadow: inset 0 0 0 2px var(--color-safari-rail);
+  }
+}
+@keyframes rail-draw {
+  from {
+    scale: 1 0;
+  }
+}
+
 /* Serenity: one long gradient from the cream of the cover render to the app's night sky, so the page darkens as you read */
 @utility nightfall {
   background-image: linear-gradient(
