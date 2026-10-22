@@ -1,4 +1,5 @@
 import Phone from "@/components/mockups/Phone";
+import hiringCaseStudy from "@/data/caseStudies/hiringTracker";
 import hiringTracker from "@/data/projects/hiringTracker";
 import safariSpirits from "@/data/projects/safariSpirits";
 import type { SafariCaseStudy, Shot } from "@/data/projects/types";
@@ -175,7 +176,8 @@ const safariCaseStudy: SafariCaseStudy = {
     ],
     screens: [tourPhone, itineraryDayPhone],
   },
-  next: hiringTracker,
+  // Under its page's shorter title
+  next: { ...hiringTracker, name: hiringCaseStudy.title },
 };
 
 export default safariCaseStudy;
