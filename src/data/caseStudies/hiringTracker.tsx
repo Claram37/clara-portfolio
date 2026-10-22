@@ -7,6 +7,7 @@ import candidateEvaluation from "@/assets/hiring/candidate-evaluation.png";
 
 const hiringCaseStudy: HiringCaseStudy = {
   project: hiringTracker,
+  title: "Hiring Tracker",
   intro: "Every candidate, every stage, in one view.",
   details: [
     { label: "Role", value: "UI/UX Designer" },

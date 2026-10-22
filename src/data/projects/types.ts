@@ -202,6 +202,7 @@ export interface Question {
 
 export interface HiringCaseStudy extends PageIntro {
   project: Pick<NextUp, "name" | "caption" | "caseStudy">;
+  title: string;
   before: Pick<SectionCopy, "eyebrow" | "body">;
   questions: Question[];
   next: NextUp;

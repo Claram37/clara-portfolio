@@ -8,11 +8,11 @@ import hiringCaseStudy from "@/data/caseStudies/hiringTracker";
 import site from "@/data/site";
 import { pageMeta } from "@/lib/meta";
 
-const { project, intro, before, next } = hiringCaseStudy;
+const { title, intro, before, next } = hiringCaseStudy;
 
 export const meta: Route.MetaFunction = () =>
   pageMeta({
-    title: `${project.name} · ${site.name}`,
+    title: `${title} · ${site.name}`,
     description: intro,
   });
 
