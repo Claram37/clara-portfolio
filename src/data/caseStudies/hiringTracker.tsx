@@ -1,3 +1,4 @@
+import { Columns3, PanelRight, Table2 } from "lucide-react";
 import hiringTracker from "@/data/projects/hiringTracker";
 import resumeFeedback from "@/data/projects/resumeFeedback";
 import type { HiringCaseStudy } from "@/data/projects/types";
@@ -22,6 +23,7 @@ const hiringCaseStudy: HiringCaseStudy = {
     {
       headline: "Where is everyone?",
       body: "The kanban view shows every candidate as a card, moved from stage to stage.",
+      icon: Columns3,
       view: "Kanban view",
       screen: {
         src: kanbanBoard,
@@ -31,6 +33,7 @@ const hiringCaseStudy: HiringCaseStudy = {
     {
       headline: "Who should I look at first?",
       body: "The table puts many applications side by side, with skills, experience, education and a fit score to compare.",
+      icon: Table2,
       view: "Table view",
       screen: {
         src: applicantsTable,
@@ -40,6 +43,7 @@ const hiringCaseStudy: HiringCaseStudy = {
     {
       headline: "What happened with this person?",
       body: "The candidate drawer keeps their full history across stages, opened without leaving the board.",
+      icon: PanelRight,
       view: "Candidate drawer",
       screen: {
         src: candidateEvaluation,

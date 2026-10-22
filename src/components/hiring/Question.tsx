@@ -12,7 +12,7 @@ interface QuestionProps {
 // A recruiter's question on the left, answered by a screen of the tracker on the right
 const Question = ({ question, number, total }: QuestionProps) => {
   const headingId = useId();
-  const { headline, body, view, screen, crop } = question;
+  const { headline, body, icon: Icon, view, screen, crop } = question;
 
   return (
     <section
@@ -48,7 +48,8 @@ const Question = ({ question, number, total }: QuestionProps) => {
             {headline}
           </h2>
           <p className="text-body text-ink-muted lg:text-body-lg">{body}</p>
-          <p className="self-start rounded-full border border-hiring-pill-line bg-paper px-4 py-2 text-xs font-semibold text-hiring">
+          <p className="flex items-center gap-2 text-base text-muted-foreground">
+            <Icon className="size-4 shrink-0" aria-hidden="true" />
             {view}
           </p>
         </div>

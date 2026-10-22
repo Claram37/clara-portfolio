@@ -195,7 +195,8 @@ export interface PastriesCaseStudy extends PageIntro {
 export interface Question {
   headline: string;
   body: string;
-  view: string; // the view that answers it, named on its pill
+  icon: LucideIcon;
+  view: string; // the view that answers it, named beside its icon
   screen: Shot;
   crop?: string; // a tall screen's aspect ratio, when only its top shows
 }
