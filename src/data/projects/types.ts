@@ -197,6 +197,7 @@ export interface Question {
   body: string;
   icon: LucideIcon;
   view: string; // the view that answers it, named beside its icon
+  more?: { label: string; items: string[] }; // what else that view holds
   screen: Shot;
   crop?: string; // a tall screen's aspect ratio, when only its top shows
 }
