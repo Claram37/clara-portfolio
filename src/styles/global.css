@@ -110,13 +110,14 @@
   --shadow-modal: 0 24px 64px #1a1a1a1c;
   --tracking-eyebrow: 1.4px;
 
-  /* Safari Spirits: chapter 03 in v1, replaced by ShopXray on the homepage. Now Fitcheck's next project */
+  /*
+    Safari Spirits (portfolio-pages.pen → Safari Spirits Idea 01 · The Itinerary, with Idea 05's story): the off-white
+    page, the site's clay and the homepage window's shadow. shadow-safari is its peek on Fitcheck's Next project
+  */
   --shadow-safari: 0 24px 60px #3b2a1a33;
-  --color-safari: #f5ede0;
-  --color-safari-accent: #8a6a45;
-  --color-safari-ink: #2b2116;
-  --color-safari-muted: #6b5a45;
-  --color-safari-line: #e2d5c2;
+  --shadow-safari-window: 0 24px 64px #1a1a1a1c;
+  --color-safari: #f8f7f4;
+  --color-safari-clay: #bc6c25;
 
   --color-resume-feedback: #e6edf8;
 

@@ -7,6 +7,7 @@ export default [
   route("work/shopxray", "routes/shopxray.tsx"),
   route("work/fitcheck", "routes/fitcheck.tsx"),
   route("work/hiring-tracker", "routes/hiring-tracker.tsx"),
+  route("work/safari-spirits", "routes/safari-spirits.tsx"),
   route("concepts/pride", "routes/pride.tsx"),
   route("concepts/pastries", "routes/pastries.tsx"),
   route("concepts/meditation", "routes/serenity.tsx"),

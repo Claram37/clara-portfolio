@@ -222,3 +222,9 @@ export interface SerenityCaseStudy extends PageIntro {
   approach: Pick<SectionCopy, "eyebrow" | "body">;
   next: NextUp;
 }
+
+// Safari Spirits' page, planned like one of its trips: the project's days on an itinerary rail
+export interface SafariCaseStudy extends PageIntro {
+  project: NextUp;
+  hero: Shot; // the homepage, in a browser window under the hero
+}
