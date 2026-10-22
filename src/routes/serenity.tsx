@@ -6,12 +6,13 @@ import Featured from "@/components/serenity/Featured";
 import Palette from "@/components/serenity/Palette";
 import CaseHero from "@/components/shared/CaseHero";
 import Contact from "@/components/shared/Contact";
+import NextProject from "@/components/shared/NextProject";
 import serenityCaseStudy from "@/data/caseStudies/serenity";
 import site from "@/data/site";
 import useReveal from "@/hooks/useReveal";
 import { pageMeta } from "@/lib/meta";
 
-const { project, intro } = serenityCaseStudy;
+const { project, intro, next } = serenityCaseStudy;
 
 export const meta: Route.MetaFunction = () =>
   pageMeta({
@@ -41,6 +42,7 @@ const SerenityPage = () => {
         <Palette />
         <Approach />
       </div>
+      <NextProject next={next} />
       <Contact />
     </>
   );

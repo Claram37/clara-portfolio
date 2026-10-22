@@ -1,5 +1,8 @@
+import Browser from "@/components/mockups/Browser";
+import dproz from "@/data/projects/dproz";
 import serenity from "@/data/projects/serenity";
 import type { SerenityCaseStudy } from "@/data/projects/types";
+import homepageDesktop from "@/assets/dproz/homepage-desktop.png";
 import coverPhones from "@/assets/meditation/cover-phones.jpg";
 import welcomePhone from "@/assets/meditation/onboarding-1-welcome-phone.jpg";
 import restYourMindPhone from "@/assets/meditation/onboarding-2-rest-your-mind-phone.jpg";
@@ -85,6 +88,26 @@ const serenityCaseStudy: SerenityCaseStudy = {
   approach: {
     eyebrow: "The approach",
     body: "Content curated to each person, clear paths to Sleep, Meditate and Focus, and a palette that invites people to slow down.",
+  },
+  // Dproz, on a band in Serenity's night colours as the design shows
+  next: {
+    name: dproz.name,
+    caption: dproz.caption,
+    caseStudy: dproz.caseStudy,
+    theme: {
+      stage: "bg-serenity-next",
+      caption: "text-paper",
+      link: "text-serenity-next-text",
+      dark: true,
+    },
+    peek: (
+      <Browser
+        url="dproz.com"
+        src={homepageDesktop}
+        alt="Dproz homepage with a job search and jobs grouped by category"
+        className="absolute top-[32%] left-[6.67%] w-[116.67%]"
+      />
+    ),
   },
 };
 
