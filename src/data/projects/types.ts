@@ -208,8 +208,14 @@ export interface HiringCaseStudy extends PageIntro {
   next: NextUp;
 }
 
-// Serenity's concept page: night falls as you scroll
+// Serenity's concept page: night falls as you scroll, through a chapter per line of the app's own words
+export interface SerenityChapter {
+  line: string;
+  screens: Shot[];
+}
+
 export interface SerenityCaseStudy extends PageIntro {
   project: NextUp;
   featured: { headline: string; tags: string[]; cta: string; cover: Shot };
+  chapters: SerenityChapter[];
 }

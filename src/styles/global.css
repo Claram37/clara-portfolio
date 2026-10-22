@@ -162,9 +162,17 @@
   --color-hiring-line: #e4e8ef;
   --shadow-hiring: 0 20px 48px #0a1a5c14;
 
-  /* Serenity concept (portfolio-pages.pen → Serenity Idea 03 · Night Falls, with Idea 05's featured card and palette) */
+  /*
+    Serenity concept (portfolio-pages.pen → Serenity Idea 03 · Night Falls, with Idea 05's featured card and palette):
+    the cream page, the ink of the first line, the app's violet, then the nightfall gradient's dusk, twilight,
+    evening and night, the featured card's soft text and glow
+  */
   --color-serenity: #f6efe6;
+  --color-serenity-ink: #2a2540;
   --color-serenity-violet: #6b5bd0;
+  --color-serenity-dusk: #e9dce6;
+  --color-serenity-twilight: #8e7fb8;
+  --color-serenity-evening: #3a3260;
   --color-serenity-night: #1d1b2e;
   --color-serenity-soft: #c9c5dd;
   --color-serenity-glow: #8c7fd0;
@@ -474,6 +482,17 @@
   from {
     scale: 0 1;
   }
+}
+
+/* Serenity: one long gradient from the cream of the cover render to the app's night sky, so the page darkens as you read */
+@utility nightfall {
+  background-image: linear-gradient(
+    var(--color-serenity) 0%,
+    var(--color-serenity-dusk) 14%,
+    var(--color-serenity-twilight) 33%,
+    var(--color-serenity-evening) 50%,
+    var(--color-serenity-night) 66%
+  );
 }
 
 /* On a dark section: white focus outlines */

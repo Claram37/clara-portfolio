@@ -1,4 +1,5 @@
 import type { Route } from "./+types/serenity";
+import Chapters from "@/components/serenity/Chapters";
 import Featured from "@/components/serenity/Featured";
 import CaseHero from "@/components/shared/CaseHero";
 import Contact from "@/components/shared/Contact";
@@ -20,13 +21,16 @@ const story = "story";
 const SerenityPage = () => {
   return (
     <>
-      <div className="bg-serenity pb-16">
+      <div className="bg-serenity">
         <CaseHero
           caseStudy={serenityCaseStudy}
           eyebrow="Concept"
           accent="text-serenity-violet"
         />
+      </div>
+      <div className="nightfall pb-20 lg:pb-40">
         <Featured story={story} />
+        <Chapters story={story} />
       </div>
       <Contact />
     </>
