@@ -152,8 +152,16 @@
   --color-pastries-pink: #f2d4d7;
   --color-pastries-body: #4a433b;
 
-  /* Hiring Tracker (portfolio-pages.pen → Hiring Tracker Idea 01 · Three Questions): its blue */
+  /*
+    Hiring Tracker (portfolio-pages.pen → Hiring Tracker Idea 01 · Three Questions): its blue, the tinted question
+    bands, the counter's unread segments, the pill and screen borders, and the screens' shadow
+  */
   --color-hiring: #0b66d8;
+  --color-hiring-tint: #f4f6fa;
+  --color-hiring-track: #d5dce8;
+  --color-hiring-pill-line: #dce3ee;
+  --color-hiring-line: #e4e8ef;
+  --shadow-hiring: 0 20px 48px #0a1a5c14;
 
   /* Contact */
   --color-contact: #e2582f;

@@ -192,7 +192,16 @@ export interface PastriesCaseStudy extends PageIntro {
 }
 
 // The Hiring Tracker page: the three questions a recruiter brings, each answered by one view of the tracker
+export interface Question {
+  headline: string;
+  body: string;
+  view: string; // the view that answers it, named on its pill
+  screen: Shot;
+  crop?: string; // a tall screen's aspect ratio, when only its top shows
+}
+
 export interface HiringCaseStudy extends PageIntro {
   project: Pick<NextUp, "name" | "caption" | "caseStudy">;
   before: Pick<SectionCopy, "eyebrow" | "body">;
+  questions: Question[];
 }

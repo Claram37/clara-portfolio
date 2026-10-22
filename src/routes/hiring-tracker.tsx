@@ -1,4 +1,5 @@
 import type { Route } from "./+types/hiring-tracker";
+import Questions from "@/components/hiring/Questions";
 import CaseHero from "@/components/shared/CaseHero";
 import Lead from "@/components/shared/Lead";
 import hiringCaseStudy from "@/data/caseStudies/hiringTracker";
@@ -22,6 +23,7 @@ const HiringTrackerPage = () => {
         accent="text-hiring"
       />
       <Lead {...before} accent="text-hiring md:w-75" className="lg:pb-24" />
+      <Questions />
     </>
   );
 };
