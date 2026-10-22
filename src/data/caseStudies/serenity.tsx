@@ -18,7 +18,7 @@ const serenityCaseStudy: SerenityCaseStudy = {
   details: [
     { label: "Role", value: "UI/UX Designer" },
     { label: "Type", value: "Concept" },
-    { label: "Format", value: "Mobile app · Onboarding" },
+    { label: "Format", value: "Mobile App" },
   ],
   featured: {
     headline: "Quiet Your Racing Mind",
