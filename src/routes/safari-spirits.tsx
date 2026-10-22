@@ -1,5 +1,6 @@
 import type { Route } from "./+types/safari-spirits";
 import HeroShot from "@/components/safari/HeroShot";
+import Overview from "@/components/safari/Overview";
 import CaseHero from "@/components/shared/CaseHero";
 import Contact from "@/components/shared/Contact";
 import safariCaseStudy from "@/data/caseStudies/safariSpirits";
@@ -24,6 +25,7 @@ const SafariSpiritsPage = () => {
           accent="text-safari-clay"
         />
         <HeroShot />
+        <Overview />
       </div>
       <Contact />
     </>

@@ -15,6 +15,21 @@ const safariCaseStudy: SafariCaseStudy = {
     src: homeHero,
     alt: "Safari Spirits homepage: Unwind on Kenya's Coast, beach getaways in Mombasa, Diani, Watamu and Lamu, with Explore Destinations and View Packages, over a palm tree and the sea",
   },
+  overview: {
+    eyebrow: "Overview",
+    headline: "Find a place, see the full price, plan the days.",
+    body: "Recommendations are shaped by each traveller's budget, interests and trip length, so planning a trip stops being a project of its own.",
+    audiences: [
+      {
+        name: "Local travellers",
+        text: "Students, professionals and families planning weekends and holidays.",
+      },
+      {
+        name: "Tourists",
+        text: "First-time and returning visitors, and solo travellers who want guidance.",
+      },
+    ],
+  },
 };
 
 export default safariCaseStudy;

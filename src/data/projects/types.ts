@@ -227,4 +227,5 @@ export interface SerenityCaseStudy extends PageIntro {
 export interface SafariCaseStudy extends PageIntro {
   project: NextUp;
   hero: Shot; // the homepage, in a browser window under the hero
+  overview: SectionCopy & { audiences: { name: string; text: string }[] };
 }
