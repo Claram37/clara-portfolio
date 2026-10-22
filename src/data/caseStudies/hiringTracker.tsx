@@ -9,6 +9,10 @@ const hiringCaseStudy: HiringCaseStudy = {
     { label: "Company", value: "Dproz" },
     { label: "Platform", value: "Web" },
   ],
+  before: {
+    eyebrow: "Before",
+    body: "Most hiring managers in Tanzania still shortlist by hand, with no good way to track an application from one stage to the next.",
+  },
 };
 
 export default hiringCaseStudy;

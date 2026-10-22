@@ -1,15 +1,15 @@
 import type { Route } from "./+types/pastries";
 import Menu from "@/components/pastries/Menu";
-import Overview from "@/components/pastries/Overview";
 import WholePage from "@/components/pastries/WholePage";
 import CaseHero from "@/components/shared/CaseHero";
 import Contact from "@/components/shared/Contact";
+import Lead from "@/components/shared/Lead";
 import NextProject from "@/components/shared/NextProject";
 import pastriesCaseStudy from "@/data/caseStudies/pastries";
 import site from "@/data/site";
 import { pageMeta } from "@/lib/meta";
 
-const { title, intro, next } = pastriesCaseStudy;
+const { title, intro, overview, next } = pastriesCaseStudy;
 
 export const meta: Route.MetaFunction = () =>
   pageMeta({
@@ -34,7 +34,11 @@ const PastriesPage = () => {
           eyebrow="Concept"
           accent="text-pastries-terracotta"
         />
-        <Overview />
+        <Lead
+          {...overview}
+          accent="text-pastries-terracotta"
+          className="lg:pb-20"
+        />
         <Menu />
         <WholePage />
       </div>
