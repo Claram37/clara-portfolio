@@ -238,4 +238,8 @@ export interface SafariCaseStudy extends PageIntro {
   hero: Shot; // the homepage, in a browser window under the hero
   overview: SectionCopy & { audiences: { name: string; text: string }[] };
   itinerary: Pick<SectionCopy, "eyebrow" | "headline"> & { days: SafariDay[] };
+  included: Pick<SectionCopy, "eyebrow" | "headline"> & {
+    features: { name: string; text: string }[];
+    screens: Shot[];
+  };
 }

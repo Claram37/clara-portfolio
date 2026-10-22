@@ -1,5 +1,6 @@
 import type { Route } from "./+types/safari-spirits";
 import HeroShot from "@/components/safari/HeroShot";
+import Included from "@/components/safari/Included";
 import Itinerary from "@/components/safari/Itinerary";
 import Overview from "@/components/safari/Overview";
 import CaseHero from "@/components/shared/CaseHero";
@@ -28,6 +29,7 @@ const SafariSpiritsPage = () => {
         <HeroShot />
         <Overview />
         <Itinerary />
+        <Included />
       </div>
       <Contact />
     </>

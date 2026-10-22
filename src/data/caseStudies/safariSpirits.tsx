@@ -4,6 +4,8 @@ import homeHero from "@/assets/safari/home-hero.jpg";
 import journeyMap from "@/assets/safari/journey-map.jpg";
 import userFlow from "@/assets/safari/user-flow.jpg";
 import maasaiMara from "@/assets/safari/destination-detail-maasai-mara.jpg";
+import tourDetailPhone from "@/assets/safari/tour-detail-diani-phone.png";
+import itineraryPhone from "@/assets/safari/itinerary-day-1-phone.png";
 
 const safariCaseStudy: SafariCaseStudy = {
   project: safariSpirits,
@@ -73,6 +75,42 @@ const safariCaseStudy: SafariCaseStudy = {
           src: maasaiMara,
           alt: "The Maasai Mara destination: a giraffe against the setting sun above three more photos, beside a card from 15,000 KES with its rating, duration, best time and region, Start booking and Request a custom quote",
         },
+      },
+    ],
+  },
+  included: {
+    eyebrow: "Included",
+    headline: "What this version ships.",
+    features: [
+      {
+        name: "Personalized discovery",
+        text: "Share your budget, group size and interests, and get places that fit.",
+      },
+      {
+        name: "Clear pricing",
+        text: "Every package breaks down the true cost upfront.",
+      },
+      {
+        name: "Curated itineraries",
+        text: "Day trips, weekends and longer holidays, planned day by day.",
+      },
+      {
+        name: "Hidden gems",
+        text: "Places most people don't know about, alongside the classics.",
+      },
+      {
+        name: "Saved trips",
+        text: "Save the trips you love and generate an itinerary when you're ready.",
+      },
+    ],
+    screens: [
+      {
+        src: tourDetailPhone,
+        alt: "The Diani Beach Escape package: palm trees over the beach, 4 days, rated 4.8 from 96 reviews, a small-group experience from KES 32,000 per person including park fees, and Reserve your seat",
+      },
+      {
+        src: itineraryPhone,
+        alt: "The package's itinerary: Day 1, Arrival at Diani Beach, from Mombasa airport or the SGR train to the resort, with dinner as the meal and Diani Reef Beach Resort as the stay",
       },
     ],
   },
