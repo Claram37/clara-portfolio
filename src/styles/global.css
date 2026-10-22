@@ -440,6 +440,35 @@
   }
 }
 
+/*
+  Hiring Tracker's counter: from lg, a question's own segment ([data-read]) fills as its screen ([data-answer])
+  scrolls up, from half in view to its top reaching the top of the window. Without support, or for reduced motion, it's full
+*/
+@utility read-progress {
+  timeline-scope: --answer;
+
+  & [data-answer] {
+    view-timeline: --answer;
+  }
+  @supports (animation-timeline: view()) {
+    @variant lg {
+      @variant motion-safe {
+        & [data-read] {
+          transform-origin: left;
+          animation: read-fill linear both;
+          animation-timeline: --answer;
+          animation-range: entry 50% exit 0%;
+        }
+      }
+    }
+  }
+}
+@keyframes read-fill {
+  from {
+    scale: 0 1;
+  }
+}
+
 /* On a dark section: white focus outlines */
 @utility focus-light {
   --ring: var(--color-paper);

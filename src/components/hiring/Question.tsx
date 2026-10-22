@@ -18,22 +18,27 @@ const Question = ({ question, number, total }: QuestionProps) => {
     <section
       aria-labelledby={headingId}
       className={cn(
-        "px-page py-16 md:py-20 lg:py-24",
+        "px-page py-16 read-progress md:py-20 lg:py-24",
         number % 2 === 1 && "bg-hiring-tint",
       )}
     >
       <div className="mx-auto flex max-w-content flex-col gap-10 lg:flex-row lg:gap-16">
-        <div className="flex flex-col gap-5 md:max-w-140 lg:w-80 lg:shrink-0 xl:w-95">
-          {/* One segment per question, filled up to this one */}
+        {/* Pins while its screen scrolls past */}
+        <div className="flex flex-col gap-5 md:max-w-140 lg:sticky lg:top-24 lg:w-80 lg:shrink-0 lg:self-start xl:w-95">
+          {/* One segment per question, filled up to this one. This one's fills as the screen is read */}
           <div aria-hidden="true" className="flex gap-2">
             {Array.from({ length: total }, (_, index) => (
               <span
                 key={index}
-                className={cn(
-                  "h-1 w-7 rounded-full",
-                  index < number ? "bg-hiring" : "bg-hiring-track",
+                className="h-1 w-7 overflow-hidden rounded-full bg-hiring-track"
+              >
+                {index < number && (
+                  <span
+                    data-read={index === number - 1 || undefined}
+                    className="block size-full bg-hiring"
+                  />
                 )}
-              />
+              </span>
             ))}
           </div>
           <Eyebrow className="text-hiring">
@@ -48,7 +53,10 @@ const Question = ({ question, number, total }: QuestionProps) => {
           </p>
         </div>
 
-        <div className="min-w-0 flex-1 overflow-hidden rounded-3xl border border-hiring-line bg-paper shadow-hiring">
+        <div
+          data-answer
+          className="min-w-0 flex-1 overflow-hidden rounded-3xl border border-hiring-line bg-paper shadow-hiring"
+        >
           <img
             src={screen.src}
             alt={screen.alt}
