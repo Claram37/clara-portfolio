@@ -5,6 +5,7 @@ import prideCover from "@/assets/pride/cover.jpg";
 import pastriesCover from "@/assets/pastries/cover.jpg";
 import meditationCover from "@/assets/meditation/cover.jpg";
 import Phone from "@/components/mockups/Phone";
+import hiringTracker from "./hiringTracker";
 import pastries from "./pastries";
 import pride from "./pride";
 import safariSpirits from "./safariSpirits";
@@ -27,10 +28,9 @@ const moreWork: MoreProject[] = [
     ),
   },
   {
-    name: "Hiring Applications Tracker",
-    summary:
-      "Kanban and table views that help recruiters follow every candidate through each stage.",
-    to: "/work/hiring-tracker",
+    name: hiringTracker.name,
+    summary: hiringTracker.caption,
+    to: hiringTracker.caseStudy,
     cover: (
       <img
         src={hiringCover}

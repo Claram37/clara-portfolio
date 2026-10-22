@@ -190,3 +190,8 @@ export interface PastriesCaseStudy extends PageIntro {
   };
   next: NextUp;
 }
+
+// The Hiring Tracker page: the three questions a recruiter brings, each answered by one view of the tracker
+export interface HiringCaseStudy extends PageIntro {
+  project: Pick<NextUp, "name" | "caption" | "caseStudy">;
+}
