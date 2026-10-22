@@ -1,4 +1,3 @@
-import { ArrowDown } from "lucide-react";
 import Phone from "@/components/mockups/Phone";
 import type { ZoomStep as Step } from "@/data/projects/types";
 
@@ -71,13 +70,6 @@ const ZoomStep = ({ step, number }: ZoomStepProps) => {
         </h3>
         <p className="text-base text-ink-muted">{text}</p>
       </div>
-
-      {lens && (
-        <ArrowDown
-          aria-hidden="true"
-          className="mx-auto size-6 text-resume-feedback-blue lg:hidden"
-        />
-      )}
     </li>
   );
 };
