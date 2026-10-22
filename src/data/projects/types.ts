@@ -247,7 +247,15 @@ export interface SafariCaseStudy extends PageIntro {
 }
 
 // The AI Resume Feedback page: the feedback zooms in from the whole resume to one bullet's fix
+export interface ZoomStep {
+  title: string;
+  text: string;
+  screen: Shot;
+  lens?: { left: number; top: number; width: number; height: number }; // what the next step opens, in % of the phone
+}
+
 export interface ResumeCaseStudy extends PageIntro {
   project: NextUp;
   overview: Pick<SectionCopy, "eyebrow" | "body">;
+  zoom: { steps: ZoomStep[]; line: string };
 }

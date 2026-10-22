@@ -1,4 +1,5 @@
 import type { Route } from "./+types/resume-feedback";
+import Zoom from "@/components/resume/Zoom";
 import CaseHero from "@/components/shared/CaseHero";
 import Contact from "@/components/shared/Contact";
 import Lead from "@/components/shared/Lead";
@@ -27,6 +28,7 @@ const ResumeFeedbackPage = () => {
         accent="text-resume-feedback-blue md:w-75"
         className="lg:pb-20"
       />
+      <Zoom />
       <Contact />
     </>
   );
