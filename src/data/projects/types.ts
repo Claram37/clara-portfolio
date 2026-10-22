@@ -224,8 +224,18 @@ export interface SerenityCaseStudy extends PageIntro {
 }
 
 // Safari Spirits' page, planned like one of its trips: the project's days on an itinerary rail
+export interface SafariDay {
+  headline: string;
+  body: string;
+  facts?: { label: string; value: string }[]; // the footer, like an itinerary's Meals and Stay
+  quote?: { text: string; note: string; sources: string[] };
+  screen?: Shot;
+  diagram?: Shot; // across the card, under the text
+}
+
 export interface SafariCaseStudy extends PageIntro {
   project: NextUp;
   hero: Shot; // the homepage, in a browser window under the hero
   overview: SectionCopy & { audiences: { name: string; text: string }[] };
+  itinerary: Pick<SectionCopy, "eyebrow" | "headline"> & { days: SafariDay[] };
 }
