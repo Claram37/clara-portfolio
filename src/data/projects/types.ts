@@ -254,8 +254,17 @@ export interface ZoomStep {
   lens?: { left: number; top: number; width: number; height: number }; // what the next step opens, in % of the phone
 }
 
+// A screen of the flow, named after the analysis steps it covers
+export interface Scene {
+  steps: string;
+  headline: string;
+  body: string;
+  screen: Shot;
+}
+
 export interface ResumeCaseStudy extends PageIntro {
   project: NextUp;
   overview: Pick<SectionCopy, "eyebrow" | "body">;
   zoom: { steps: ZoomStep[]; line: string };
+  scenes: Pick<SectionCopy, "eyebrow" | "headline"> & { items: Scene[] };
 }

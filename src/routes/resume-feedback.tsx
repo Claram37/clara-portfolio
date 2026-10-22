@@ -1,4 +1,5 @@
 import type { Route } from "./+types/resume-feedback";
+import Scenes from "@/components/resume/Scenes";
 import Zoom from "@/components/resume/Zoom";
 import CaseHero from "@/components/shared/CaseHero";
 import Contact from "@/components/shared/Contact";
@@ -29,6 +30,7 @@ const ResumeFeedbackPage = () => {
         className="lg:pb-20"
       />
       <Zoom />
+      <Scenes />
       <Contact />
     </>
   );

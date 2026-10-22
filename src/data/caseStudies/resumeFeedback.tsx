@@ -1,10 +1,13 @@
 import resumeFeedback from "@/data/projects/resumeFeedback";
 import type { ResumeCaseStudy, Shot } from "@/data/projects/types";
+import resumeConfidencePhone from "@/assets/resume-feedback/resume-confidence-phone.jpg";
+import analyzingPhone from "@/assets/resume-feedback/analyzing-phone.jpg";
 import summaryScorePhone from "@/assets/resume-feedback/summary-score-phone.jpg";
 import bulletLevelPhone from "@/assets/resume-feedback/bullet-level-phone.jpg";
 import workExpIssuePhone from "@/assets/resume-feedback/work-exp-issue-phone.jpg";
 import suggestedEditPhone from "@/assets/resume-feedback/work-exp-suggested-edit-phone.jpg";
 
+// These three show in the zoom and the scenes
 const summaryScore: Shot = {
   src: summaryScorePhone,
   alt: "The Summary tab: a score of 84, with skills at 29/40, experience at 29/30 and education at 26/30, then three ways to improve: bullet structure, filler words and layout",
@@ -59,6 +62,48 @@ const resumeCaseStudy: ResumeCaseStudy = {
       },
     ],
     line: "From a number to a sentence you can fix.",
+  },
+  scenes: {
+    eyebrow: "Analysis steps",
+    headline: "Hang tight. Here's what it's doing.",
+    items: [
+      {
+        steps: "Initializing · Processing",
+        headline: "It starts with how you feel.",
+        body: "A quick confidence check, then one button: upload your resume.",
+        screen: {
+          src: resumeConfidencePhone,
+          alt: "Resume Confidence: how confident are you in your resume? 5/10, somewhat confident, set on a slider, then Upload Resume",
+        },
+      },
+      {
+        steps: "Identifying content · Bench-marking",
+        headline: "It reads every section.",
+        body: "Skills, presentation and education are checked, with each step shown as it happens.",
+        screen: {
+          src: analyzingPhone,
+          alt: "Analyzing Your Resume: the uploaded CV at 40%, and the analysis steps, four ticked off and Identifying Bullets in progress",
+        },
+      },
+      {
+        steps: "Calculating scores",
+        headline: "Then it scores the whole thing.",
+        body: "One number, split into skills, experience and education, with three ways to improve.",
+        screen: summaryScore,
+      },
+      {
+        steps: "Identifying bullets · Analyzing bullets",
+        headline: "It finds the bullets that need work.",
+        body: "Each section shows how many issues it has, so people know where to start.",
+        screen: bulletLevel,
+      },
+      {
+        steps: "Analyzing impact · Almost done",
+        headline: "And it shows how to fix them.",
+        body: "Issue, why it matters, a hint, and a suggested edit for every bullet.",
+        screen: suggestedEdit,
+      },
+    ],
   },
 };
 
