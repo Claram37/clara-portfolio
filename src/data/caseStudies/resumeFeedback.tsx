@@ -6,6 +6,7 @@ import summaryScorePhone from "@/assets/resume-feedback/summary-score-phone.jpg"
 import bulletLevelPhone from "@/assets/resume-feedback/bullet-level-phone.jpg";
 import workExpIssuePhone from "@/assets/resume-feedback/work-exp-issue-phone.jpg";
 import suggestedEditPhone from "@/assets/resume-feedback/work-exp-suggested-edit-phone.jpg";
+import bulletModal from "@/assets/resume-feedback/bullet-modal.jpg";
 
 // These three show in the zoom and the scenes
 const summaryScore: Shot = {
@@ -104,6 +105,15 @@ const resumeCaseStudy: ResumeCaseStudy = {
         screen: suggestedEdit,
       },
     ],
+  },
+  desktop: {
+    eyebrow: "Same zoom, bigger screen",
+    headline: "On desktop, the bullet opens in one view.",
+    body: "The original line, the issue, why it matters, how to improve it, and a suggested edit to save as a new version.",
+    screen: {
+      src: bulletModal,
+      alt: "The bullet's feedback on desktop, in one modal beside the other bullets to fix: the original line about managing social media accounts, the issue detected, why it matters, how to improve it, and a suggested edit with Save New Version",
+    },
   },
 };
 

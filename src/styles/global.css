@@ -133,12 +133,13 @@
 
   /*
     AI Resume Feedback (portfolio-pages.pen → Resume Feedback Idea 01 · Zoom In, with Idea 05's scenes): the light
-    blue band (also its More work card and peek), the app's blue, and the scenes' tint and line
+    blue band (also its More work card and peek), the app's blue, the scenes' tint and line, and the desktop modal's shadow
   */
   --color-resume-feedback: #e6edf8;
   --color-resume-feedback-blue: #0a6fe3;
   --color-resume-feedback-tint: #f4f6fa;
   --color-resume-feedback-line: #e4e8ef;
+  --shadow-resume-feedback: 0 20px 48px #0a1a5c14;
 
   /*
     Pride concept (portfolio-pages.pen → Pride Idea 01 · Tracklist, with Idea 05's waveform): the dark page,

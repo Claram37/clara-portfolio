@@ -1,4 +1,5 @@
 import type { Route } from "./+types/resume-feedback";
+import Desktop from "@/components/resume/Desktop";
 import Scenes from "@/components/resume/Scenes";
 import Zoom from "@/components/resume/Zoom";
 import CaseHero from "@/components/shared/CaseHero";
@@ -31,6 +32,7 @@ const ResumeFeedbackPage = () => {
       />
       <Zoom />
       <Scenes />
+      <Desktop />
       <Contact />
     </>
   );

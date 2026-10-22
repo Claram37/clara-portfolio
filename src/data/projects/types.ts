@@ -267,4 +267,5 @@ export interface ResumeCaseStudy extends PageIntro {
   overview: Pick<SectionCopy, "eyebrow" | "body">;
   zoom: { steps: ZoomStep[]; line: string };
   scenes: Pick<SectionCopy, "eyebrow" | "headline"> & { items: Scene[] };
+  desktop: SectionCopy & { screen: Shot };
 }
