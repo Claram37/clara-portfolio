@@ -1,12 +1,14 @@
 import type { Route } from "./+types/hiring-tracker";
 import Questions from "@/components/hiring/Questions";
 import CaseHero from "@/components/shared/CaseHero";
+import Contact from "@/components/shared/Contact";
 import Lead from "@/components/shared/Lead";
+import NextProject from "@/components/shared/NextProject";
 import hiringCaseStudy from "@/data/caseStudies/hiringTracker";
 import site from "@/data/site";
 import { pageMeta } from "@/lib/meta";
 
-const { project, intro, before } = hiringCaseStudy;
+const { project, intro, before, next } = hiringCaseStudy;
 
 export const meta: Route.MetaFunction = () =>
   pageMeta({
@@ -24,6 +26,8 @@ const HiringTrackerPage = () => {
       />
       <Lead {...before} accent="text-hiring md:w-75" className="lg:pb-24" />
       <Questions />
+      <NextProject next={next} />
+      <Contact />
     </>
   );
 };

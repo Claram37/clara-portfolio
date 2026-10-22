@@ -1,4 +1,5 @@
 import hiringTracker from "@/data/projects/hiringTracker";
+import resumeFeedback from "@/data/projects/resumeFeedback";
 import type { HiringCaseStudy } from "@/data/projects/types";
 import kanbanBoard from "@/assets/hiring/kanban-board.png";
 import applicantsTable from "@/assets/hiring/applicants-table.png";
@@ -46,6 +47,7 @@ const hiringCaseStudy: HiringCaseStudy = {
       crop: "aspect-67/60",
     },
   ],
+  next: resumeFeedback,
 };
 
 export default hiringCaseStudy;

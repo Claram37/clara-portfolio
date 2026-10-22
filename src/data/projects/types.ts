@@ -204,4 +204,5 @@ export interface HiringCaseStudy extends PageIntro {
   project: Pick<NextUp, "name" | "caption" | "caseStudy">;
   before: Pick<SectionCopy, "eyebrow" | "body">;
   questions: Question[];
+  next: NextUp;
 }

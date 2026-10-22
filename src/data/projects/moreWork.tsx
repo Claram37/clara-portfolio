@@ -8,6 +8,7 @@ import Phone from "@/components/mockups/Phone";
 import hiringTracker from "./hiringTracker";
 import pastries from "./pastries";
 import pride from "./pride";
+import resumeFeedback from "./resumeFeedback";
 import safariSpirits from "./safariSpirits";
 import serenity from "./serenity";
 import type { MoreProject } from "./types";
@@ -42,10 +43,9 @@ const moreWork: MoreProject[] = [
     ),
   },
   {
-    name: "AI Resume Feedback",
-    summary:
-      "A mobile flow that scores a resume and gives bullet-by-bullet suggestions.",
-    to: "/work/resume-feedback",
+    name: resumeFeedback.name,
+    summary: resumeFeedback.caption,
+    to: resumeFeedback.caseStudy,
     cover: (
       <div className="relative size-full bg-resume-feedback">
         <Phone
