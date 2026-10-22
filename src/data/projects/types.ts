@@ -199,14 +199,6 @@ export interface Question {
   view: string; // the view that answers it, named beside its icon
   more?: { label: string; items: string[] }; // what else that view holds
   screen: Shot;
-  timeline?: ScreenTimeline;
-}
-
-// A tall screen's history beside it. Each event sits level with its card in the screenshot, so line and top are shares of its height
-export interface ScreenTimeline {
-  order: string;
-  line: string;
-  events: { title: string; note: string; top: string }[];
 }
 
 export interface HiringCaseStudy extends PageIntro {

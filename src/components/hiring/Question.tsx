@@ -2,7 +2,6 @@ import { useId } from "react";
 import type { Question as QuestionCopy } from "@/data/projects/types";
 import Eyebrow from "@/components/shared/Eyebrow";
 import { cn } from "@/lib/utils";
-import Timeline from "./Timeline";
 
 interface QuestionProps {
   question: QuestionCopy;
@@ -10,11 +9,10 @@ interface QuestionProps {
   total: number;
 }
 
-// A recruiter's question on the left, answered by a screen of the tracker (and its timeline) on the right
+// A recruiter's question on the left, answered by a screen of the tracker on the right
 const Question = ({ question, number, total }: QuestionProps) => {
   const headingId = useId();
-  const { headline, body, icon: Icon, view, more, screen, timeline } =
-    question;
+  const { headline, body, icon: Icon, view, more, screen } = question;
 
   return (
     <section
@@ -66,17 +64,17 @@ const Question = ({ question, number, total }: QuestionProps) => {
           )}
         </div>
 
-        <div data-answer className="flex min-w-0 flex-1 gap-5">
-          {timeline && <Timeline timeline={timeline} />}
-          <div className="min-w-0 flex-1 overflow-hidden rounded-3xl border border-hiring-line bg-paper shadow-hiring">
-            <img
-              src={screen.src}
-              alt={screen.alt}
-              loading="lazy"
-              decoding="async"
-              className="w-full"
-            />
-          </div>
+        <div
+          data-answer
+          className="min-w-0 flex-1 overflow-hidden rounded-3xl border border-hiring-line bg-paper shadow-hiring"
+        >
+          <img
+            src={screen.src}
+            alt={screen.alt}
+            loading="lazy"
+            decoding="async"
+            className="w-full"
+          />
         </div>
       </div>
     </section>

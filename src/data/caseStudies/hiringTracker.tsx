@@ -53,37 +53,6 @@ const hiringCaseStudy: HiringCaseStudy = {
         src: candidateEvaluation,
         alt: "John Smith Mushi's candidate drawer on its Evaluation tab, newest first: the recruiter's review waiting on a decision, his assessment results and submission, his move to Assessment with the recruiter's comment, and the AI screening's strengths and weaknesses",
       },
-      timeline: {
-        order: "Newest first",
-        line: "top-[10.41%] bottom-[17.66%]",
-        events: [
-          {
-            title: "Review & decide",
-            note: "The next call, with the evidence",
-            top: "top-[19.1%]",
-          },
-          {
-            title: "Assessment results",
-            note: "Each skill marked Meets",
-            top: "top-[37.32%]",
-          },
-          {
-            title: "Assessment submitted",
-            note: "Lands with its date",
-            top: "top-[47.62%]",
-          },
-          {
-            title: "Moved to Assessment",
-            note: "The decision and a comment",
-            top: "top-[59.3%]",
-          },
-          {
-            title: "AI screening",
-            note: "Strengths, weaknesses, a note",
-            top: "top-[81.12%]",
-          },
-        ],
-      },
     },
   ],
   next: resumeFeedback,
