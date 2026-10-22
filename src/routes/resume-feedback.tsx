@@ -5,11 +5,12 @@ import Zoom from "@/components/resume/Zoom";
 import CaseHero from "@/components/shared/CaseHero";
 import Contact from "@/components/shared/Contact";
 import Lead from "@/components/shared/Lead";
+import NextProject from "@/components/shared/NextProject";
 import resumeCaseStudy from "@/data/caseStudies/resumeFeedback";
 import site from "@/data/site";
 import { pageMeta } from "@/lib/meta";
 
-const { project, intro, overview } = resumeCaseStudy;
+const { project, intro, overview, next } = resumeCaseStudy;
 
 export const meta: Route.MetaFunction = () =>
   pageMeta({
@@ -33,6 +34,7 @@ const ResumeFeedbackPage = () => {
       <Zoom />
       <Scenes />
       <Desktop />
+      <NextProject next={next} />
       <Contact />
     </>
   );

@@ -1,3 +1,4 @@
+import pride from "@/data/projects/pride";
 import resumeFeedback from "@/data/projects/resumeFeedback";
 import type { ResumeCaseStudy, Shot } from "@/data/projects/types";
 import resumeConfidencePhone from "@/assets/resume-feedback/resume-confidence-phone.jpg";
@@ -115,6 +116,7 @@ const resumeCaseStudy: ResumeCaseStudy = {
       alt: "The bullet's feedback on desktop, in one modal beside the other bullets to fix: the original line about managing social media accounts, the issue detected, why it matters, how to improve it, and a suggested edit with Save New Version",
     },
   },
+  next: pride,
 };
 
 export default resumeCaseStudy;
