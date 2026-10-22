@@ -546,6 +546,37 @@
   }
 }
 
+/*
+  AI Resume Feedback's zoom: as each highlight box ([data-lens]) scrolls in (useReveal), it pulses once, then its
+  magnifier lines stretch out to the next phone. From lg, where the phones share a row, each step waits for the one before
+*/
+@utility zoom-in {
+  & [data-lens][data-reveal="shown"] {
+    animation: lens-pulse 600ms ease-in-out var(--wait, 0ms);
+  }
+  & [data-lens][data-reveal="shown"] + svg line {
+    transition: scale 700ms var(--ease-reveal) calc(var(--wait, 0ms) + 400ms);
+  }
+  & [data-lens][data-reveal="waiting"] + svg line {
+    scale: 0;
+  }
+  @variant lg {
+    & > :nth-child(2) {
+      --wait: 900ms;
+    }
+    & > :nth-child(3) {
+      --wait: 1800ms;
+    }
+  }
+}
+@keyframes lens-pulse {
+  40% {
+    scale: 1.1;
+    box-shadow: 0 0 0 8px
+      color-mix(in srgb, var(--color-resume-feedback-blue) 16%, transparent);
+  }
+}
+
 /* Serenity: one long gradient from the cream of the cover render to the app's night sky, so the page darkens as you read */
 @utility nightfall {
   background-image: linear-gradient(

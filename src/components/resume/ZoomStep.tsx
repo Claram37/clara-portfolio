@@ -8,9 +8,11 @@ interface ZoomStepProps {
 }
 
 // A phone, its highlight box and the magnifier lines out to the next phone, then its caption.
-// The lines end 40% of a phone's width to the right (Zoom's gap), at the next screen's top and bottom
+// The lines end 40% of a phone's width to the right (Zoom's gap), at the next screen's top and bottom,
+// and grow from the box's corners (their transform origins)
 const ZoomStep = ({ step, number }: ZoomStepProps) => {
   const { title, text, screen, lens } = step;
+  const right = lens && lens.left + lens.width;
 
   return (
     <li className="flex w-60 flex-col gap-7 lg:w-auto">
@@ -19,6 +21,8 @@ const ZoomStep = ({ step, number }: ZoomStepProps) => {
         {lens && (
           <>
             <span
+              data-lens
+              data-reveal
               aria-hidden="true"
               className="absolute rounded-lg border-2 border-resume-feedback-blue bg-resume-feedback-blue/8"
               style={{
@@ -33,18 +37,22 @@ const ZoomStep = ({ step, number }: ZoomStepProps) => {
               className="absolute inset-0 size-full overflow-visible stroke-resume-feedback-blue/40 max-lg:hidden"
             >
               <line
-                x1={`${lens.left + lens.width}%`}
+                x1={`${right}%`}
                 y1={`${lens.top}%`}
                 x2="140%"
                 y2="1.6%"
                 strokeWidth={1.5}
+                style={{ transformOrigin: `${right}% ${lens.top}%` }}
               />
               <line
-                x1={`${lens.left + lens.width}%`}
+                x1={`${right}%`}
                 y1={`${lens.top + lens.height}%`}
                 x2="140%"
                 y2="98.4%"
                 strokeWidth={1.5}
+                style={{
+                  transformOrigin: `${right}% ${lens.top + lens.height}%`,
+                }}
               />
             </svg>
           </>

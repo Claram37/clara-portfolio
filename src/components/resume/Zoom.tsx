@@ -1,5 +1,6 @@
-import { useId } from "react";
+import { useId, useRef } from "react";
 import resumeCaseStudy from "@/data/caseStudies/resumeFeedback";
+import useReveal from "@/hooks/useReveal";
 import ZoomStep from "./ZoomStep";
 
 const { zoom } = resumeCaseStudy;
@@ -8,14 +9,17 @@ const { zoom } = resumeCaseStudy;
 // with the design's 240px phones and 96px gaps as shares of the row, so the magnifier lines meet the next phone
 const Zoom = () => {
   const headingId = useId();
+  const section = useRef<HTMLElement>(null);
+  useReveal(section);
 
   return (
     <section
+      ref={section}
       aria-labelledby={headingId}
       className="bg-resume-feedback px-page py-16 lg:pt-35 lg:pb-24"
     >
       <div className="mx-auto flex max-w-content flex-col gap-16 lg:gap-20">
-        <ol className="flex flex-col items-center gap-6 lg:grid lg:grid-cols-4 lg:items-start lg:gap-x-[7.69%]">
+        <ol className="flex flex-col items-center gap-6 zoom-in lg:grid lg:grid-cols-4 lg:items-start lg:gap-x-[7.69%]">
           {zoom.steps.map((step, index) => (
             <ZoomStep key={step.title} step={step} number={index + 1} />
           ))}
