@@ -9,5 +9,6 @@ export default [
   route("work/hiring-tracker", "routes/hiring-tracker.tsx"),
   route("concepts/pride", "routes/pride.tsx"),
   route("concepts/pastries", "routes/pastries.tsx"),
+  route("concepts/meditation", "routes/serenity.tsx"),
   route("*", "routes/not-found.tsx"),
 ] satisfies RouteConfig;

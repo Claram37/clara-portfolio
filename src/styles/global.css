@@ -162,6 +162,10 @@
   --color-hiring-line: #e4e8ef;
   --shadow-hiring: 0 20px 48px #0a1a5c14;
 
+  /* Serenity concept (portfolio-pages.pen → Serenity Idea 03 · Night Falls, with Idea 05's featured card and palette) */
+  --color-serenity: #f6efe6;
+  --color-serenity-violet: #6b5bd0;
+
   /* Contact */
   --color-contact: #e2582f;
   --color-contact-body: #ffe3d8;

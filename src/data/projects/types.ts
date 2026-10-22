@@ -207,3 +207,8 @@ export interface HiringCaseStudy extends PageIntro {
   questions: Question[];
   next: NextUp;
 }
+
+// Serenity's concept page: night falls as you scroll
+export interface SerenityCaseStudy extends PageIntro {
+  project: NextUp;
+}
