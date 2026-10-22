@@ -227,10 +227,9 @@ export interface SerenityCaseStudy extends PageIntro {
 export interface SafariDay {
   headline: string;
   body: string;
-  facts?: { label: string; value: string }[]; // the footer, like an itinerary's Meals and Stay
+  facts: { label: string; value: string }[]; // the footer, like an itinerary's Meals and Stay
   quote?: { text: string; note: string; sources: string[] };
-  screen?: Shot;
-  diagram?: Shot; // across the card, under the text
+  visual?: ReactNode; // its screens, placed in percentages of the panel
 }
 
 export interface SafariCaseStudy extends PageIntro {
@@ -238,6 +237,8 @@ export interface SafariCaseStudy extends PageIntro {
   hero: Shot; // the homepage, in a browser window under the hero
   overview: SectionCopy & { audiences: { name: string; text: string }[] };
   itinerary: Pick<SectionCopy, "eyebrow" | "headline"> & { days: SafariDay[] };
+  journeyMap: SectionCopy & { image: Shot };
+  userFlow: SectionCopy & { image: Shot };
   included: Pick<SectionCopy, "eyebrow" | "headline"> & {
     features: { name: string; text: string }[];
     screens: Shot[];

@@ -113,11 +113,12 @@
   /*
     Safari Spirits (portfolio-pages.pen → Safari Spirits Idea 01 · The Itinerary, with Idea 05's story): the off-white
     page, the site's green and clay, the card lines, the grey-brown text, the sand panels, the rail, the chips' line,
-    the footer labels, Included's ticks and phone stage, and the homepage window's shadow.
+    the footer labels, Included's ticks and phone stage, and the shadows of the homepage window and the price card.
     shadow-safari is its peek on Fitcheck's Next project
   */
   --shadow-safari: 0 24px 60px #3b2a1a33;
   --shadow-safari-window: 0 24px 64px #1a1a1a1c;
+  --shadow-safari-card: 0 12px 32px #3b2a1a22;
   --color-safari: #f8f7f4;
   --color-safari-green: #283618;
   --color-safari-clay: #bc6c25;

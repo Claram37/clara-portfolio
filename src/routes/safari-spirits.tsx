@@ -1,4 +1,5 @@
 import type { Route } from "./+types/safari-spirits";
+import Diagram from "@/components/safari/Diagram";
 import HeroShot from "@/components/safari/HeroShot";
 import Included from "@/components/safari/Included";
 import Itinerary from "@/components/safari/Itinerary";
@@ -10,7 +11,7 @@ import safariCaseStudy from "@/data/caseStudies/safariSpirits";
 import site from "@/data/site";
 import { pageMeta } from "@/lib/meta";
 
-const { project, intro, next } = safariCaseStudy;
+const { project, intro, journeyMap, userFlow, next } = safariCaseStudy;
 
 export const meta: Route.MetaFunction = () =>
   pageMeta({
@@ -30,6 +31,8 @@ const SafariSpiritsPage = () => {
         <HeroShot />
         <Overview />
         <Itinerary />
+        <Diagram {...journeyMap} />
+        <Diagram {...userFlow} />
         <Included />
       </div>
       <NextProject next={next} />
