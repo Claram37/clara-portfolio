@@ -16,7 +16,7 @@ const prideCaseStudy: PrideCaseStudy = {
   details: [
     { label: "Role", value: "UI/UX Designer" },
     { label: "Type", value: "Concept" },
-    { label: "Format", value: "Landing page · Desktop-first" },
+    { label: "Format", value: "Landing Page" },
   ],
   set: {
     eyebrow: "The set",
