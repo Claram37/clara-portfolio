@@ -242,4 +242,5 @@ export interface SafariCaseStudy extends PageIntro {
     features: { name: string; text: string }[];
     screens: Shot[];
   };
+  next: NextUp;
 }

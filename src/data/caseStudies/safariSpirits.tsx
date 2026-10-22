@@ -1,3 +1,4 @@
+import hiringTracker from "@/data/projects/hiringTracker";
 import safariSpirits from "@/data/projects/safariSpirits";
 import type { SafariCaseStudy } from "@/data/projects/types";
 import homeHero from "@/assets/safari/home-hero.jpg";
@@ -114,6 +115,7 @@ const safariCaseStudy: SafariCaseStudy = {
       },
     ],
   },
+  next: hiringTracker,
 };
 
 export default safariCaseStudy;

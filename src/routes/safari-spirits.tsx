@@ -5,11 +5,12 @@ import Itinerary from "@/components/safari/Itinerary";
 import Overview from "@/components/safari/Overview";
 import CaseHero from "@/components/shared/CaseHero";
 import Contact from "@/components/shared/Contact";
+import NextProject from "@/components/shared/NextProject";
 import safariCaseStudy from "@/data/caseStudies/safariSpirits";
 import site from "@/data/site";
 import { pageMeta } from "@/lib/meta";
 
-const { project, intro } = safariCaseStudy;
+const { project, intro, next } = safariCaseStudy;
 
 export const meta: Route.MetaFunction = () =>
   pageMeta({
@@ -31,6 +32,7 @@ const SafariSpiritsPage = () => {
         <Itinerary />
         <Included />
       </div>
+      <NextProject next={next} />
       <Contact />
     </>
   );
