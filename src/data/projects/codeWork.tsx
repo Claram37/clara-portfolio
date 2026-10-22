@@ -20,7 +20,7 @@ const codeWork: CodeProject[] = [
     summary:
       "Designed, then built by me in React. The project tabs at the top of this page are one of its components, design on one side and code on the other.",
     stack: ["React", "React Router", "TypeScript", "Tailwind CSS", "shadcn/ui"],
-    code: `${site.github}/my-portfoilio`,
+    code: `${site.github}/clara-portfolio`,
     visual: (
       <img
         src={portfolioVisual}
