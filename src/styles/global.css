@@ -624,6 +624,14 @@
   --ring: var(--color-paper);
 }
 
+/* Scrolls without a scrollbar, like a phone's screen */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 /*
   Headings and page margins step up at each breakpoint instead of scaling with the viewport,
   so every size stays on the scale. 2xl is the design at 1440px. Sizes in px, and each

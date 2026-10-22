@@ -8,6 +8,7 @@ import dreamCakeSteps from "@/assets/pastries/4-dream-cake-steps.jpg";
 import inspirationGallery from "@/assets/pastries/5-inspiration-gallery.jpg";
 import createDreamCake from "@/assets/pastries/6-create-your-dream-cake.jpg";
 import menuPhone from "@/assets/pastries/menu-phone.png";
+import menuFull from "@/assets/pastries/menu-full-mobile.jpg";
 import customCakePhone from "@/assets/pastries/custom-cake-phone.png";
 import homePhone from "@/assets/pastries/home-phone.png";
 
@@ -50,6 +51,11 @@ const pastriesCaseStudy: PastriesCaseStudy = {
         screen: {
           src: menuPhone,
           alt: "Our Menu on a phone: filter chips for All, Cakes, Cupcakes and Pies over product cards, each with a price and a cart button",
+        },
+        // The "iPhone 13 & 14 - 2" frame
+        full: {
+          src: menuFull,
+          alt: "The whole Our Menu screen: filter chips for All, Cakes, Cupcakes and Pies over ten product cards, from cupcakes and cakes to doughnuts, bread, a pie and cookies, each with a price and a cart button, then the footer with Pâtisserie's contact details and opening hours",
         },
       },
       {

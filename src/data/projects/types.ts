@@ -175,6 +175,7 @@ export interface MenuItem {
   category?: "Seasonal" | "Custom cakes";
   screen: Shot;
   crop?: string; // a desktop screen's aspect ratio on its card
+  full?: Shot; // a mobile screen's whole length, which scrolls in its full view
 }
 
 export interface PastriesCaseStudy extends PageIntro {

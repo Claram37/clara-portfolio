@@ -1,6 +1,7 @@
 import type { MenuItem } from "@/data/projects/types";
 import Phone from "@/components/mockups/Phone";
 import Lightbox from "./Lightbox";
+import LongScreen from "./LongScreen";
 
 interface FullViewProps {
   item: MenuItem | null;
@@ -17,7 +18,11 @@ const FullView = ({ item, onClose }: FullViewProps) => {
       className={item?.format === "Mobile" ? "max-w-80" : "max-w-content"}
     >
       {item?.format === "Mobile" ? (
-        <Phone src={item.screen.src} alt={item.screen.alt} loading="eager" />
+        <Phone src={item.screen.src} alt={item.screen.alt} loading="eager">
+          {item.full && (
+            <LongScreen screen={item.full} statusBar={item.screen.src} />
+          )}
+        </Phone>
       ) : (
         item && (
           <img

@@ -11,7 +11,8 @@ interface PhoneProps {
 }
 
 // A 280×580 phone frame: 9px black bezel, 44px outer and 35px screen corners, scaled to whatever width it is given.
-// The rounded-device, p-bezel and rounded-screen tokens are shares of the phone's width, so they need the @container
+// The rounded-device, p-bezel and rounded-screen tokens are shares of the phone's width, so they need the @container.
+// min-h-0 keeps the ratio when what's on the screen is taller
 const Phone = ({
   src,
   alt,
@@ -21,7 +22,7 @@ const Phone = ({
   loading = "lazy",
 }: PhoneProps) => {
   return (
-    <div className={cn("@container aspect-280/580", className)}>
+    <div className={cn("@container aspect-280/580 min-h-0", className)}>
       <div className={cn("size-full rounded-device bg-bezel p-bezel", shadow)}>
         {children ? (
           <div className="size-full overflow-hidden rounded-screen">
