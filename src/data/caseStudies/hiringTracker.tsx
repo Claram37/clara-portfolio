@@ -45,10 +45,6 @@ const hiringCaseStudy: HiringCaseStudy = {
       body: "The candidate drawer keeps their full history across stages, opened without leaving the board.",
       icon: PanelRight,
       view: "Candidate drawer",
-      more: {
-        label: "Other tabs in the drawer",
-        items: ["Details", "Interviews", "Documents", "Notes"],
-      },
       screen: {
         src: candidateEvaluation,
         alt: "John Smith Mushi's candidate drawer on its Evaluation tab, newest first: the recruiter's review waiting on a decision, his assessment results and submission, his move to Assessment with the recruiter's comment, and the AI screening's strengths and weaknesses",

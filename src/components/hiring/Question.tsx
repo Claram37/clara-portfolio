@@ -12,7 +12,7 @@ interface QuestionProps {
 // A recruiter's question on the left, answered by a screen of the tracker on the right
 const Question = ({ question, number, total }: QuestionProps) => {
   const headingId = useId();
-  const { headline, body, icon: Icon, view, more, screen } = question;
+  const { headline, body, icon: Icon, view, screen } = question;
 
   return (
     <section
@@ -52,16 +52,6 @@ const Question = ({ question, number, total }: QuestionProps) => {
             <Icon className="size-4 shrink-0" aria-hidden="true" />
             {view}
           </p>
-          {more && (
-            <div className="flex flex-col gap-2 pt-4">
-              <p className="text-xs font-semibold text-ink-soft">
-                {more.label}
-              </p>
-              <p className="text-base text-muted-foreground">
-                {more.items.join(" · ")}
-              </p>
-            </div>
-          )}
         </div>
 
         <div
