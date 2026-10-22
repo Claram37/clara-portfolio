@@ -211,4 +211,5 @@ export interface HiringCaseStudy extends PageIntro {
 // Serenity's concept page: night falls as you scroll
 export interface SerenityCaseStudy extends PageIntro {
   project: NextUp;
+  featured: { headline: string; tags: string[]; cta: string; cover: Shot };
 }
