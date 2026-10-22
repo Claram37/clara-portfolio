@@ -21,20 +21,24 @@ const Chapter = ({ chapter, id, dusk }: ChapterProps) => {
     <section id={id} aria-labelledby={headingId} className="px-page">
       <h2
         id={headingId}
+        data-reveal
         className={cn(
-          "mx-auto max-w-225 pt-20 pb-10 text-center text-chapter text-balance md:pt-32 md:pb-14",
+          "mx-auto max-w-225 pt-20 pb-10 text-center text-chapter text-balance reveal-fade md:pt-32 md:pb-14",
           dusk ? "text-serenity-ink lg:pt-30" : "text-paper lg:pt-40",
         )}
       >
         “{line}”
       </h2>
-      <div className="flex justify-center gap-3 md:gap-12">
+      <div
+        data-reveal
+        className="flex items-start justify-center gap-3 reveal-fade md:gap-12"
+      >
         {screens.map((screen, index) => (
           <Phone
             key={screen.src}
             src={screen.src}
             alt={screen.alt}
-            className={cn("w-full max-w-70", drops[index])}
+            className={cn("w-full max-w-70 drift", drops[index])}
           />
         ))}
       </div>

@@ -1,4 +1,4 @@
-import { useId } from "react";
+import { useId, type MouseEvent } from "react";
 import { CirclePlay } from "lucide-react";
 import serenityCaseStudy from "@/data/caseStudies/serenity";
 
@@ -11,6 +11,16 @@ interface FeaturedProps {
 // The project as the app's featured session: its cover render, with Play leading into the story
 const Featured = ({ story }: FeaturedProps) => {
   const headingId = useId();
+
+  // Glides down to the first chapter, which fades in as it arrives. Jumps for reduced motion
+  const play = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    document.getElementById(story)?.scrollIntoView({
+      behavior: matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "instant"
+        : "smooth",
+    });
+  };
 
   return (
     <section aria-labelledby={headingId} className="px-page">
@@ -41,6 +51,7 @@ const Featured = ({ story }: FeaturedProps) => {
         </ul>
         <a
           href={`#${story}`}
+          onClick={play}
           className="focus-ring relative mt-2 flex h-16 w-full max-w-130 items-center justify-center gap-3 rounded-2xl bg-serenity-violet text-xl font-semibold transition-colors hover:bg-serenity-violet/85"
         >
           {cta}

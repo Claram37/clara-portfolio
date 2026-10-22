@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import type { Route } from "./+types/serenity";
 import Approach from "@/components/serenity/Approach";
 import Chapters from "@/components/serenity/Chapters";
@@ -7,6 +8,7 @@ import CaseHero from "@/components/shared/CaseHero";
 import Contact from "@/components/shared/Contact";
 import serenityCaseStudy from "@/data/caseStudies/serenity";
 import site from "@/data/site";
+import useReveal from "@/hooks/useReveal";
 import { pageMeta } from "@/lib/meta";
 
 const { project, intro } = serenityCaseStudy;
@@ -21,6 +23,9 @@ export const meta: Route.MetaFunction = () =>
 const story = "story";
 
 const SerenityPage = () => {
+  const nightfall = useRef<HTMLDivElement>(null);
+  useReveal(nightfall);
+
   return (
     <>
       <div className="bg-serenity">
@@ -30,7 +35,7 @@ const SerenityPage = () => {
           accent="text-serenity-violet"
         />
       </div>
-      <div className="nightfall pb-20 lg:pb-40">
+      <div ref={nightfall} className="nightfall pb-20 lg:pb-40">
         <Featured story={story} />
         <Chapters story={story} />
         <Palette />

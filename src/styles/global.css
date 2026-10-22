@@ -498,6 +498,34 @@
   );
 }
 
+/* Serenity's chapters fade in slowly as they arrive (useReveal), Play the story's included */
+@utility reveal-fade {
+  &[data-reveal="waiting"] {
+    opacity: 0;
+  }
+  &[data-reveal="shown"] {
+    transition: opacity 1200ms ease-in-out;
+  }
+}
+
+/* Serenity's phones drift up a little slower than the page as they cross the screen. Without support, or for reduced motion, they stay put */
+@utility drift {
+  @supports (animation-timeline: view()) {
+    @variant motion-safe {
+      animation: drift linear both;
+      animation-timeline: view();
+    }
+  }
+}
+@keyframes drift {
+  from {
+    transform: translateY(-48px);
+  }
+  to {
+    transform: translateY(48px);
+  }
+}
+
 /* On a dark section: white focus outlines */
 @utility focus-light {
   --ring: var(--color-paper);
