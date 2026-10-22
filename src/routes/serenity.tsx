@@ -1,6 +1,8 @@
 import type { Route } from "./+types/serenity";
+import Approach from "@/components/serenity/Approach";
 import Chapters from "@/components/serenity/Chapters";
 import Featured from "@/components/serenity/Featured";
+import Palette from "@/components/serenity/Palette";
 import CaseHero from "@/components/shared/CaseHero";
 import Contact from "@/components/shared/Contact";
 import serenityCaseStudy from "@/data/caseStudies/serenity";
@@ -31,6 +33,8 @@ const SerenityPage = () => {
       <div className="nightfall pb-20 lg:pb-40">
         <Featured story={story} />
         <Chapters story={story} />
+        <Palette />
+        <Approach />
       </div>
       <Contact />
     </>

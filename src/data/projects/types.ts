@@ -218,4 +218,6 @@ export interface SerenityCaseStudy extends PageIntro {
   project: NextUp;
   featured: { headline: string; tags: string[]; cta: string; cover: Shot };
   chapters: SerenityChapter[];
+  palette: SectionCopy & { swatches: { name: string; fill: string }[] };
+  approach: Pick<SectionCopy, "eyebrow" | "body">;
 }

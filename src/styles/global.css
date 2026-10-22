@@ -164,17 +164,20 @@
 
   /*
     Serenity concept (portfolio-pages.pen → Serenity Idea 03 · Night Falls, with Idea 05's featured card and palette):
-    the cream page, the ink of the first line, the app's violet, then the nightfall gradient's dusk, twilight,
-    evening and night, the featured card's soft text and glow
+    the cream page, the ink of the first line, the app's palette (violet, lavender, moonlight), then the nightfall
+    gradient's dusk, twilight, evening and night, the soft and muted text on the night, and the featured card's glow
   */
   --color-serenity: #f6efe6;
   --color-serenity-ink: #2a2540;
   --color-serenity-violet: #6b5bd0;
+  --color-serenity-lavender: #bba9d1;
+  --color-serenity-moonlight: #e8e6f2;
   --color-serenity-dusk: #e9dce6;
   --color-serenity-twilight: #8e7fb8;
   --color-serenity-evening: #3a3260;
   --color-serenity-night: #1d1b2e;
   --color-serenity-soft: #c9c5dd;
+  --color-serenity-muted: #8c89a6;
   --color-serenity-glow: #8c7fd0;
   --shadow-serenity: 0 0 40px #8c7fd055;
 
@@ -488,10 +491,10 @@
 @utility nightfall {
   background-image: linear-gradient(
     var(--color-serenity) 0%,
-    var(--color-serenity-dusk) 14%,
-    var(--color-serenity-twilight) 33%,
-    var(--color-serenity-evening) 50%,
-    var(--color-serenity-night) 66%
+    var(--color-serenity-dusk) 12%,
+    var(--color-serenity-twilight) 30%,
+    var(--color-serenity-evening) 47%,
+    var(--color-serenity-night) 62%
   );
 }
 

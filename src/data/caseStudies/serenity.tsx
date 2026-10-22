@@ -71,6 +71,21 @@ const serenityCaseStudy: SerenityCaseStudy = {
       ],
     },
   ],
+  palette: {
+    eyebrow: "Soundscapes",
+    headline: "A palette for the middle of the night.",
+    body: "Deep navy, soft violet and lavender, with moonlit illustrations that never glare.",
+    swatches: [
+      { name: "Night", fill: "bg-serenity-night" },
+      { name: "Violet", fill: "bg-serenity-violet" },
+      { name: "Lavender", fill: "bg-serenity-lavender" },
+      { name: "Moonlight", fill: "bg-serenity-moonlight" },
+    ],
+  },
+  approach: {
+    eyebrow: "The approach",
+    body: "Content curated to each person, clear paths to Sleep, Meditate and Focus, and a palette that invites people to slow down.",
+  },
 };
 
 export default serenityCaseStudy;
