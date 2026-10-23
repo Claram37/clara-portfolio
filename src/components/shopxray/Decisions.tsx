@@ -13,7 +13,7 @@ const Decisions = ({ decisions }: DecisionsProps) => {
   return (
     <section
       aria-labelledby={headingId}
-      className="px-page py-20 lg:py-24 2xl:py-30"
+      className="px-page py-20 lg:py-24 2xl:py-30 snap-start"
     >
       <div className="mx-auto flex max-w-content flex-col gap-12">
         <Heading

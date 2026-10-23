@@ -13,7 +13,7 @@ const Learned = ({ learned }: LearnedProps) => {
   return (
     <section
       aria-labelledby={headingId}
-      className="px-page py-20 lg:py-24 2xl:py-30"
+      className="px-page py-20 lg:py-24 2xl:py-30 snap-start"
     >
       <div className="mx-auto flex max-w-content flex-col gap-6 rounded-3xl bg-daftari-stage p-8 md:p-12 xl:p-16">
         <Eyebrow className="text-shopxray">{eyebrow}</Eyebrow>

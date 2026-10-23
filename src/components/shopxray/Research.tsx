@@ -13,7 +13,7 @@ const Research = ({ research }: ResearchProps) => {
   return (
     <section
       aria-labelledby={headingId}
-      className="px-page py-20 lg:py-24 2xl:py-30"
+      className="px-page py-20 lg:py-24 2xl:py-30 snap-start"
     >
       <div className="mx-auto flex max-w-content flex-col gap-6 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
         <Heading
