@@ -19,8 +19,8 @@ const Work = () => {
     >
       <div className="mx-auto max-w-content">
         <SectionHead id={headingId} title="My best work">
-          Showcasing exceptional projects that pushed my boundaries and created
-          meaningful impact.
+          Three real products: the problem, the decisions behind each design,
+          and what changed.
         </SectionHead>
         <Tabs
           value={active}
