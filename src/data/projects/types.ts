@@ -88,6 +88,7 @@ export interface Step {
 }
 export interface StepCaseStudy extends CaseStudyIntro {
   steps: Step[];
+  research: SectionCopy;
 }
 
 // Fitcheck's case study sections

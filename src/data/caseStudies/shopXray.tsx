@@ -202,6 +202,11 @@ const shopXrayCaseStudy: StepCaseStudy = {
       ),
     },
   ],
+  research: {
+    eyebrow: "Research",
+    headline: "First, I read the notebook.",
+    body: "Every daftari tracked the same four things: visits, matumizi, mapato and salio. The pain always came at closing, when the cash in the drawer didn't match the book and nobody could say why.",
+  },
 };
 
 export default shopXrayCaseStudy;
