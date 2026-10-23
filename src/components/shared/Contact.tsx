@@ -32,7 +32,7 @@ const Contact = () => {
     >
       <div className="mx-auto flex max-w-content flex-col gap-12 lg:gap-20">
         <SectionHead id={headingId} title="Get in touch.">
-          Let's build something will people actually use.
+          Let's build something people will actually use.
         </SectionHead>
 
         <div className="flex flex-col gap-16 lg:flex-row 2xl:gap-24">
