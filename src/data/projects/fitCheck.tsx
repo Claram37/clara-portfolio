@@ -11,7 +11,7 @@ const fitCheck: Project = {
   name: "Dproz Fitcheck",
   kind: "AI feature",
   icon: FileCheck,
-  caption: "An AI feature to Fitcheck and tailor resumes.",
+  caption: "An AI feature that checks a resume against one job, then tailors it.",
   caseStudy: "/work/fitcheck",
   theme: {
     tile: "bg-tab-purple",
