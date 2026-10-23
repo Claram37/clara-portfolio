@@ -207,6 +207,24 @@ const shopXrayCaseStudy: StepCaseStudy = {
     headline: "First, I read the notebook.",
     body: "Every daftari tracked the same four things: visits, matumizi, mapato and salio. The pain always came at closing, when the cash in the drawer didn't match the book and nobody could say why.",
   },
+  decisions: {
+    eyebrow: "Key decisions",
+    headline: "Keep the notebook's habits. Take over the maths.",
+    items: [
+      {
+        title: "Record as it happens, not at closing.",
+        text: "Visits and expenses are logged when they happen, so closing becomes a quick check instead of rebuilding the day from memory. The trade-off is a few more taps during a busy day. This was worth it because they could record the day as it happens and made all records easy to keep.",
+      },
+      {
+        title: "Show the gap before the day closes.",
+        text: "If the cash in hand doesn't match what was recorded, the closing summary shows the shortfall before the owner confirms.",
+      },
+      {
+        title: "One card per visit.",
+        text: "Each visit is a card listing its services and total, like one line of the daftari. Cards are easy to scan and each card belongs to one customer.",
+      },
+    ],
+  },
 };
 
 export default shopXrayCaseStudy;
