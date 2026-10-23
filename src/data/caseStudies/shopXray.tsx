@@ -202,30 +202,6 @@ const shopXrayCaseStudy: StepCaseStudy = {
       ),
     },
   ],
-  edgeCases: {
-    eyebrow: "When the day doesn't go to plan",
-    headline:
-      "Real days are messy. The daftari handled that, so ShopXray had to.",
-    columns: ["Situation", "What ShopXray does"],
-    items: [
-      {
-        situation:
-          "An expense is only partly paid, like a 10,000 bodaboda ride with 5,000 paid now",
-        response:
-          "Records what was paid and the balance stays visible until all is paid.",
-      },
-      {
-        situation: "A customer drops something off and collects it later",
-        response:
-          "A customer can drop off an item for repair or for a service. The visit is converted to a drop off with the customer name and their contact details. The day they pay for it is when the payment counts. If they partially paid, the balance is counted when they pay the remaining amount.",
-      },
-      {
-        situation: "The cash doesn't match at closing",
-        response:
-          "Shows the deficit on the closing summary before the owner confirms, the deficit shows even when the day is closed.",
-      },
-    ],
-  },
   learned: {
     eyebrow: "What I learned",
     headline: "Don't replace the habit. Replace the arithmetic.",
