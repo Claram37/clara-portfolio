@@ -181,7 +181,7 @@ const dprozCaseStudy: CaseStudy = {
       tone: "tint",
       layout: "split",
       headline: "A lighter path on each platform.",
-      body: "On mobile, a gamified, step-by-step wizard that turns onboarding into a series of quick wins. On web, resume upload, so job seekers can build their profile from a resume they already have.",
+      body: "On phones, most job seekers don't have a CV file to hand, so the wizard asks a few quick questions. On the web, many do, so uploading one fills the profile in seconds.",
       highlight:
         "Users now reach their profile in under 60 seconds, with a feeling of momentum instead of a wall of questions.",
       visual: (
