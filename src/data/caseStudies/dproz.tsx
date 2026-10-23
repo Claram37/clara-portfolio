@@ -219,6 +219,7 @@ const dprozCaseStudy: CaseStudy = {
       tone: "paper",
       layout: "screens",
       headline: "Onboarding, profile, homepage and job recommendations.",
+      body: "If something is missing, when they land on the profile page, they are prompted to complete setting up their preferences.",
       screens: [
         {
           src: smartProfilePhone,

@@ -8,7 +8,7 @@ interface ScreensBodyProps {
 }
 
 const ScreensBody = ({ chapter, tone }: ScreensBodyProps) => {
-  const { headline, screens } = chapter;
+  const { headline, body, screens } = chapter;
 
   return (
     <div className="flex flex-col gap-7 xl:min-h-0 xl:flex-1">
@@ -35,6 +35,8 @@ const ScreensBody = ({ chapter, tone }: ScreensBodyProps) => {
           </li>
         ))}
       </ul>
+
+      {body && <p className={cn("text-body", tone.body)}>{body}</p>}
     </div>
   );
 };
