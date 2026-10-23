@@ -23,6 +23,9 @@ const CodeWork = () => {
               I write React, so I think in components and states, know what's
               costly to build, and can talk with engineers in their language.
             </span>
+            <span className="mt-4 block text-code-muted">
+              Two things I designed and built end to end:
+            </span>
           </SectionHead>
           <Button href={site.github} variant="light" className="shrink-0">
             <GitHub className="size-4" aria-hidden="true" />
