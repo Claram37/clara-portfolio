@@ -1,6 +1,7 @@
 const site = {
   name: "Clara Kamande",
   role: "Product Designer",
+  focus: "Front-end",
   location: "Nairobi, Kenya",
   email: "kamandeclara@gmail.com",
   github: "https://github.com/Claram37",

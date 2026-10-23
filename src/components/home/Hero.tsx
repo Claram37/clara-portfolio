@@ -13,7 +13,7 @@ const Hero = () => {
           className="size-2 shrink-0 rounded-full bg-success"
           aria-hidden="true"
         ></span>
-        {site.role} · {site.location}
+        {site.role} · {site.focus} · {site.location}
       </p>
 
       <h1 className="text-hero text-balance">Hi, I'm Clara.</h1>
