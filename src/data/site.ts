@@ -8,7 +8,7 @@ const site = {
   linkedin: "https://www.linkedin.com/in/clara-kamande-33aa62272",
   resume: "/clara-kamande-resume.pdf", // public/
   intro:
-    "I'm a Product Designer with two years of experience. I design products people can actually use, and I can help build them too.",
+    "I design web and mobile products people can actually use, then help build them in React and TypeScript.",
 };
 
 export default site;
