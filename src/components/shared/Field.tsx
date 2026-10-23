@@ -8,10 +8,11 @@ interface FieldProps {
   type?: string;
   autoComplete?: string;
   multiline?: boolean;
+  error?: string;
 }
 
 const control =
-  "w-full rounded-input bg-surface px-5 py-4 text-base placeholder:text-placeholder focus-ring";
+  "w-full rounded-input bg-surface px-5 py-4 text-base placeholder:text-placeholder focus-ring aria-invalid:ring-2 aria-invalid:ring-alert";
 
 const Field = ({
   label,
@@ -20,8 +21,14 @@ const Field = ({
   type = "text",
   autoComplete,
   multiline = false,
+  error,
 }: FieldProps) => {
   const id = useId();
+  const errorId = `${id}-error`;
+  const invalid = {
+    "aria-invalid": error ? true : undefined,
+    "aria-describedby": error ? errorId : undefined,
+  };
 
   return (
     <div className="flex flex-col gap-2">
@@ -34,6 +41,7 @@ const Field = ({
           name={name}
           placeholder={placeholder}
           required
+          {...invalid}
           className={cn(control, "h-42 resize-none")}
         />
       ) : (
@@ -44,8 +52,14 @@ const Field = ({
           placeholder={placeholder}
           autoComplete={autoComplete}
           required
+          {...invalid}
           className={cn(control, "h-14")}
         />
+      )}
+      {error && (
+        <p id={errorId} className="text-base text-alert">
+          {error}
+        </p>
       )}
     </div>
   );

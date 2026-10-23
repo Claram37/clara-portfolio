@@ -1,4 +1,4 @@
-import { useId, type FormEvent } from "react";
+import { useId, useState, type FormEvent } from "react";
 import { Mail, MapPin } from "lucide-react";
 import Button from "@/components/shared/Button";
 import Field from "@/components/shared/Field";
@@ -13,16 +13,44 @@ const links = [
   { label: "LinkedIn", href: site.linkedin, icon: LinkedIn },
 ];
 
+const messages = {
+  name: "Add your name.",
+  email: "Enter an email address, like name@example.com.",
+  message: "Write a short message.",
+};
+
+type FieldName = keyof typeof messages;
+
 const Contact = () => {
   const headingId = useId();
+  const [invalid, setInvalid] = useState<FieldName[]>([]);
+
+  const errorFor = (name: FieldName) =>
+    invalid.includes(name) ? messages[name] : undefined;
 
   // No server, so the message opens in the visitor's email app
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const fields = event.currentTarget.elements;
+    const found = (Object.keys(messages) as FieldName[]).filter(
+      (name) => !(fields.namedItem(name) as HTMLInputElement).checkValidity(),
+    );
+    setInvalid(found);
+    if (found.length > 0) {
+      (fields.namedItem(found[0]) as HTMLInputElement).focus();
+      return;
+    }
+
     const form = new FormData(event.currentTarget);
     const subject = `Message from ${form.get("name")}`;
     const body = `${form.get("message")}\n\n${form.get("name")} · ${form.get("email")}`;
     window.location.href = `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
+  // A field's error clears once it's typed in
+  const handleInput = (event: FormEvent<HTMLFormElement>) => {
+    const { name } = event.target as HTMLInputElement;
+    setInvalid((fields) => fields.filter((field) => field !== name));
   };
 
   return (
@@ -36,13 +64,19 @@ const Contact = () => {
         </SectionHead>
 
         <div className="flex flex-col gap-16 lg:flex-row 2xl:gap-24">
-          <form onSubmit={handleSubmit} className="flex flex-1 flex-col gap-6">
-            <div className="grid gap-4 sm:grid-cols-2">
+          <form
+            noValidate
+            onSubmit={handleSubmit}
+            onInput={handleInput}
+            className="flex flex-1 flex-col gap-6"
+          >
+            <div className="grid items-start gap-4 sm:grid-cols-2">
               <Field
                 label="Name"
                 name="name"
                 placeholder="Your name"
                 autoComplete="name"
+                error={errorFor("name")}
               />
               <Field
                 label="Email"
@@ -50,6 +84,7 @@ const Contact = () => {
                 type="email"
                 placeholder="you@company.com"
                 autoComplete="email"
+                error={errorFor("email")}
               />
             </div>
             <Field
@@ -57,6 +92,7 @@ const Contact = () => {
               name="message"
               placeholder="Tell me about the role or project…"
               multiline
+              error={errorFor("message")}
             />
             <Button type="submit" arrow className="self-start">
               Send message
