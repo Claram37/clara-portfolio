@@ -11,8 +11,9 @@ import PinnedSteps from "@/components/shopxray/PinnedSteps";
 import Research from "@/components/shopxray/Research";
 import Decisions from "@/components/shopxray/Decisions";
 import EdgeCases from "@/components/shopxray/EdgeCases";
+import Learned from "@/components/shopxray/Learned";
 
-const { project, intro, steps, research, decisions, edgeCases } =
+const { project, intro, steps, research, decisions, edgeCases, learned } =
   shopXrayCaseStudy;
 
 export const meta: Route.MetaFunction = () =>
@@ -30,6 +31,7 @@ const ShopXrayPage = () => {
       <Research research={research} />
       <Decisions decisions={decisions} />
       <EdgeCases edgeCases={edgeCases} />
+      <Learned learned={learned} />
       <NextProject next={nextAfter(project)} />
       <Contact />
     </>

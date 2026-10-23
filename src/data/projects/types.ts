@@ -96,6 +96,7 @@ export interface StepCaseStudy extends CaseStudyIntro {
     columns: [string, string];
     items: { situation: string; response: string }[];
   };
+  learned: SectionCopy;
 }
 
 // Fitcheck's case study sections

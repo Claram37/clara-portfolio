@@ -249,6 +249,11 @@ const shopXrayCaseStudy: StepCaseStudy = {
       },
     ],
   },
+  learned: {
+    eyebrow: "What I learned",
+    headline: "Don't replace the habit. Replace the arithmetic.",
+    body: "Owners didn't want a new way to run their shop. They wanted the notebook to add itself up.",
+  },
 };
 
 export default shopXrayCaseStudy;
