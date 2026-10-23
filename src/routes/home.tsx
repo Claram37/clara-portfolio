@@ -8,7 +8,7 @@ import { pageMeta } from "@/lib/meta";
 import CodeWork from "@/components/home/CodeWork";
 
 export const meta: Route.MetaFunction = () =>
-  pageMeta({ title: `${site.name} · ${site.role}`, description: site.intro });
+  pageMeta({ title: `${site.name} · ${site.role}`, description: site.description });
 
 const Home = () => {
   return (

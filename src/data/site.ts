@@ -9,6 +9,8 @@ const site = {
   resume: "/clara-kamande-resume.pdf", // public/
   intro:
     "I design web and mobile products people can actually use, then help build them in React and TypeScript.",
+  description:
+    "Product designer in Nairobi who designs web and mobile products and helps build them in React and TypeScript.",
 };
 
 export default site;
