@@ -52,7 +52,9 @@ const Nav = () => {
             size="sm"
             variant={darkNav ? "light" : "dark"}
           >
-            Resume
+            <span>
+              Resume<span className="max-sm:sr-only"> (PDF)</span>
+            </span>
             <Download className="size-4" aria-hidden="true" />
           </Button>
         </div>
