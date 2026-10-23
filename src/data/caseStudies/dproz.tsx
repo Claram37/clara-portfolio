@@ -251,8 +251,7 @@ const dprozCaseStudy: CaseStudy = {
       tone: "blue",
       layout: "impact",
       figure: "+40%",
-      headline:
-        "We saw a 40% increase in profile completion, and more new profiles were created in the month after the redesign.",
+      headline: "40% more people finished their profile than before.",
       body: "Today, thousands of job seekers see and apply for jobs on Dproz every day, and that number keeps growing.",
     },
     {
