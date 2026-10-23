@@ -88,9 +88,6 @@ export interface Step {
 }
 export interface StepCaseStudy extends CaseStudyIntro {
   steps: Step[];
-  decisions: Pick<SectionCopy, "eyebrow" | "headline"> & {
-    items: { title: string; text: string }[];
-  };
   edgeCases: Pick<SectionCopy, "eyebrow" | "headline"> & {
     columns: [string, string];
     items: { situation: string; response: string }[];

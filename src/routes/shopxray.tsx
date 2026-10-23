@@ -8,12 +8,10 @@ import { pageMeta } from "@/lib/meta";
 import Hero from "@/components/shopxray/Hero";
 import StepCards from "@/components/shopxray/StepCards";
 import PinnedSteps from "@/components/shopxray/PinnedSteps";
-import Decisions from "@/components/shopxray/Decisions";
 import EdgeCases from "@/components/shopxray/EdgeCases";
 import Learned from "@/components/shopxray/Learned";
 
-const { project, intro, steps, decisions, edgeCases, learned } =
-  shopXrayCaseStudy;
+const { project, intro, steps, edgeCases, learned } = shopXrayCaseStudy;
 
 export const meta: Route.MetaFunction = () =>
   pageMeta({
@@ -27,7 +25,6 @@ const ShopXrayPage = () => {
       <Hero caseStudy={shopXrayCaseStudy} />
       <StepCards steps={steps} />
       <PinnedSteps steps={steps} />
-      <Decisions decisions={decisions} />
       <EdgeCases edgeCases={edgeCases} />
       <Learned learned={learned} />
       <NextProject next={nextAfter(project)} />

@@ -2,7 +2,6 @@ import { useId } from "react";
 import Eyebrow from "@/components/shared/Eyebrow";
 import type { StepCaseStudy } from "@/data/projects/types";
 import { cn } from "@/lib/utils";
-import Heading from "./Heading";
 
 interface EdgeCasesProps {
   edgeCases: StepCaseStudy["edgeCases"];
@@ -20,12 +19,12 @@ const EdgeCases = ({ edgeCases }: EdgeCasesProps) => {
       className="px-page py-20 lg:py-24 2xl:py-30 snap-start"
     >
       <div className="mx-auto flex max-w-content flex-col gap-12">
-        <Heading
-          id={headingId}
-          eyebrow={eyebrow}
-          headline={headline}
-          className="max-w-200"
-        />
+        <div className="flex max-w-200 flex-col gap-4">
+          <Eyebrow className="text-shopxray">{eyebrow}</Eyebrow>
+          <h2 id={headingId} className="text-chapter text-balance">
+            {headline}
+          </h2>
+        </div>
         <div>
           <div className={cn(row, "pb-4 max-md:hidden")} aria-hidden="true">
             {columns.map((column) => (
