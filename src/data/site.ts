@@ -3,9 +3,9 @@ const site = {
   role: "Product Designer",
   focus: "Front-end Designer",
   location: "Nairobi, Kenya",
-  email: "kamandeclara@gmail.com",
+  email: "hello@clarakamande.com",
   github: "https://github.com/Claram37",
-  linkedin: "https://www.linkedin.com/in/clara-kamande-33aa62272",
+  linkedin: "https://www.linkedin.com/in/clara-kamande",
   resume: "/clara-kamande-resume.pdf", // public/
   intro:
     "I design web and mobile products people can actually use, then help build them in React and TypeScript.",
