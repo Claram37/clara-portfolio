@@ -55,6 +55,7 @@ const Contact = () => {
 
   return (
     <section
+      id="contact"
       aria-labelledby={headingId}
       className="px-page py-20 lg:py-28 snap-start"
     >
