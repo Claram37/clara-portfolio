@@ -121,39 +121,6 @@ const Wall = () => {
         )}
       </div>
 
-      {/* A chip lights up its post from the other direction, and opens it from the first slide */}
-      <div className="px-page pt-7 pb-30">
-        <div className="mx-auto flex max-w-content flex-wrap items-center gap-3">
-          <p className="text-xs text-muted-foreground">Light up a post</p>
-          {posts.map(({ title, reel, slides }, post) => (
-            <button
-              key={title}
-              type="button"
-              onPointerEnter={() => setLit(post)}
-              onPointerLeave={() => setLit(null)}
-              onFocus={() => setLit(post)}
-              onBlur={() => setLit(null)}
-              onClick={() => setOpen({ post, slide: 0 })}
-              className={cn(
-                "flex gap-2 rounded-full border px-4 py-2 text-xs transition-colors focus-ring",
-                lit === post
-                  ? "border-ink bg-ink text-paper"
-                  : "border-border bg-paper text-ink",
-              )}
-            >
-              <span className="font-semibold">{title}</span>
-              <span
-                className={
-                  lit === post ? "text-paper/60" : "text-muted-foreground"
-                }
-              >
-                {reel ? reel.length : `${slides.length} slides`}
-              </span>
-            </button>
-          ))}
-        </div>
-      </div>
-
       <div
         ref={labelRef}
         aria-hidden="true"
