@@ -329,6 +329,13 @@
   --container-paper-stage: min(900px, calc((100svh - 96px) * 3 / 2));
 
   /*
+    The gallery's open post: a 4:5 slide or a 9:16 reel as tall as fits under the Lightbox's padding
+    and a two-line title, and above a carousel's arrows
+  */
+  --container-post: min(560px, calc((100svh - 264px) * 4 / 5));
+  --container-reel: min(400px, calc((100svh - 196px) * 9 / 16));
+
+  /*
     Corner radii, multiples of 8. Every card, the About portrait included, and every form input is 16px.
     Tailwind's own are cleared down to lg (8px), 2xl (16px), 3xl (24px) and 4xl (32px)
   */

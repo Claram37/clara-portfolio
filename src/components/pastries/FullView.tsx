@@ -1,6 +1,6 @@
 import type { MenuItem } from "@/data/projects/types";
 import Phone from "@/components/mockups/Phone";
-import Lightbox from "./Lightbox";
+import Lightbox from "@/components/shared/Lightbox";
 import LongScreen from "./LongScreen";
 
 interface FullViewProps {

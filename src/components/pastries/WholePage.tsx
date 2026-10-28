@@ -2,7 +2,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import pastriesCaseStudy from "@/data/caseStudies/pastries";
 import Button from "@/components/shared/Button";
 import Phone from "@/components/mockups/Phone";
-import Lightbox from "./Lightbox";
+import Lightbox from "@/components/shared/Lightbox";
 
 const { wholePage } = pastriesCaseStudy;
 const { desktop, mobile } = wholePage;
