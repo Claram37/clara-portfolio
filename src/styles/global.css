@@ -298,10 +298,10 @@
   --text-lesson--letter-spacing: -1.5px;
   --text-lesson--font-weight: 600;
 
-  /* The gallery's title ("Social posts for Dproz") */
-  --text-gallery: 48px;
+  /* The gallery's title ("Graphics for Dproz") */
+  --text-gallery: 40px;
   --text-gallery--line-height: 0.95;
-  --text-gallery--letter-spacing: -2.2px;
+  --text-gallery--letter-spacing: -1.8px;
   --text-gallery--font-weight: 600;
 
   /* A ShopXray step's caption headline ("A blank page becomes a shop.") */
@@ -667,7 +667,7 @@
   impact            72   96  120  144  160
   step              24   28   28   28   28
   lesson            40   48   56   56   64
-  gallery           48   64   72   80   88
+  gallery           40   48   56   64   64
 */
 :root {
   @variant md {
@@ -691,8 +691,8 @@
     --text-step--letter-spacing: -0.8px;
     --text-lesson: 48px;
     --text-lesson--letter-spacing: -1.8px;
-    --text-gallery: 64px;
-    --text-gallery--letter-spacing: -2.9px;
+    --text-gallery: 48px;
+    --text-gallery--letter-spacing: -2.2px;
   }
   @variant lg {
     --spacing-page: 64px;
@@ -713,8 +713,8 @@
     --text-impact--letter-spacing: -6.4px;
     --text-lesson: 56px;
     --text-lesson--letter-spacing: -2.1px;
-    --text-gallery: 72px;
-    --text-gallery--letter-spacing: -3.3px;
+    --text-gallery: 56px;
+    --text-gallery--letter-spacing: -2.5px;
   }
   @variant xl {
     --spacing-page: 80px;
@@ -729,8 +729,8 @@
     --text-section--letter-spacing: -1.2px;
     --text-impact: 144px;
     --text-impact--letter-spacing: -7.6px;
-    --text-gallery: 80px;
-    --text-gallery--letter-spacing: -3.6px;
+    --text-gallery: 64px;
+    --text-gallery--letter-spacing: -2.9px;
   }
   @variant 2xl {
     --spacing-page: 96px;
@@ -753,8 +753,6 @@
     --text-impact--letter-spacing: -8.5px;
     --text-lesson: 64px;
     --text-lesson--letter-spacing: -2.4px;
-    --text-gallery: 88px;
-    --text-gallery--letter-spacing: -4px;
   }
 }
 
