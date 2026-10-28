@@ -1,33 +1,34 @@
-import type { Gallery, GallerySlide } from "@/data/projects/types";
+import type { Gallery, Shot } from "@/data/projects/types";
 import brandReel from "@/assets/gallery/brand-reel/reel.mp4";
 import swahiliReel from "@/assets/gallery/swahili-reel/reel.mp4";
 import fitcheckReel from "@/assets/gallery/fitcheck-reel/reel.mp4";
 
-// Every image at full size and 400px wide, by its path in assets/gallery
+// Every slide at full size, and each post's cover 800px wide, by its path in assets/gallery
 const full = import.meta.glob<string>("../assets/gallery/*/*.{png,jpg}", {
   eager: true,
   import: "default",
 });
-const thumbs = import.meta.glob<string>("../assets/gallery/*/*.{png,jpg}", {
-  eager: true,
-  import: "default",
-  query: { w: 400 },
-});
+const covers = import.meta.glob<string>(
+  "../assets/gallery/*/*cover.{png,jpg}",
+  { eager: true, import: "default", query: { w: 800 } },
+);
 
-const slide = (file: string, alt: string): GallerySlide => ({
+const slide = (file: string, alt: string): Shot => ({
   src: full[`../assets/gallery/${file}`],
-  thumb: thumbs[`../assets/gallery/${file}`],
   alt,
 });
+const cover = (file: string) => covers[`../assets/gallery/${file}`];
 
 const gallery: Gallery = {
   eyebrow: "Gallery",
   title: "Graphics for Dproz",
   intro:
     "Carousels and reels I designed for Dproz's social pages, turning long job ads into posts people swipe through.",
+  // In the grid's order, down each column in turn, so the columns end close together
   posts: [
     {
       title: "1,099 jobs at TANESCO",
+      cover: cover("tanesco/1-cover.png"),
       slides: [
         slide(
           "tanesco/1-cover.png",
@@ -60,7 +61,19 @@ const gallery: Gallery = {
       ],
     },
     {
+      title: "Your next job should find you",
+      cover: cover("brand-reel/cover.jpg"),
+      reel: { video: brandReel, length: "0:36" },
+      slides: [
+        slide(
+          "brand-reel/cover.jpg",
+          "Your next job should find, in bold white type on blue, with job in yellow inside a hand-drawn white loop",
+        ),
+      ],
+    },
+    {
       title: "2 jobs at CRDB Bank",
+      cover: cover("crdb/1-cover.png"),
       slides: [
         slide(
           "crdb/1-cover.png",
@@ -82,6 +95,7 @@ const gallery: Gallery = {
     },
     {
       title: "6 jobs at Equity Bank",
+      cover: cover("equity/1-cover.png"),
       slides: [
         slide(
           "equity/1-cover.png",
@@ -119,6 +133,7 @@ const gallery: Gallery = {
     },
     {
       title: "6 jobs at Yas Tanzania",
+      cover: cover("yas/1-cover.png"),
       slides: [
         slide(
           "yas/1-cover.png",
@@ -156,6 +171,7 @@ const gallery: Gallery = {
     },
     {
       title: "Teach tech, teach design, or run the systems",
+      cover: cover("st-jude/1-cover.jpg"),
       slides: [
         slide(
           "st-jude/1-cover.jpg",
@@ -180,17 +196,8 @@ const gallery: Gallery = {
       ],
     },
     {
-      title: "Your next job should find you",
-      reel: { video: brandReel, length: "0:36" },
-      slides: [
-        slide(
-          "brand-reel/cover.jpg",
-          "Your next job should find, in bold white type on blue, with job in yellow inside a hand-drawn white loop",
-        ),
-      ],
-    },
-    {
       title: "Umetuma maombi mara ngapi?",
+      cover: cover("swahili-reel/cover.jpg"),
       reel: { video: swahiliReel, length: "1:10" },
       slides: [
         slide(
@@ -201,6 +208,7 @@ const gallery: Gallery = {
     },
     {
       title: "Je, umeshawahi kutuma CV kuomba kazi?",
+      cover: cover("fitcheck-reel/cover.jpg"),
       reel: { video: fitcheckReel, length: "1:39" },
       slides: [
         slide(

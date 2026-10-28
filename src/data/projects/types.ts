@@ -273,14 +273,11 @@ export interface ResumeCaseStudy extends PageIntro {
   next: NextUp;
 }
 
-// The gallery: Dproz's social posts, every slide and reel frame on one wall
-export interface GallerySlide extends Shot {
-  thumb: string; // 400px wide, for the wall
-}
-
+// The gallery: Dproz's social posts, a card per post
 export interface GalleryPost {
   title: string;
-  slides: GallerySlide[]; // a carousel's slides, or a reel's cover
+  cover: string; // the first slide, 800px wide, for the grid
+  slides: Shot[]; // a carousel's slides, or a reel's cover
   reel?: { video: string; length: string };
 }
 
