@@ -205,6 +205,10 @@
   --color-serenity-glow: #8c7fd0;
   --shadow-serenity: 0 0 40px #8c7fd055;
 
+  /* The gallery (portfolio-pages.pen → Gallery Idea 05 · Decks): the line between carousels and reels, and a card's shadow */
+  --color-gallery-line: #e1e2e5;
+  --shadow-gallery-card: 0 10px 24px #1011141f;
+
   /* Contact */
   --color-contact: #e2582f;
   --color-contact-body: #ffe3d8;
@@ -632,6 +636,37 @@
   }
 }
 
+/*
+  The gallery's decks: each card ([data-card]) rests in the stack at --x, --y and --r, and springs out to --fx, --fy
+  and --fr while its deck is hovered or focused. Translations are in % of the card
+*/
+@utility deck {
+  & [data-card] {
+    translate: var(--x) var(--y);
+    rotate: var(--r);
+    transition-property: translate, rotate, scale;
+    transition-duration: 450ms;
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  &:focus-visible [data-card] {
+    translate: var(--fx) var(--fy);
+    rotate: var(--fr);
+    scale: 0.96;
+  }
+  @media (hover: hover) {
+    &:hover [data-card] {
+      translate: var(--fx) var(--fy);
+      rotate: var(--fr);
+      scale: 0.96;
+    }
+  }
+  @variant motion-reduce {
+    & [data-card] {
+      transition: none;
+    }
+  }
+}
+
 /* On a dark section: white focus outlines */
 @utility focus-light {
   --ring: var(--color-paper);
@@ -794,6 +829,29 @@ body:has([data-daftari]) {
 ::view-transition-group(*) {
   animation-duration: 500ms;
   animation-timing-function: var(--ease-reveal);
+}
+
+/* The gallery: a deck's cards (deal-1, deal-2…) glide out to the table, or back to the stack, one after another */
+::view-transition-group(deal-2) {
+  animation-delay: 60ms;
+}
+::view-transition-group(deal-3) {
+  animation-delay: 120ms;
+}
+::view-transition-group(deal-4) {
+  animation-delay: 180ms;
+}
+::view-transition-group(deal-5) {
+  animation-delay: 240ms;
+}
+::view-transition-group(deal-6) {
+  animation-delay: 300ms;
+}
+::view-transition-group(deal-7) {
+  animation-delay: 360ms;
+}
+::view-transition-group(deal-8) {
+  animation-delay: 420ms;
 }
 
 /* shadcn/ui: exposes the variables in :root below as Tailwind classes (bg-primary, text-muted-foreground…) */
