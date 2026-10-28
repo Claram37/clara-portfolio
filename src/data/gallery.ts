@@ -22,7 +22,7 @@ const slide = (file: string, alt: string): GallerySlide => ({
 
 const gallery: Gallery = {
   eyebrow: "Gallery",
-  title: "Social posts for Dproz",
+  title: "Graphics for Dproz",
   intro:
     "Carousels and reels I designed for Dproz's social pages, turning long job ads into posts people swipe through.",
   posts: [
