@@ -1,0 +1,255 @@
+import type { Gallery, GallerySlide } from "@/data/projects/types";
+import brandReel from "@/assets/gallery/brand-reel/reel.mp4";
+import swahiliReel from "@/assets/gallery/swahili-reel/reel.mp4";
+import fitcheckReel from "@/assets/gallery/fitcheck-reel/reel.mp4";
+
+// Every image at full size and 400px wide, by its path in assets/gallery
+const full = import.meta.glob<string>("../assets/gallery/*/*.{png,jpg}", {
+  eager: true,
+  import: "default",
+});
+const thumbs = import.meta.glob<string>("../assets/gallery/*/*.{png,jpg}", {
+  eager: true,
+  import: "default",
+  query: { w: 400 },
+});
+
+const slide = (file: string, alt: string): GallerySlide => ({
+  src: full[`../assets/gallery/${file}`],
+  thumb: thumbs[`../assets/gallery/${file}`],
+  alt,
+});
+
+const gallery: Gallery = {
+  eyebrow: "Gallery",
+  title: "Social posts for Dproz",
+  intro:
+    "Carousels and reels I designed for Dproz's social pages, turning long job ads into posts people swipe through.",
+  posts: [
+    {
+      title: "1,099 jobs at TANESCO",
+      slides: [
+        slide(
+          "tanesco/1-cover.png",
+          "1,099 jobs at TANESCO, over a bar chart of the roles by level: 100 Drivers, 777 Artisans, 203 Technicians, 13 ICT Officers and 6 Engineers, all closing Mon 26 Oct 2026, with a Find your level button",
+        ),
+        slide(
+          "tanesco/2-drivers.png",
+          "Driver Grade II, level 1 of 5 (Form IV): 100 full-time positions needing a Form IV certificate, a Class C or E driving licence, a VETA or NIT driving course and 1+ year with no accidents",
+        ),
+        slide(
+          "tanesco/3-artisans.png",
+          "Artisan Grade II, level 2 of 5 (Secondary + VETA): 777 positions across 7 trades, from Electrical (736) and Automobile (12) to Gorge Attendant (3), closing Mon 26 Oct 2026",
+        ),
+        slide(
+          "tanesco/4-technicians.png",
+          "Technician Grade II, level 3 of 5 (Diploma): 203 positions for an NTA Level 6 diploma and computer literacy, in Electrical / Electronics (193), HVAC (7) and Water Systems O&M (3)",
+        ),
+        slide(
+          "tanesco/5-ict-officers.png",
+          "ICT Officer Grade II, level 4 of 5 (Degree): 13 positions for computing graduates across 6 roles, from Information Systems Auditor (6) to Oracle Database Administrator (1)",
+        ),
+        slide(
+          "tanesco/6-engineers.png",
+          "Engineer Grade II, level 5 of 5 (Degree + ERB): 6 positions for engineering graduates registered with ERB, in Mechanical (3), Electrical & Electronics (2) and Telecommunications (1), with a How to apply button",
+        ),
+        slide(
+          "tanesco/7-how-to-apply.png",
+          "Found your level? Here is how to apply. Open to Tanzanian citizens up to 45, in three steps, from reading the 20 listings on Dproz to applying on the Ajira portal by Mon 26 Oct 2026",
+        ),
+      ],
+    },
+    {
+      title: "2 jobs at CRDB Bank",
+      slides: [
+        slide(
+          "crdb/1-cover.png",
+          "2 jobs at CRDB Bank, both closing Monday 5 October: an October 2026 calendar with the 5th circled as the last day to apply for 2 Data & AI jobs in Dar es Salaam, and a See the jobs button",
+        ),
+        slide(
+          "crdb/2-data-scientist.png",
+          "Data Scientist, 2 positions in Dar es Salaam, apply by Monday 5 October: machine-learning models for fraud and credit risk, needing 3+ years in ML and Azure AI and MLOps certifications",
+        ),
+        slide(
+          "crdb/3-feature-engineering-specialist.png",
+          "Feature Engineering Specialist, apply by Monday 5 October: design the feature pipelines behind the bank's machine-learning models, needing 3+ years in data science or ML and strong Python and SQL",
+        ),
+        slide(
+          "crdb/4-apply.png",
+          "Mark your calendar: a deadline card to apply to CRDB Bank by Monday 5 October, for Data Scientist (2 positions) and Feature Engineering Specialist (1), with the link dproz.com/companies/crdbbank",
+        ),
+      ],
+    },
+    {
+      title: "6 jobs at Equity Bank",
+      slides: [
+        slide(
+          "equity/1-cover.png",
+          "6 jobs at Equity Bank are now boarding, under a split-flap Departures sign: a departures board of the six jobs, closing 13 and 16 Oct and all marked Open, with a See the jobs button",
+        ),
+        slide(
+          "equity/2-livestock.png",
+          "RM Agribusiness Livestock Specialist, now boarding at Gate 01: finance livestock farmers and processors from Dar es Salaam, closing Tue 13 Oct 2026, with three check-in requirements",
+        ),
+        slide(
+          "equity/3-fishing-and-aquaculture.png",
+          "RM Agribusiness Fishing & Aquaculture Specialist, Gate 02: build the bank's fisheries and aquaculture portfolio, closing Tue 13 Oct 2026, needing 7–10 years in aquaculture, fisheries or banking",
+        ),
+        slide(
+          "equity/4-cash-crops.png",
+          "RM Agribusiness Cash Crops Specialist, Gate 03: grow the portfolio in cash crop value chains, from farmers to exporters, closing Fri 16 Oct 2026, needing 3–7 years in cash crop finance",
+        ),
+        slide(
+          "equity/5-relationship-manager.png",
+          "Relationship Manager – Business, Gate 04: lead the branch business development team, closing Fri 16 Oct 2026, needing a finance or business degree and 3+ years in banking",
+        ),
+        slide(
+          "equity/6-relationship-officer.png",
+          "Relationship Officer – Business, Gate 05: win and keep micro and consumer business customers through field sales, closing Fri 16 Oct 2026, needing a record of meeting deposit targets",
+        ),
+        slide(
+          "equity/7-merchant-acquiring.png",
+          "Manager, Merchant Acquiring, Gate 06: grow the merchant and POS business, closing Fri 16 Oct 2026, needing planning and reporting skills, with a How to apply button",
+        ),
+        slide(
+          "equity/8-apply.png",
+          "Apply on Dproz before the gates close, under a split-flap Final Call sign: the link dproz.com/companies/equity-bank-tanzania, with 2 jobs closing Tue 13 Oct and 4 on Fri 16 Oct",
+        ),
+      ],
+    },
+    {
+      title: "6 jobs at Yas Tanzania",
+      slides: [
+        slide(
+          "yas/1-cover.png",
+          "6 jobs at Yas Tanzania. Pick a number. A USSD-style menu numbers the six jobs, from 1. Fraud & Investigation Mgr to 6. Commission Specialist, with 1 typed in above Cancel and Send",
+        ),
+        slide(
+          "yas/2-fraud-and-investigation-manager.png",
+          "Fraud and Investigation Manager, job 1 of 6, on a USSD-style screen: closes Wed 7 Oct 2026 in Dar es Salaam, needing 7+ years in fraud investigation and cybersecurity",
+        ),
+        slide(
+          "yas/3-fiber-bi-and-reporting-manager.png",
+          "Fiber BI & Reporting Manager, job 2 of 6, on a USSD-style screen: lead BI and reporting for the fiber business, closes Wed 7 Oct 2026, needing 5+ years and Power BI, Tableau and SQL",
+        ),
+        slide(
+          "yas/4-b2b-operations-manager.png",
+          "B2B Operations Manager, job 3 of 6, on a USSD-style screen: lead B2B network operations, closes Sat 17 Oct 2026, needing an engineering degree and 5+ years in network operations",
+        ),
+        slide(
+          "yas/5-it-service-desk-supervisor.png",
+          "IT Service Desk Supervisor, job 4 of 6, on a USSD-style screen: lead 24×7 IT service management, closes Sat 17 Oct 2026, needing 3+ years in system testing and monitoring",
+        ),
+        slide(
+          "yas/6-digital-growth-specialist.png",
+          "Digital Growth & Engagement Specialist, job 5 of 6, on a USSD-style screen: grow Yas's digital channels, closes Sat 17 Oct 2026, needing 2+ years with customers and knowledge of bundles and VAS",
+        ),
+        slide(
+          "yas/7-commission-specialist.png",
+          "Commission Specialist, job 6 of 6, on a USSD-style screen: calculate commissions for every sales channel, closes Sat 17 Oct 2026, needing SQL and financial systems, with a How to apply button",
+        ),
+        slide(
+          "yas/8-apply.png",
+          "Found your number? Apply on Dproz. A USSD-style screen with the link dproz.com/companies/yas-tanzania, and two jobs closing Wed 7 Oct and four on Sat 17 Oct",
+        ),
+      ],
+    },
+    {
+      title: "Teach tech, teach design, or run the systems",
+      slides: [
+        slide(
+          "st-jude/1-cover.jpg",
+          "Teach tech, teach design, or run the systems, over a classroom photo: 3 jobs at The School of St Jude, Arusha, for an Officer – Applications, a Coding and AI Facilitator and a Graphics Design Facilitator",
+        ),
+        slide(
+          "st-jude/2-officer-applications.jpg",
+          "Officer – Applications, a full-time school office job in Arusha, over a photo of a laptop: improve the school's ERP systems, needing accounting skills and ERP experience, closing Wed 21 Oct 2026",
+        ),
+        slide(
+          "st-jude/3-coding-and-ai-facilitator.jpg",
+          "Coding and AI Facilitator, a holiday program contract in Arusha, over a photo of someone at a screen: teach coding and AI to 16 to 18 year olds in Python, JavaScript and Scratch, closing Sun 25 Oct 2026",
+        ),
+        slide(
+          "st-jude/4-graphics-design-facilitator.jpg",
+          "Graphics Design Facilitator, a holiday program contract in Arusha, over a photo of a hand sketching in pencil: teach graphics design, needing Adobe Creative Suite and Canva, closing Sun 25 Oct 2026",
+        ),
+        slide(
+          "st-jude/5-how-to-apply.jpg",
+          "Send your cover letter and CV by email, over a mountain photo: recruitment@schoolofstjude.co.tz, each role's subject-line reference and closing date, and a note that the school never asks for payment",
+        ),
+      ],
+    },
+    {
+      title: "Your next job should find you",
+      reel: { video: brandReel, length: "0:36", frames: [1.8, 7, 9.2, 15] },
+      slides: [
+        slide(
+          "brand-reel/1-your-next-job.jpg",
+          "Your next job should find, in bold white type on blue, with job in yellow inside a hand-drawn white loop",
+        ),
+        slide(
+          "brand-reel/2-browse-by-category.jpg",
+          "Browse by category. Categories with their job counts, from Banking (164) to Healthcare and Medical (102), above an RM Agribusiness Cash Crops Specialist card with a cursor on Save",
+        ),
+        slide(
+          "brand-reel/3-found-one.jpg",
+          "Found one? in large navy type on yellow",
+        ),
+        slide(
+          "brand-reel/4-your-resume-vs-the-job.jpg",
+          "Your resume vs. the job. A FitCheck card scoring an 87% match: Education, Experience and Skills match and Certifications is a gap, with a 3 strengths tag",
+        ),
+      ],
+    },
+    {
+      title: "Umetuma maombi mara ngapi?",
+      reel: { video: swahiliReel, length: "1:10", frames: [3.5, 18, 50, 61] },
+      slides: [
+        slide(
+          "swahili-reel/1-umetuma-maombi.jpg",
+          "Umetuma maombi mara ngapi… bila kupata jibu? (How many applications have you sent… with no reply?) above 47 applications sent, 0 replies and three jobs each marked Hakuna jibu (No reply)",
+        ),
+        slide(
+          "swahili-reel/2-mamia-ya-nafasi.jpg",
+          "Mamia ya nafasi za kazi (Hundreds of job openings): category cards with job counts, from Elimu (Education, 177) and Benki (Banking, 176) to Afya (Health, 115)",
+        ),
+        slide(
+          "swahili-reel/3-boresha-cv.jpg",
+          "Boresha CV yako ilingane na kazi (Improve your CV to match the job): a FitCheck card scoring 94%, with education, experience, skills and certificates all matching, and Omba sasa (Apply now)",
+        ),
+        slide(
+          "swahili-reel/4-unahitaji-msaada.jpg",
+          "Unahitaji msaada zaidi? (Need more help?) on yellow, with three ticked services from Dproz's experts: writing your CV, improving your LinkedIn and preparing you for interviews",
+        ),
+      ],
+    },
+    {
+      title: "Je, umeshawahi kutuma CV kuomba kazi?",
+      reel: {
+        video: fitcheckReel,
+        length: "1:39",
+        frames: [2, 42.5, 77.5, 97.5],
+      },
+      slides: [
+        slide(
+          "fitcheck-reel/1-je-umeshawahi.jpg",
+          "Je, umeshawahi kutuma CV kuomba kazi… (Have you ever sent a CV to apply for a job…) above a green CV imetumwa (CV sent) tag",
+        ),
+        slide(
+          "fitcheck-reel/2-hakujui-wewe.jpg",
+          "Hakujui wewe. (They don't know you.) between Msomaji hawezi kujua hilo. (The reader can't know that.) and Anajua kile tu kilichoandikwa mbele yake. (They only know what's written in front of them.)",
+        ),
+        slide(
+          "fitcheck-reel/3-unaonyesha-3-kati-ya-5.jpg",
+          "Unaonyesha 3 kati ya 5 vinavyohitajika (You show 3 of the 5 requirements) on a FitCheck card, with five bars, three green and two red, for the requirements you meet and miss",
+        ),
+        slide(
+          "fitcheck-reel/4-usiache-sifa.jpg",
+          "Usiache sifa zako zijifiche. (Don't let your qualifications hide.) above the Dproz logo, Jaribu FitCheck leo (Try FitCheck today) and a dproz.com button",
+        ),
+      ],
+    },
+  ],
+};
+
+export default gallery;

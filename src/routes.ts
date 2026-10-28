@@ -12,5 +12,6 @@ export default [
   route("concepts/pride", "routes/pride.tsx"),
   route("concepts/pastries", "routes/pastries.tsx"),
   route("concepts/meditation", "routes/serenity.tsx"),
+  route("gallery", "routes/gallery.tsx"),
   route("*", "routes/not-found.tsx"),
 ] satisfies RouteConfig;

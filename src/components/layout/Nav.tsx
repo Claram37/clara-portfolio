@@ -1,4 +1,4 @@
-import { Link, useMatches } from "react-router";
+import { Link, NavLink, useMatches } from "react-router";
 import { Download } from "lucide-react";
 import Button from "@/components/shared/Button";
 import site from "@/data/site";
@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 
 const links = [
   { to: "/work", label: "Work" },
+  { to: "/gallery", label: "Gallery" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ];
@@ -33,19 +34,24 @@ const Nav = () => {
           {site.name}
         </Link>
         <div className="flex items-center gap-8">
+          {/* The page you're on is semibold */}
           {links.map(({ to, label }) => (
-            <Link
+            <NavLink
               key={to}
               to={to}
-              className={cn(
-                "text-base leading-5 transition-colors max-sm:hidden",
-                darkNav
-                  ? "hover:text-on-dark-muted"
-                  : "hover:text-muted-foreground",
-              )}
+              end
+              className={({ isActive }) =>
+                cn(
+                  "text-base leading-5 transition-colors max-sm:hidden",
+                  isActive && "font-semibold",
+                  darkNav
+                    ? "hover:text-on-dark-muted"
+                    : "hover:text-muted-foreground",
+                )
+              }
             >
               {label}
-            </Link>
+            </NavLink>
           ))}
           <Button
             href={site.resume}

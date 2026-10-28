@@ -272,3 +272,25 @@ export interface ResumeCaseStudy extends PageIntro {
   desktop: SectionCopy & { screen: Shot };
   next: NextUp;
 }
+
+// The gallery: Dproz's social posts, every slide and reel frame on one wall
+export interface GallerySlide extends Shot {
+  thumb: string; // 400px wide, for the wall
+}
+
+export interface GalleryPost {
+  title: string;
+  slides: GallerySlide[]; // a carousel's slides, or a reel's frames on the wall
+  reel?: {
+    video: string;
+    length: string;
+    frames: number[]; // the second each frame on the wall is from
+  };
+}
+
+export interface Gallery {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  posts: GalleryPost[];
+}
