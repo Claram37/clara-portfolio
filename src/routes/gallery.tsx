@@ -1,6 +1,6 @@
 import type { Route } from "./+types/gallery";
 import Header from "@/components/gallery/Header";
-import Posts from "@/components/gallery/Posts";
+import Table from "@/components/gallery/Table";
 import Contact from "@/components/shared/Contact";
 import gallery from "@/data/gallery";
 import site from "@/data/site";
@@ -16,7 +16,7 @@ const GalleryPage = () => {
   return (
     <>
       <Header />
-      <Posts />
+      <Table />
       <Contact />
     </>
   );

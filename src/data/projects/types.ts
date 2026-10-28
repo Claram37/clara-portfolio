@@ -273,11 +273,15 @@ export interface ResumeCaseStudy extends PageIntro {
   next: NextUp;
 }
 
-// The gallery: Dproz's social posts, a card per post
+// The gallery: Dproz's social posts, each a deck of cards on a table
+export interface GallerySlide extends Shot {
+  card: string; // 640px wide, for the deck and the dealt cards
+}
+
 export interface GalleryPost {
   title: string;
-  cover: string; // the first slide, 800px wide, for the grid
-  slides: Shot[]; // a carousel's slides, or a reel's cover
+  brand: string; // who it's for, in the label under its deck
+  slides: GallerySlide[]; // a carousel's slides, or a reel's cover
   reel?: { video: string; length: string };
 }
 
@@ -285,5 +289,7 @@ export interface Gallery {
   eyebrow: string;
   title: string;
   intro: string;
+  hint: string;
+  reels: string; // the label over the reels
   posts: GalleryPost[];
 }
