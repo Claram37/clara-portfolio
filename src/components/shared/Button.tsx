@@ -8,6 +8,7 @@ const variants = {
   soft: "bg-surface-strong text-ink hover:brightness-95",
   light: "bg-paper text-ink hover:bg-paper/90",
   subtle: "bg-code-line text-paper hover:brightness-125", // on dark cards
+  outline: "border border-ink text-ink hover:bg-ink hover:text-paper",
 };
 
 const sizes = {
