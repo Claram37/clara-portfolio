@@ -13,7 +13,7 @@ interface PostViewProps {
 const stepButton =
   "flex size-11 items-center justify-center rounded-full bg-paper text-ink transition hover:bg-paper/90 focus-ring disabled:opacity-40";
 
-// A post full size, from the tile clicked: a carousel a slide at a time, or a reel playing from that frame
+// A post full size: a carousel a slide at a time from the tile clicked, or a reel playing
 const PostView = ({ post, slide, onStep, onClose }: PostViewProps) => {
   const last = (post?.slides.length ?? 1) - 1;
   const carousel = post !== null && !post.reel;
@@ -38,8 +38,8 @@ const PostView = ({ post, slide, onStep, onClose }: PostViewProps) => {
     >
       {post?.reel && (
         <video
-          src={`${post.reel.video}#t=${post.reel.frames[slide]}`}
-          poster={post.slides[slide].src}
+          src={post.reel.video}
+          poster={post.slides[0].src}
           controls
           autoPlay
           playsInline

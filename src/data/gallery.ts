@@ -181,71 +181,31 @@ const gallery: Gallery = {
     },
     {
       title: "Your next job should find you",
-      reel: { video: brandReel, length: "0:36", frames: [1.8, 7, 9.2, 15] },
+      reel: { video: brandReel, length: "0:36" },
       slides: [
         slide(
-          "brand-reel/1-your-next-job.jpg",
+          "brand-reel/cover.jpg",
           "Your next job should find, in bold white type on blue, with job in yellow inside a hand-drawn white loop",
-        ),
-        slide(
-          "brand-reel/2-browse-by-category.jpg",
-          "Browse by category. Categories with their job counts, from Banking (164) to Healthcare and Medical (102), above an RM Agribusiness Cash Crops Specialist card with a cursor on Save",
-        ),
-        slide(
-          "brand-reel/3-found-one.jpg",
-          "Found one? in large navy type on yellow",
-        ),
-        slide(
-          "brand-reel/4-your-resume-vs-the-job.jpg",
-          "Your resume vs. the job. A FitCheck card scoring an 87% match: Education, Experience and Skills match and Certifications is a gap, with a 3 strengths tag",
         ),
       ],
     },
     {
       title: "Umetuma maombi mara ngapi?",
-      reel: { video: swahiliReel, length: "1:10", frames: [3.5, 18, 50, 61] },
+      reel: { video: swahiliReel, length: "1:10" },
       slides: [
         slide(
-          "swahili-reel/1-umetuma-maombi.jpg",
+          "swahili-reel/cover.jpg",
           "Umetuma maombi mara ngapi… bila kupata jibu? (How many applications have you sent… with no reply?) above 47 applications sent, 0 replies and three jobs each marked Hakuna jibu (No reply)",
-        ),
-        slide(
-          "swahili-reel/2-mamia-ya-nafasi.jpg",
-          "Mamia ya nafasi za kazi (Hundreds of job openings): category cards with job counts, from Elimu (Education, 177) and Benki (Banking, 176) to Afya (Health, 115)",
-        ),
-        slide(
-          "swahili-reel/3-boresha-cv.jpg",
-          "Boresha CV yako ilingane na kazi (Improve your CV to match the job): a FitCheck card scoring 94%, with education, experience, skills and certificates all matching, and Omba sasa (Apply now)",
-        ),
-        slide(
-          "swahili-reel/4-unahitaji-msaada.jpg",
-          "Unahitaji msaada zaidi? (Need more help?) on yellow, with three ticked services from Dproz's experts: writing your CV, improving your LinkedIn and preparing you for interviews",
         ),
       ],
     },
     {
       title: "Je, umeshawahi kutuma CV kuomba kazi?",
-      reel: {
-        video: fitcheckReel,
-        length: "1:39",
-        frames: [2, 42.5, 77.5, 97.5],
-      },
+      reel: { video: fitcheckReel, length: "1:39" },
       slides: [
         slide(
-          "fitcheck-reel/1-je-umeshawahi.jpg",
+          "fitcheck-reel/cover.jpg",
           "Je, umeshawahi kutuma CV kuomba kazi… (Have you ever sent a CV to apply for a job…) above a green CV imetumwa (CV sent) tag",
-        ),
-        slide(
-          "fitcheck-reel/2-hakujui-wewe.jpg",
-          "Hakujui wewe. (They don't know you.) between Msomaji hawezi kujua hilo. (The reader can't know that.) and Anajua kile tu kilichoandikwa mbele yake. (They only know what's written in front of them.)",
-        ),
-        slide(
-          "fitcheck-reel/3-unaonyesha-3-kati-ya-5.jpg",
-          "Unaonyesha 3 kati ya 5 vinavyohitajika (You show 3 of the 5 requirements) on a FitCheck card, with five bars, three green and two red, for the requirements you meet and miss",
-        ),
-        slide(
-          "fitcheck-reel/4-usiache-sifa.jpg",
-          "Usiache sifa zako zijifiche. (Don't let your qualifications hide.) above the Dproz logo, Jaribu FitCheck leo (Try FitCheck today) and a dproz.com button",
         ),
       ],
     },

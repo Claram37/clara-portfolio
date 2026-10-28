@@ -7,10 +7,10 @@ import PostView from "./PostView";
 
 const { posts } = gallery;
 
-// The same shuffle on every build, so the pre-rendered page matches. Seed 381 keeps a post's tiles apart
+// The same shuffle on every build, so the pre-rendered page matches. Seed 930 keeps a post's tiles apart
 const shuffle = <T,>(items: T[]) => {
   const shuffled = [...items];
-  let seed = 381;
+  let seed = 930;
   for (let i = shuffled.length - 1; i > 0; i--) {
     seed = (seed * 16807) % 2147483647;
     const j = seed % (i + 1);
@@ -171,7 +171,7 @@ const Wall = () => {
             </span>
             <span className="text-xs text-paper/70">
               {posts[lit].reel
-                ? `${posts[lit].reel.length} reel · click to play from here`
+                ? `${posts[lit].reel.length} reel · click to play`
                 : `${posts[lit].slides.length} slides · click to open from here`}
             </span>
           </>

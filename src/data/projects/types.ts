@@ -280,12 +280,8 @@ export interface GallerySlide extends Shot {
 
 export interface GalleryPost {
   title: string;
-  slides: GallerySlide[]; // a carousel's slides, or a reel's frames on the wall
-  reel?: {
-    video: string;
-    length: string;
-    frames: number[]; // the second each frame on the wall is from
-  };
+  slides: GallerySlide[]; // a carousel's slides, or a reel's cover
+  reel?: { video: string; length: string };
 }
 
 export interface Gallery {
