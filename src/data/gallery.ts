@@ -24,75 +24,8 @@ const gallery: Gallery = {
   title: "Graphics for Dproz",
   intro:
     "Carousels and reels I designed for Dproz's social pages, turning long job ads into posts people swipe through.",
-  // In the grid's order, down each column in turn, so the columns end close together
+  // In the grid's order, down each column in turn: two carousels and a reel each, so the columns end level
   posts: [
-    {
-      title: "1,099 jobs at TANESCO",
-      cover: cover("tanesco/1-cover.png"),
-      slides: [
-        slide(
-          "tanesco/1-cover.png",
-          "1,099 jobs at TANESCO, over a bar chart of the roles by level: 100 Drivers, 777 Artisans, 203 Technicians, 13 ICT Officers and 6 Engineers, all closing Mon 26 Oct 2026, with a Find your level button",
-        ),
-        slide(
-          "tanesco/2-drivers.png",
-          "Driver Grade II, level 1 of 5 (Form IV): 100 full-time positions needing a Form IV certificate, a Class C or E driving licence, a VETA or NIT driving course and 1+ year with no accidents",
-        ),
-        slide(
-          "tanesco/3-artisans.png",
-          "Artisan Grade II, level 2 of 5 (Secondary + VETA): 777 positions across 7 trades, from Electrical (736) and Automobile (12) to Gorge Attendant (3), closing Mon 26 Oct 2026",
-        ),
-        slide(
-          "tanesco/4-technicians.png",
-          "Technician Grade II, level 3 of 5 (Diploma): 203 positions for an NTA Level 6 diploma and computer literacy, in Electrical / Electronics (193), HVAC (7) and Water Systems O&M (3)",
-        ),
-        slide(
-          "tanesco/5-ict-officers.png",
-          "ICT Officer Grade II, level 4 of 5 (Degree): 13 positions for computing graduates across 6 roles, from Information Systems Auditor (6) to Oracle Database Administrator (1)",
-        ),
-        slide(
-          "tanesco/6-engineers.png",
-          "Engineer Grade II, level 5 of 5 (Degree + ERB): 6 positions for engineering graduates registered with ERB, in Mechanical (3), Electrical & Electronics (2) and Telecommunications (1), with a How to apply button",
-        ),
-        slide(
-          "tanesco/7-how-to-apply.png",
-          "Found your level? Here is how to apply. Open to Tanzanian citizens up to 45, in three steps, from reading the 20 listings on Dproz to applying on the Ajira portal by Mon 26 Oct 2026",
-        ),
-      ],
-    },
-    {
-      title: "Your next job should find you",
-      cover: cover("brand-reel/cover.jpg"),
-      reel: { video: brandReel, length: "0:36" },
-      slides: [
-        slide(
-          "brand-reel/cover.jpg",
-          "Your next job should find, in bold white type on blue, with job in yellow inside a hand-drawn white loop",
-        ),
-      ],
-    },
-    {
-      title: "2 jobs at CRDB Bank",
-      cover: cover("crdb/1-cover.png"),
-      slides: [
-        slide(
-          "crdb/1-cover.png",
-          "2 jobs at CRDB Bank, both closing Monday 5 October: an October 2026 calendar with the 5th circled as the last day to apply for 2 Data & AI jobs in Dar es Salaam, and a See the jobs button",
-        ),
-        slide(
-          "crdb/2-data-scientist.png",
-          "Data Scientist, 2 positions in Dar es Salaam, apply by Monday 5 October: machine-learning models for fraud and credit risk, needing 3+ years in ML and Azure AI and MLOps certifications",
-        ),
-        slide(
-          "crdb/3-feature-engineering-specialist.png",
-          "Feature Engineering Specialist, apply by Monday 5 October: design the feature pipelines behind the bank's machine-learning models, needing 3+ years in data science or ML and strong Python and SQL",
-        ),
-        slide(
-          "crdb/4-apply.png",
-          "Mark your calendar: a deadline card to apply to CRDB Bank by Monday 5 October, for Data Scientist (2 positions) and Feature Engineering Specialist (1), with the link dproz.com/companies/crdbbank",
-        ),
-      ],
-    },
     {
       title: "6 jobs at Equity Bank",
       cover: cover("equity/1-cover.png"),
@@ -132,6 +65,147 @@ const gallery: Gallery = {
       ],
     },
     {
+      title: "Your next job should find you",
+      cover: cover("brand-reel/cover.jpg"),
+      reel: { video: brandReel, length: "0:36" },
+      slides: [
+        slide(
+          "brand-reel/cover.jpg",
+          "Your next job should find, in bold white type on blue, with job in yellow inside a hand-drawn white loop",
+        ),
+      ],
+    },
+    {
+      title: "3 jobs at Stanbic Bank",
+      cover: cover("stanbic/1-cover.jpg"),
+      slides: [
+        slide(
+          "stanbic/1-cover.jpg",
+          "Next stop: your new job at Stanbic Bank. 3 open roles on Dproz, boarding closes 12 October 2026, on tilted boarding cards: 01 Software Developer and 02 Solution Architect in Dar es Salaam, and 03 Branch Manager, Dodoma Branch",
+        ),
+        slide(
+          "stanbic/2-software-developer.jpg",
+          "Software Developer, role 01 of 03 on a Dproz Job Pass: design, code and maintain banking software at Stanbic Bank Tanzania, full-time in Dar es Salaam, board by 12 Oct 2026, needing 1–2 years in software engineering",
+        ),
+        slide(
+          "stanbic/3-solution-architect.jpg",
+          "Solution Architect, role 02 of 03 on a Dproz Job Pass: design solution architectures and help the bank adopt data, automation and AI, full-time in Dar es Salaam, board by 12 Oct 2026, needing 5–7 years in software engineering",
+        ),
+        slide(
+          "stanbic/4-branch-manager.jpg",
+          "Branch Manager, Dodoma Branch, role 03 of 03 on a Dproz Job Pass: lead the Dodoma branch team and grow the business, full-time, board by 12 Oct 2026, needing 5+ years in banking and 3+ as a manager",
+        ),
+        slide(
+          "stanbic/5-apply.jpg",
+          "Final call: boarding closes 12 October. A dark ticket to board at dproz.com/companies/stanbic-bank-tanzania, with Share with a friend who fits and Save this post",
+        ),
+      ],
+    },
+    {
+      title: "1,099 jobs at TANESCO",
+      cover: cover("tanesco/1-cover.png"),
+      slides: [
+        slide(
+          "tanesco/1-cover.png",
+          "1,099 jobs at TANESCO, over a bar chart of the roles by level: 100 Drivers, 777 Artisans, 203 Technicians, 13 ICT Officers and 6 Engineers, all closing Mon 26 Oct 2026, with a Find your level button",
+        ),
+        slide(
+          "tanesco/2-drivers.png",
+          "Driver Grade II, level 1 of 5 (Form IV): 100 full-time positions needing a Form IV certificate, a Class C or E driving licence, a VETA or NIT driving course and 1+ year with no accidents",
+        ),
+        slide(
+          "tanesco/3-artisans.png",
+          "Artisan Grade II, level 2 of 5 (Secondary + VETA): 777 positions across 7 trades, from Electrical (736) and Automobile (12) to Gorge Attendant (3), closing Mon 26 Oct 2026",
+        ),
+        slide(
+          "tanesco/4-technicians.png",
+          "Technician Grade II, level 3 of 5 (Diploma): 203 positions for an NTA Level 6 diploma and computer literacy, in Electrical / Electronics (193), HVAC (7) and Water Systems O&M (3)",
+        ),
+        slide(
+          "tanesco/5-ict-officers.png",
+          "ICT Officer Grade II, level 4 of 5 (Degree): 13 positions for computing graduates across 6 roles, from Information Systems Auditor (6) to Oracle Database Administrator (1)",
+        ),
+        slide(
+          "tanesco/6-engineers.png",
+          "Engineer Grade II, level 5 of 5 (Degree + ERB): 6 positions for engineering graduates registered with ERB, in Mechanical (3), Electrical & Electronics (2) and Telecommunications (1), with a How to apply button",
+        ),
+        slide(
+          "tanesco/7-how-to-apply.png",
+          "Found your level? Here is how to apply. Open to Tanzanian citizens up to 45, in three steps, from reading the 20 listings on Dproz to applying on the Ajira portal by Mon 26 Oct 2026",
+        ),
+      ],
+    },
+    {
+      title: "Teach tech, teach design, or run the systems",
+      cover: cover("st-jude/1-cover.jpg"),
+      slides: [
+        slide(
+          "st-jude/1-cover.jpg",
+          "Teach tech, teach design, or run the systems, over a classroom photo: 3 jobs at The School of St Jude, Arusha, for an Officer – Applications, a Coding and AI Facilitator and a Graphics Design Facilitator",
+        ),
+        slide(
+          "st-jude/2-officer-applications.jpg",
+          "Officer – Applications, a full-time school office job in Arusha, over a photo of a laptop: improve the school's ERP systems, needing accounting skills and ERP experience, closing Wed 21 Oct 2026",
+        ),
+        slide(
+          "st-jude/3-coding-and-ai-facilitator.jpg",
+          "Coding and AI Facilitator, a holiday program contract in Arusha, over a photo of someone at a screen: teach coding and AI to 16 to 18 year olds in Python, JavaScript and Scratch, closing Sun 25 Oct 2026",
+        ),
+        slide(
+          "st-jude/4-graphics-design-facilitator.jpg",
+          "Graphics Design Facilitator, a holiday program contract in Arusha, over a photo of a hand sketching in pencil: teach graphics design, needing Adobe Creative Suite and Canva, closing Sun 25 Oct 2026",
+        ),
+        slide(
+          "st-jude/5-how-to-apply.jpg",
+          "Send your cover letter and CV by email, over a mountain photo: recruitment@schoolofstjude.co.tz, each role's subject-line reference and closing date, and a note that the school never asks for payment",
+        ),
+      ],
+    },
+    {
+      title: "Je, umeshawahi kutuma CV kuomba kazi?",
+      cover: cover("fitcheck-reel/cover.jpg"),
+      reel: { video: fitcheckReel, length: "1:39" },
+      slides: [
+        slide(
+          "fitcheck-reel/cover.jpg",
+          "Je, umeshawahi kutuma CV kuomba kazi… (Have you ever sent a CV to apply for a job…) above a green CV imetumwa (CV sent) tag",
+        ),
+      ],
+    },
+    {
+      title: "2 jobs at CRDB Bank",
+      cover: cover("crdb/1-cover.png"),
+      slides: [
+        slide(
+          "crdb/1-cover.png",
+          "2 jobs at CRDB Bank, both closing Monday 5 October: an October 2026 calendar with the 5th circled as the last day to apply for 2 Data & AI jobs in Dar es Salaam, and a See the jobs button",
+        ),
+        slide(
+          "crdb/2-data-scientist.png",
+          "Data Scientist, 2 positions in Dar es Salaam, apply by Monday 5 October: machine-learning models for fraud and credit risk, needing 3+ years in ML and Azure AI and MLOps certifications",
+        ),
+        slide(
+          "crdb/3-feature-engineering-specialist.png",
+          "Feature Engineering Specialist, apply by Monday 5 October: design the feature pipelines behind the bank's machine-learning models, needing 3+ years in data science or ML and strong Python and SQL",
+        ),
+        slide(
+          "crdb/4-apply.png",
+          "Mark your calendar: a deadline card to apply to CRDB Bank by Monday 5 October, for Data Scientist (2 positions) and Feature Engineering Specialist (1), with the link dproz.com/companies/crdbbank",
+        ),
+      ],
+    },
+    {
+      title: "Umetuma maombi mara ngapi?",
+      cover: cover("swahili-reel/cover.jpg"),
+      reel: { video: swahiliReel, length: "1:10" },
+      slides: [
+        slide(
+          "swahili-reel/cover.jpg",
+          "Umetuma maombi mara ngapi… bila kupata jibu? (How many applications have you sent… with no reply?) above 47 applications sent, 0 replies and three jobs each marked Hakuna jibu (No reply)",
+        ),
+      ],
+    },
+    {
       title: "6 jobs at Yas Tanzania",
       cover: cover("yas/1-cover.png"),
       slides: [
@@ -166,54 +240,6 @@ const gallery: Gallery = {
         slide(
           "yas/8-apply.png",
           "Found your number? Apply on Dproz. A USSD-style screen with the link dproz.com/companies/yas-tanzania, and two jobs closing Wed 7 Oct and four on Sat 17 Oct",
-        ),
-      ],
-    },
-    {
-      title: "Teach tech, teach design, or run the systems",
-      cover: cover("st-jude/1-cover.jpg"),
-      slides: [
-        slide(
-          "st-jude/1-cover.jpg",
-          "Teach tech, teach design, or run the systems, over a classroom photo: 3 jobs at The School of St Jude, Arusha, for an Officer – Applications, a Coding and AI Facilitator and a Graphics Design Facilitator",
-        ),
-        slide(
-          "st-jude/2-officer-applications.jpg",
-          "Officer – Applications, a full-time school office job in Arusha, over a photo of a laptop: improve the school's ERP systems, needing accounting skills and ERP experience, closing Wed 21 Oct 2026",
-        ),
-        slide(
-          "st-jude/3-coding-and-ai-facilitator.jpg",
-          "Coding and AI Facilitator, a holiday program contract in Arusha, over a photo of someone at a screen: teach coding and AI to 16 to 18 year olds in Python, JavaScript and Scratch, closing Sun 25 Oct 2026",
-        ),
-        slide(
-          "st-jude/4-graphics-design-facilitator.jpg",
-          "Graphics Design Facilitator, a holiday program contract in Arusha, over a photo of a hand sketching in pencil: teach graphics design, needing Adobe Creative Suite and Canva, closing Sun 25 Oct 2026",
-        ),
-        slide(
-          "st-jude/5-how-to-apply.jpg",
-          "Send your cover letter and CV by email, over a mountain photo: recruitment@schoolofstjude.co.tz, each role's subject-line reference and closing date, and a note that the school never asks for payment",
-        ),
-      ],
-    },
-    {
-      title: "Umetuma maombi mara ngapi?",
-      cover: cover("swahili-reel/cover.jpg"),
-      reel: { video: swahiliReel, length: "1:10" },
-      slides: [
-        slide(
-          "swahili-reel/cover.jpg",
-          "Umetuma maombi mara ngapi… bila kupata jibu? (How many applications have you sent… with no reply?) above 47 applications sent, 0 replies and three jobs each marked Hakuna jibu (No reply)",
-        ),
-      ],
-    },
-    {
-      title: "Je, umeshawahi kutuma CV kuomba kazi?",
-      cover: cover("fitcheck-reel/cover.jpg"),
-      reel: { video: fitcheckReel, length: "1:39" },
-      slides: [
-        slide(
-          "fitcheck-reel/cover.jpg",
-          "Je, umeshawahi kutuma CV kuomba kazi… (Have you ever sent a CV to apply for a job…) above a green CV imetumwa (CV sent) tag",
         ),
       ],
     },
