@@ -7,10 +7,10 @@ import PostView from "./PostView";
 
 const { posts } = gallery;
 
-// The same shuffle on every build, so the pre-rendered page matches. Seed 930 keeps a post's tiles apart
+// The same shuffle on every build, so the pre-rendered page matches. Seed 448 keeps a post's tiles apart
 const shuffle = <T,>(items: T[]) => {
   const shuffled = [...items];
-  let seed = 930;
+  let seed = 448;
   for (let i = shuffled.length - 1; i > 0; i--) {
     seed = (seed * 16807) % 2147483647;
     const j = seed % (i + 1);
@@ -47,15 +47,13 @@ const Wall = () => {
 
   return (
     <section aria-label="Every slide and reel frame">
-      <div className="relative">
+      {/* Clipped here, not on the list: a list with a height would push tiles into extra columns */}
+      <div className={cn("relative", !whole && "max-h-225 overflow-hidden")}>
         {/* Tabbing into the wall unfolds it, so no tile is hidden under the fade */}
         <ul
           onKeyUp={(event) => event.key === "Tab" && setWhole(true)}
           onPointerMove={follow}
-          className={cn(
-            "columns-2 gap-1 sm:columns-3 md:columns-4 lg:columns-6 xl:columns-8",
-            !whole && "max-h-225 overflow-hidden",
-          )}
+          className="columns-2 gap-1 sm:columns-3 md:columns-4 lg:columns-6 xl:columns-8"
         >
           {tiles.map(({ post, slide }) => {
             const { title, reel, slides } = posts[post];
